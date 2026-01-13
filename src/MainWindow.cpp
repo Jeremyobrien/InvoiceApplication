@@ -35,13 +35,28 @@ MainWindow::MainWindow(QWidget *parent)
     setCentralWidget(central);
 }
 
-void MainWindow::refreshUI()
+void MainWindow::refreshExpenses()
 {
-    invoiceTable->setRowCount(0);
     expenseTable->setRowCount(0);
 
-    double revenue = 0;
-    double expensesTotal = 0;
+    for (const auto &exp : expenses)
+    {
+        int row = expenseTable->rowCount();
+        expenseTable->insertRow(row);
+
+        expenseTable->setItem(row, 0,
+                              new QTableWidgetItem(
+                                  QString::fromStdString(exp.serialize())));
+
+        expenseTable->setItem(row, 1,
+                              new QTableWidgetItem(
+                                  QString::number(exp.getCost())));
+    }
+}
+
+void MainWindow::refreshInvoices()
+{
+    invoiceTable->setRowCount(0);
 
     for (const auto &inv : invoices)
     {
@@ -58,28 +73,28 @@ void MainWindow::refreshUI()
 
         invoiceTable->setItem(row, 2,
                               new QTableWidgetItem(inv.isPaid() ? "Yes" : "No"));
+    }
+}
 
+void MainWindow::refreshProfit()
+{
+    double revenue = 0;
+    double expensesTotal = 0;
+
+    for (const auto& inv : invoices)
+    {
         if (inv.isPaid())
             revenue += inv.getAmount();
     }
 
-    for (const auto &exp : expenses)
+    for (const auto& exp : expenses)
     {
-        int row = expenseTable->rowCount();
-        expenseTable->insertRow(row);
-
-        expenseTable->setItem(row, 0,
-                              new QTableWidgetItem(
-                                  QString::fromStdString(exp.serialize())));
-
-        expenseTable->setItem(row, 1,
-                              new QTableWidgetItem(
-                                  QString::number(exp.getCost())));
-
         expensesTotal += exp.getCost();
     }
 
-    profitLabel->setText("Profit: $" + QString::number(revenue - expensesTotal));
+    profitLabel->setText(
+        "Profit: $" + QString::number(revenue - expensesTotal)
+    );
 }
 
 void MainWindow::addInvoice()
@@ -92,7 +107,8 @@ void MainWindow::addInvoice()
             dialog.client().toStdString(),
             dialog.amount(),
             dialog.isPaid());
-        refreshUI();
+        refreshInvoices();
+        refreshProfit();
     }
 }
 
@@ -104,6 +120,7 @@ void MainWindow::addExpense()
         expenses.emplace_back(
             dialog.description().toStdString(),
             dialog.amount());
-        refreshUI();
+        refreshExpenses();
+        refreshProfit();
     }
 }

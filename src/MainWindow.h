@@ -22,7 +22,9 @@ private:
     QTableWidget *expenseTable;
     QLabel *profitLabel;
 
-    void refreshUI();
+    void refreshInvoices();
+    void refreshExpenses();
+    void refreshProfit();
 
 private slots:
     void addInvoice();
