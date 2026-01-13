@@ -1,0 +1,5 @@
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/invoice-tracker.dir
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/edit_cache.dir
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/rebuild_cache.dir
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/invoice-tracker_autogen.dir

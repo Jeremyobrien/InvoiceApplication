@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "name": "macOS",
+      "compilerPath": "/usr/bin/clang++",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "macos-clang-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Headers",
+        "/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Headers",
+        "/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Headers"
+      ],
+      "macFrameworkPath": ["/usr/local/Cellar/qtbase/6.10.1/lib"]
+    }
+  ],
+  "version": 4
+}
