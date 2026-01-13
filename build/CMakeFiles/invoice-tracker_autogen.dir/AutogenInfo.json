@@ -444,6 +444,12 @@
 			null
 		],
 		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h",
+			"MU",
+			"UVLADIE3JM/moc_ExpenseDialog.cpp",
+			null
+		],
+		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Invoice.h",
 			"MU",
 			"UVLADIE3JM/moc_Invoice.cpp",
@@ -523,6 +529,11 @@
 	[
 		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.cpp",
 			"MU",
 			null
 		],

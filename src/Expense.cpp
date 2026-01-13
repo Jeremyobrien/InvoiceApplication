@@ -10,5 +10,5 @@ double Expense::getCost() const
 
 std::string Expense::serialize() const
 {
-    return description + "," + std::to_string(cost);
+    return description;
 }

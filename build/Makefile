@@ -203,6 +203,30 @@ src/Expense.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/Expense.cpp.s
 .PHONY : src/Expense.cpp.s
 
+src/ExpenseDialog.o: src/ExpenseDialog.cpp.o
+.PHONY : src/ExpenseDialog.o
+
+# target to build an object file
+src/ExpenseDialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/ExpenseDialog.cpp.o
+.PHONY : src/ExpenseDialog.cpp.o
+
+src/ExpenseDialog.i: src/ExpenseDialog.cpp.i
+.PHONY : src/ExpenseDialog.i
+
+# target to preprocess a source file
+src/ExpenseDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/ExpenseDialog.cpp.i
+.PHONY : src/ExpenseDialog.cpp.i
+
+src/ExpenseDialog.s: src/ExpenseDialog.cpp.s
+.PHONY : src/ExpenseDialog.s
+
+# target to generate assembly for a file
+src/ExpenseDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/ExpenseDialog.cpp.s
+.PHONY : src/ExpenseDialog.cpp.s
+
 src/Invoice.o: src/Invoice.cpp.o
 .PHONY : src/Invoice.o
 
@@ -316,6 +340,9 @@ help:
 	@echo "... src/Expense.o"
 	@echo "... src/Expense.i"
 	@echo "... src/Expense.s"
+	@echo "... src/ExpenseDialog.o"
+	@echo "... src/ExpenseDialog.i"
+	@echo "... src/ExpenseDialog.s"
 	@echo "... src/Invoice.o"
 	@echo "... src/Invoice.i"
 	@echo "... src/Invoice.s"

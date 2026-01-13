@@ -16,6 +16,7 @@ add_executable(invoice-tracker
     src/Invoice.cpp
     src/Expense.cpp
     src/InvoiceDialog.cpp
+    src/ExpenseDialog.cpp
 )
 
 target_link_libraries(invoice-tracker Qt6::Widgets)

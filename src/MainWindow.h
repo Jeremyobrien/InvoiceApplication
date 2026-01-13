@@ -8,6 +8,7 @@
 #include "Invoice.h"
 #include "Expense.h"
 #include "InvoiceDialog.h"
+#include "ExpenseDialog.h"
 
 class MainWindow : public QMainWindow
 {
@@ -18,6 +19,7 @@ private:
     std::vector<Expense> expenses;
 
     QTableWidget *invoiceTable;
+    QTableWidget *expenseTable;
     QLabel *profitLabel;
 
     void refreshUI();

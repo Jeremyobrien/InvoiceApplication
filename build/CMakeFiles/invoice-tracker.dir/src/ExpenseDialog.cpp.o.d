@@ -1,7 +1,8 @@
-CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/main.cpp \
-  /usr/local/lib/QtWidgets.framework/Headers/QApplication \
-  /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
+CMakeFiles/invoice-tracker.dir/src/ExpenseDialog.cpp.o: \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.cpp \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
+  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /usr/local/lib/QtGui.framework/Headers/qtguiglobal.h \
   /usr/local/lib/QtCore.framework/Headers/qglobal.h \
@@ -707,9 +708,10 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/qtguiexports.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /usr/local/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /usr/local/lib/QtCore.framework/Headers/qstring.h \
-  /usr/local/lib/QtCore.framework/Headers/qchar.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+  /usr/local/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /usr/local/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /usr/local/lib/QtCore.framework/Headers/qnamespace.h \
   /usr/local/lib/QtCore.framework/Headers/qcompare.h \
   /usr/local/lib/QtCore.framework/Headers/qstdlibdetection.h \
   /usr/local/lib/QtCore.framework/Headers/qcomparehelpers.h \
@@ -843,11 +845,15 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
+  /usr/local/lib/QtCore.framework/Headers/qtmetamacros.h \
+  /usr/local/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /usr/local/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
+  /usr/local/lib/QtCore.framework/Headers/qobject.h \
+  /usr/local/lib/QtCore.framework/Headers/qstring.h \
+  /usr/local/lib/QtCore.framework/Headers/qchar.h \
   /usr/local/lib/QtCore.framework/Headers/qstringview.h \
   /usr/local/lib/QtCore.framework/Headers/qbytearray.h \
   /usr/local/lib/QtCore.framework/Headers/qrefcount.h \
-  /usr/local/lib/QtCore.framework/Headers/qnamespace.h \
-  /usr/local/lib/QtCore.framework/Headers/qtmetamacros.h \
   /usr/local/lib/QtCore.framework/Headers/qarraydata.h \
   /usr/local/lib/QtCore.framework/Headers/qpair.h \
   /usr/local/lib/QtCore.framework/Headers/qarraydatapointer.h \
@@ -869,13 +875,6 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /usr/local/lib/QtCore.framework/Headers/qstringbuilder.h \
   /usr/local/lib/QtCore.framework/Headers/qstringconverter.h \
   /usr/local/lib/QtCore.framework/Headers/qstringconverter_base.h \
-  /usr/local/lib/QtCore.framework/Headers/qcoreevent.h \
-  /usr/local/lib/QtCore.framework/Headers/qbasictimer.h \
-  /usr/local/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /usr/local/lib/QtCore.framework/Headers/qobject.h \
-  /usr/local/lib/QtCore.framework/Headers/qobjectdefs.h \
-  /usr/local/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
-  /usr/local/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
   /usr/local/lib/QtCore.framework/Headers/qlist.h \
   /usr/local/lib/QtCore.framework/Headers/qhashfunctions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
@@ -918,22 +917,18 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
-  /usr/local/lib/QtCore.framework/Headers/qeventloop.h \
-  /usr/local/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /usr/local/lib/QtCore.framework/Headers/qnativeinterface.h \
-  /usr/local/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
-  /usr/local/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /usr/local/lib/QtCore.framework/Headers/qpoint.h \
+  /usr/local/lib/QtCore.framework/Headers/qmargins.h \
   /usr/local/lib/QtCore.framework/Headers/qcheckedint_impl.h \
   /usr/local/lib/QtCore.framework/Headers/q23utility.h \
   /usr/local/lib/QtCore.framework/Headers/q20utility.h \
+  /usr/local/lib/QtGui.framework/Headers/qaction.h \
+  /usr/local/lib/QtGui.framework/Headers/qkeysequence.h \
+  /usr/local/lib/QtGui.framework/Headers/qicon.h \
   /usr/local/lib/QtCore.framework/Headers/qsize.h \
-  /usr/local/lib/QtCore.framework/Headers/qmargins.h \
-  /usr/local/lib/QtGui.framework/Headers/qcursor.h \
-  /usr/local/lib/QtGui.framework/Headers/qbitmap.h \
   /usr/local/lib/QtGui.framework/Headers/qpixmap.h \
   /usr/local/lib/QtGui.framework/Headers/qpaintdevice.h \
   /usr/local/lib/QtCore.framework/Headers/qrect.h \
+  /usr/local/lib/QtCore.framework/Headers/qpoint.h \
   /usr/local/lib/QtGui.framework/Headers/qcolor.h \
   /usr/local/lib/QtGui.framework/Headers/qrgb.h \
   /usr/local/lib/QtGui.framework/Headers/qrgba64.h \
@@ -947,9 +942,6 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /usr/local/lib/QtCore.framework/Headers/q20iterator.h \
   /usr/local/lib/QtCore.framework/Headers/qline.h \
-  /usr/local/lib/QtGui.framework/Headers/qguiapplication.h \
-  /usr/local/lib/QtGui.framework/Headers/qinputmethod.h \
-  /usr/local/lib/QtCore.framework/Headers/qlocale.h \
   /usr/local/lib/QtCore.framework/Headers/qvariant.h \
   /usr/local/lib/QtCore.framework/Headers/qdebug.h \
   /usr/local/lib/QtCore.framework/Headers/qtextstream.h \
@@ -964,14 +956,6 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /usr/local/lib/QtCore.framework/Headers/qhash.h \
   /usr/local/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /usr/local/lib/QtCore.framework/Headers/qalloc.h \
-  /usr/local/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/MainWindow.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
-  /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /usr/local/lib/QtGui.framework/Headers/qaction.h \
-  /usr/local/lib/QtGui.framework/Headers/qkeysequence.h \
-  /usr/local/lib/QtGui.framework/Headers/qicon.h \
   /usr/local/lib/QtGui.framework/Headers/qpalette.h \
   /usr/local/lib/QtGui.framework/Headers/qbrush.h \
   /usr/local/lib/QtGui.framework/Headers/qfont.h \
@@ -980,43 +964,23 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/qfontinfo.h \
   /usr/local/lib/QtGui.framework/Headers/qfontvariableaxis.h \
   /usr/local/lib/QtWidgets.framework/Headers/qsizepolicy.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QTableWidget \
-  /usr/local/lib/QtWidgets.framework/Headers/qtablewidget.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qtableview.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qframe.h \
-  /usr/local/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /usr/local/lib/QtCore.framework/Headers/qitemselectionmodel.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
-  /usr/local/lib/QtGui.framework/Headers/qvalidator.h \
-  /usr/local/lib/QtCore.framework/Headers/qregularexpression.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qslider.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qstyle.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qtabbar.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qrubberband.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QLabel \
-  /usr/local/lib/QtWidgets.framework/Headers/qlabel.h \
-  /usr/local/lib/QtGui.framework/Headers/qpicture.h \
-  /usr/local/lib/QtCore.framework/Headers/qiodevice.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextdocument.h \
-  /usr/local/lib/QtCore.framework/Headers/qurl.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Invoice.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/InvoiceDialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
+  /usr/local/lib/QtGui.framework/Headers/qcursor.h \
+  /usr/local/lib/QtGui.framework/Headers/qbitmap.h \
   /usr/local/lib/QtWidgets.framework/Headers/QLineEdit \
   /usr/local/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qframe.h \
   /usr/local/lib/QtGui.framework/Headers/qtextcursor.h \
+  /usr/local/lib/QtGui.framework/Headers/qtextdocument.h \
+  /usr/local/lib/QtCore.framework/Headers/qurl.h \
   /usr/local/lib/QtGui.framework/Headers/qtextformat.h \
   /usr/local/lib/QtGui.framework/Headers/qpen.h \
   /usr/local/lib/QtGui.framework/Headers/qtextoption.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h
+  /usr/local/lib/QtWidgets.framework/Headers/QFormLayout \
+  /usr/local/lib/QtWidgets.framework/Headers/qformlayout.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QLayout \
+  /usr/local/lib/QtWidgets.framework/Headers/qlayout.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qlayoutitem.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qgridlayout.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QDialogButtonBox \
+  /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h

@@ -732,6 +732,8 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   invoice-tracker_autogen/moc_predefs.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.cpp \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.cpp \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Invoice.cpp \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Invoice.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/InvoiceDialog.cpp \
@@ -1814,6 +1816,10 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qlocale.h:
 
+/usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake:
+
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qline.h:
+
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qmargins.h:
@@ -1887,6 +1893,10 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h:
 
 /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/InvoiceDialog.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:
+
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h:
 
 /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.h:
 
@@ -2614,8 +2624,6 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/subrange.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/empty.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/data.h:
@@ -2657,6 +2665,12 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h:
+
+/usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets-release.cmake:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_function.h:
+
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/partition_copy.h:
 
@@ -3412,10 +3426,6 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_category.h:
 
-/usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake:
-
-/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qline.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/pmr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
@@ -3689,10 +3699,6 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/compare:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:
-
-/usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets-release.cmake:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_function.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
 

@@ -1,7 +1,7 @@
 CMakeFiles/invoice-tracker.dir/invoice-tracker_autogen/mocs_compilation.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/mocs_compilation.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/moc_InvoiceDialog.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/../../../src/InvoiceDialog.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/moc_ExpenseDialog.cpp \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/../../../src/ExpenseDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialog \
   /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
@@ -976,12 +976,14 @@ CMakeFiles/invoice-tracker.dir/invoice-tracker_autogen/mocs_compilation.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/qtextformat.h \
   /usr/local/lib/QtGui.framework/Headers/qpen.h \
   /usr/local/lib/QtGui.framework/Headers/qtextoption.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /usr/local/lib/QtCore.framework/Headers/qtmochelpers.h \
   /usr/local/lib/QtCore.framework/Headers/qtmocconstants.h \
   /usr/local/lib/QtCore.framework/Headers/q20algorithm.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/moc_InvoiceDialog.cpp \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/../../../src/InvoiceDialog.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
+  /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/moc_MainWindow.cpp \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/../../../src/MainWindow.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \

@@ -1006,6 +1006,7 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
   /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
   /usr/local/lib/QtWidgets.framework/Headers/qabstractbutton.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /usr/local/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /usr/local/lib/QtWidgets.framework/Headers/qlayout.h \

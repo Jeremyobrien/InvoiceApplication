@@ -733,6 +733,8 @@
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/moc_predefs.h
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.cpp
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Expense.h
+ /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.cpp
+ /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ExpenseDialog.h
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Invoice.cpp
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/Invoice.h
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/InvoiceDialog.cpp

@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/invoice-tracker.dir/invoice-tracker_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/invoice-tracker.dir/src/Expense.cpp.o"
   "CMakeFiles/invoice-tracker.dir/src/Expense.cpp.o.d"
+  "CMakeFiles/invoice-tracker.dir/src/ExpenseDialog.cpp.o"
+  "CMakeFiles/invoice-tracker.dir/src/ExpenseDialog.cpp.o.d"
   "CMakeFiles/invoice-tracker.dir/src/Invoice.cpp.o"
   "CMakeFiles/invoice-tracker.dir/src/Invoice.cpp.o.d"
   "CMakeFiles/invoice-tracker.dir/src/InvoiceDialog.cpp.o"
