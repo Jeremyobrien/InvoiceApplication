@@ -1,5 +1,4 @@
-#ifndef INVOICE_H
-#define INVOICE_H
+#pragma once
 
 #include <string>
 class Invoice
@@ -10,14 +9,10 @@ private:
     bool paid;
 
 public:
-    Invoice(std::string clientName, double amount, bool paid = false);
+    Invoice(std::string clientName, double amount, bool paid = false)
+        : clientName(std::move(clientName)), amount(amount), paid(paid) {}
 
-    void markPaid();
     double getAmount() const;
     bool isPaid() const;
     std::string getClient() const;
-
-    std::string serialize() const;
 };
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef EXPENSEDIALOG_H
-#define EXPENSEDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QLineEdit>
@@ -18,5 +17,3 @@ public:
     QString description() const;
     double amount() const;
 };
-
-#endif

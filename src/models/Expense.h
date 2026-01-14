@@ -1,5 +1,4 @@
-#ifndef EXPENSE_H
-#define EXPENSE_H
+#pragma once
 
 #include <string>
 
@@ -14,5 +13,3 @@ public:
     double getCost() const;
     std::string serialize() const;
 };
-
-#endif

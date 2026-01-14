@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QTableWidget>
@@ -33,5 +32,3 @@ private slots:
 public:
     MainWindow(QWidget *parent = nullptr);
 };
-
-#endif
