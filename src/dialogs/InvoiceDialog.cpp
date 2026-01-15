@@ -1,6 +1,7 @@
 #include "InvoiceDialog.h"
 #include <QFormLayout>
 #include <QDialogButtonBox>
+#include <QValidator>
 
 InvoiceDialog::InvoiceDialog(QWidget *parent)
     : QDialog(parent)
@@ -10,6 +11,10 @@ InvoiceDialog::InvoiceDialog(QWidget *parent)
     clientInput = new QLineEdit(this);
     amountInput = new QLineEdit(this);
     paidCheck = new QCheckBox("Paid", this);
+
+    auto *costValidator = new QDoubleValidator(0.0, 1'000'000'000.0, 2, this);
+    costValidator->setNotation(QDoubleValidator::StandardNotation);
+    amountInput->setValidator(costValidator);
 
     QFormLayout *layout = new QFormLayout(this);
     layout->addRow("Client Name:", clientInput);

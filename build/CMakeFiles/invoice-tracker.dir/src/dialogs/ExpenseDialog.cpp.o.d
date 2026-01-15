@@ -984,4 +984,8 @@ CMakeFiles/invoice-tracker.dir/src/dialogs/ExpenseDialog.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /usr/local/lib/QtWidgets.framework/Headers/qgridlayout.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialogButtonBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h
+  /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+  /usr/local/lib/QtGui.framework/Headers/QValidator \
+  /usr/local/lib/QtGui.framework/Headers/qvalidator.h \
+  /usr/local/lib/QtCore.framework/Headers/qregularexpression.h \
+  /usr/local/lib/QtCore.framework/Headers/qlocale.h

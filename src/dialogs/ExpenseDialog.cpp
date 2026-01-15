@@ -1,6 +1,7 @@
 #include "ExpenseDialog.h"
 #include <QFormLayout>
 #include <QDialogButtonBox>
+#include <QValidator>
 
 ExpenseDialog::ExpenseDialog(QWidget *parent)
     : QDialog(parent)
@@ -9,6 +10,10 @@ ExpenseDialog::ExpenseDialog(QWidget *parent)
 
     expenseInput = new QLineEdit(this);
     amountInput = new QLineEdit(this);
+
+    auto *costValidator = new QDoubleValidator(0.0, 1'000'000'000.0, 2, this);
+    costValidator->setNotation(QDoubleValidator::StandardNotation);
+    amountInput->setValidator(costValidator);
 
     QFormLayout *layout = new QFormLayout(this);
     layout->addRow("Expense Description:", expenseInput);
@@ -30,6 +35,7 @@ QString ExpenseDialog::description() const
 
 double ExpenseDialog::amount() const
 {
+
     return amountInput->text().toDouble();
 }
 
