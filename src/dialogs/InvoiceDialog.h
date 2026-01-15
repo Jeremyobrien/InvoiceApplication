@@ -3,6 +3,7 @@
 #include <QDialog>
 #include <QLineEdit>
 #include <QCheckBox>
+#include "models/Invoice.h"
 
 class InvoiceDialog : public QDialog
 {
@@ -15,7 +16,7 @@ private:
 
 public:
     InvoiceDialog(QWidget *parent = nullptr);
-
+    Invoice getInvoice() const;
     QString client() const;
     double amount() const;
     bool isPaid() const;

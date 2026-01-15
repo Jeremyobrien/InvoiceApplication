@@ -32,3 +32,10 @@ double ExpenseDialog::amount() const
 {
     return amountInput->text().toDouble();
 }
+
+Expense ExpenseDialog::getExpense() const
+{
+    return Expense(
+        expenseInput->text().toStdString(),
+        amountInput->text().toDouble());
+}

@@ -2,6 +2,7 @@
 
 #include <QDialog>
 #include <QLineEdit>
+#include "models/Expense.h"
 
 class ExpenseDialog : public QDialog
 {
@@ -13,7 +14,7 @@ private:
 
 public:
     ExpenseDialog(QWidget *parent = nullptr);
-
+    Expense getExpense() const;
     QString description() const;
     double amount() const;
 };

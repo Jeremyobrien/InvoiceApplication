@@ -13,10 +13,16 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 add_executable(invoice-tracker
     src/main.cpp
     src/MainWindow.cpp
-    src/Invoice.cpp
-    src/Expense.cpp
-    src/InvoiceDialog.cpp
-    src/ExpenseDialog.cpp
+    src/dialogs/InvoiceDialog.cpp
+    src/dialogs/ExpenseDialog.cpp
+    src/models/Invoice.cpp
+    src/models/Expense.cpp
+    src/models/InvoiceTableModel.cpp
+    src/models/ExpenseTableModel.cpp
+)
+
+target_include_directories(invoice-tracker PRIVATE
+${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 target_link_libraries(invoice-tracker Qt6::Widgets)

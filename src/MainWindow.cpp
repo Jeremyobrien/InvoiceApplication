@@ -1,113 +1,88 @@
 #include "MainWindow.h"
+#include "dialogs/InvoiceDialog.h"
+#include "dialogs/ExpenseDialog.h"
+#include <QTabWidget>
 #include <QVBoxLayout>
-#include <QPushButton>
+#include <QTableView>
+#include <QHeaderView>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    setupTabs();
+}
+
+void MainWindow::setupTabs()
+{
     QWidget *central = new QWidget(this);
-    QVBoxLayout *layout = new QVBoxLayout();
+    setCentralWidget(central);
 
-    invoiceTable = new QTableWidget(0, 3);
-    invoiceTable->setHorizontalHeaderLabels({"Client", "Amount", "Paid"});
-
-    expenseTable = new QTableWidget(0, 2);
-    expenseTable->setHorizontalHeaderLabels({"Description", "Cost"});
-
-    QPushButton *addInvoiceBtn = new QPushButton("Add Invoice");
     profitLabel = new QLabel("Profit: $0");
 
-    connect(addInvoiceBtn, &QPushButton::clicked,
-            this, &MainWindow::addInvoice);
+    QVBoxLayout *mainLayout = new QVBoxLayout();
+    central->setLayout(mainLayout);
 
+    tabWidget = new QTabWidget(this);
+    mainLayout->addWidget(tabWidget);
+    mainLayout->addWidget(profitLabel);
+
+    QWidget *invoiceTab = new QWidget();
+    QVBoxLayout *invoiceLayout = new QVBoxLayout(invoiceTab);
+
+    invoiceModel = new InvoiceTableModel(this);
+    invoices = std::make_shared<std::vector<Invoice>>();
+    invoiceModel->setInvoices(invoices);
+
+    invoiceView = new QTableView(invoiceTab);
+    invoiceView->setModel(invoiceModel);
+    invoiceView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    invoiceView->setAlternatingRowColors(true);
+    invoiceView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    invoiceLayout->addWidget(invoiceView);
+    QPushButton *addInvoiceBtn = new QPushButton("Add Invoice");
+    connect(addInvoiceBtn, &QPushButton::clicked, this, &MainWindow::addInvoice);
+    invoiceLayout->addWidget(addInvoiceBtn);
+    tabWidget->addTab(invoiceTab, "Invoices");
+
+    QWidget *expenseTab = new QWidget();
+    QVBoxLayout *expenseLayout = new QVBoxLayout(expenseTab);
+
+    expenseModel = new ExpenseTableModel(this);
+    expenses = std::make_shared<std::vector<Expense>>();
+    expenseModel->setExpenses(expenses);
+    expenseView = new QTableView(expenseTab);
+    expenseView->setModel(expenseModel);
+    expenseView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    expenseView->setAlternatingRowColors(true);
+    expenseView->setSelectionBehavior(QAbstractItemView::SelectRows);
     QPushButton *addExpenseBtn = new QPushButton("Add Expense");
+    connect(addExpenseBtn, &QPushButton::clicked, this, &MainWindow::addExpense);
 
-    connect(addExpenseBtn, &QPushButton::clicked,
-            this, &MainWindow::addExpense);
-
-    layout->addWidget(expenseTable);
-    layout->addWidget(addExpenseBtn);
-    layout->addWidget(invoiceTable);
-    layout->addWidget(addInvoiceBtn);
-    layout->addWidget(profitLabel);
-
-    central->setLayout(layout);
-    setCentralWidget(central);
-}
-
-void MainWindow::refreshExpenses()
-{
-    expenseTable->setRowCount(0);
-
-    for (const auto &exp : expenses)
-    {
-        int row = expenseTable->rowCount();
-        expenseTable->insertRow(row);
-
-        expenseTable->setItem(row, 0,
-                              new QTableWidgetItem(
-                                  QString::fromStdString(exp.serialize())));
-
-        expenseTable->setItem(row, 1,
-                              new QTableWidgetItem(
-                                  QString::number(exp.getCost())));
-    }
-}
-
-void MainWindow::refreshInvoices()
-{
-    invoiceTable->setRowCount(0);
-
-    for (const auto &inv : invoices)
-    {
-        int row = invoiceTable->rowCount();
-        invoiceTable->insertRow(row);
-
-        invoiceTable->setItem(row, 0,
-                              new QTableWidgetItem(
-                                  QString::fromStdString(inv.getClient())));
-
-        invoiceTable->setItem(row, 1,
-                              new QTableWidgetItem(
-                                  QString::number(inv.getAmount())));
-
-        invoiceTable->setItem(row, 2,
-                              new QTableWidgetItem(inv.isPaid() ? "Yes" : "No"));
-    }
+    expenseLayout->addWidget(expenseView);
+    expenseLayout->addWidget(addExpenseBtn);
+    tabWidget->addTab(expenseTab, "Expenses");
 }
 
 void MainWindow::refreshProfit()
 {
-    double revenue = 0;
-    double expensesTotal = 0;
-
-    for (const auto& inv : invoices)
-    {
+    double revenue = 0, expensesTotal = 0;
+    for (const auto &inv : *invoices)
         if (inv.isPaid())
             revenue += inv.getAmount();
-    }
 
-    for (const auto& exp : expenses)
-    {
+    for (const auto &exp : *expenses)
         expensesTotal += exp.getCost();
-    }
 
-    profitLabel->setText(
-        "Profit: $" + QString::number(revenue - expensesTotal)
-    );
+    profitLabel->setText("Profit: $" + QString::number(revenue - expensesTotal));
 }
 
 void MainWindow::addInvoice()
 {
     InvoiceDialog dialog(this);
-
     if (dialog.exec() == QDialog::Accepted)
     {
-        invoices.emplace_back(
-            dialog.client().toStdString(),
-            dialog.amount(),
-            dialog.isPaid());
-        refreshInvoices();
+        invoices->push_back(dialog.getInvoice());
+        invoiceModel->setInvoices(invoices);
         refreshProfit();
     }
 }
@@ -117,10 +92,8 @@ void MainWindow::addExpense()
     ExpenseDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted)
     {
-        expenses.emplace_back(
-            dialog.description().toStdString(),
-            dialog.amount());
-        refreshExpenses();
+        expenses->push_back(dialog.getExpense());
+        expenseModel->setExpenses(expenses);
         refreshProfit();
     }
 }
