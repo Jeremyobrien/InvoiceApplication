@@ -43,9 +43,14 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "addInvoice",
         "",
         "addExpense",
+        "chooseFile",
+        "filter",
+        "importCsv",
+        "filePath",
+        "importJson",
+        "importData",
         "exportData",
         "exportCsv",
-        "filePath",
         "exportJson"
     };
 
@@ -54,15 +59,29 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'addExpense'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'chooseFile'
+        QtMocHelpers::SlotData<QString(const QString &)>(4, 2, QMC::AccessPrivate, QMetaType::QString, {{
+            { QMetaType::QString, 5 },
+        }}),
+        // Slot 'importCsv'
+        QtMocHelpers::SlotData<void(QString)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'importJson'
+        QtMocHelpers::SlotData<void(QString)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
+        // Slot 'importData'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'exportData'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'exportCsv'
-        QtMocHelpers::SlotData<void(const QString &)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::SlotData<void(const QString &)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
         }}),
         // Slot 'exportJson'
-        QtMocHelpers::SlotData<void(const QString &)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::SlotData<void(const QString &)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -89,9 +108,14 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->addInvoice(); break;
         case 1: _t->addExpense(); break;
-        case 2: _t->exportData(); break;
-        case 3: _t->exportCsv((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: _t->exportJson((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: { QString _r = _t->chooseFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast<QString*>(_a[0]) = std::move(_r); }  break;
+        case 3: _t->importCsv((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->importJson((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->importData(); break;
+        case 6: _t->exportData(); break;
+        case 7: _t->exportCsv((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 8: _t->exportJson((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -116,14 +140,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 9;
     }
     return _id;
 }
