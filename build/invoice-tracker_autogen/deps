@@ -734,6 +734,17 @@ invoice-tracker_autogen/timestamp: \
 	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/ExpenseDialog.h \
 	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/InvoiceDialog.cpp \
 	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/InvoiceDialog.h \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/CsvExporter.cpp \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/CsvExporter.h \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.cpp \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.h \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/JsonExporter.cpp \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/JsonExporter.h \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.cpp \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.h \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportMode.h \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.cpp \
+	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.h \
 	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/main.cpp \
 	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.cpp \
 	/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.h \

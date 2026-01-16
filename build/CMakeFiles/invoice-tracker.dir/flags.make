@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/include -I/Users/jeremyobrien/Desktop/Code/invoice-tracker/src -isystem /usr/local/lib/QtWidgets.framework/Headers -iframework /usr/local/lib -isystem /usr/local/lib/QtCore.framework/Headers -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/lib/QtGui.framework/Headers
+CXX_INCLUDES = -I/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/include -I/Users/jeremyobrien/Desktop/Code/invoice-tracker/src -I/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import -I/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export -isystem /usr/local/lib/QtWidgets.framework/Headers -iframework /usr/local/lib -isystem /usr/local/lib/QtCore.framework/Headers -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/lib/QtGui.framework/Headers
 
 CXX_FLAGS = -std=gnu++17
 

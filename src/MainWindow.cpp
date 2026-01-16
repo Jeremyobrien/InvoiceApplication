@@ -16,6 +16,12 @@
 #include <QAction>
 #include <QMessageBox>
 #include <iostream>
+#include "import/ImportMode.h"
+#include "import/ImportResult.h"
+#include "import/JsonImporter.h"
+#include "import/CsvImporter.h"
+#include "import/ImportUtils.h"
+#include "export/ExportService.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -30,23 +36,25 @@ void MainWindow::setupTabs()
     QWidget *central = new QWidget(this);
     setCentralWidget(central);
 
-    profitLabel = new QLabel("Profit: $0");
+    profitLabel = new QLabel("Profit: $0", this);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout();
-    central->setLayout(mainLayout);
+    auto *mainLayout = new QVBoxLayout(central);
 
+    // ---- Tabs ----
     tabWidget = new QTabWidget(this);
     mainLayout->addWidget(tabWidget);
     mainLayout->addWidget(profitLabel);
 
-    QHBoxLayout *buttonLayout = new QHBoxLayout();
+    // ---- Import / Export buttons ----
+    auto *buttonLayout = new QHBoxLayout();
 
-    QPushButton *importBtn = new QPushButton("Import");
-    QPushButton *exportBtn = new QPushButton("Export");
+    auto *importBtn = new QPushButton("Import", this);
+    auto *exportBtn = new QPushButton("Export", this);
 
     buttonLayout->addStretch();
     buttonLayout->addWidget(importBtn);
     buttonLayout->addWidget(exportBtn);
+
     connect(importBtn, &QPushButton::clicked,
             this, &MainWindow::importData);
     connect(exportBtn, &QPushButton::clicked,
@@ -54,8 +62,9 @@ void MainWindow::setupTabs()
 
     mainLayout->addLayout(buttonLayout);
 
-    QWidget *invoiceTab = new QWidget();
-    QVBoxLayout *invoiceLayout = new QVBoxLayout(invoiceTab);
+    // ---- Invoice tab ----
+    auto *invoiceTab = new QWidget(this);
+    auto *invoiceLayout = new QVBoxLayout(invoiceTab);
 
     invoiceModel = new InvoiceTableModel(this);
     invoiceModel->setInvoices(invoices);
@@ -65,68 +74,51 @@ void MainWindow::setupTabs()
     invoiceView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     invoiceView->setAlternatingRowColors(true);
     invoiceView->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    auto *addInvoiceBtn = new QPushButton("Add Invoice", invoiceTab);
+    connect(addInvoiceBtn, &QPushButton::clicked,
+            this, &MainWindow::addInvoice);
+
     invoiceLayout->addWidget(invoiceView);
-    QPushButton *addInvoiceBtn = new QPushButton("Add Invoice");
-    connect(addInvoiceBtn, &QPushButton::clicked, this, &MainWindow::addInvoice);
     invoiceLayout->addWidget(addInvoiceBtn);
+
     tabWidget->addTab(invoiceTab, "Invoices");
 
-    QWidget *expenseTab = new QWidget();
-    QVBoxLayout *expenseLayout = new QVBoxLayout(expenseTab);
+    // ---- Expense tab ----
+    auto *expenseTab = new QWidget(this);
+    auto *expenseLayout = new QVBoxLayout(expenseTab);
 
     expenseModel = new ExpenseTableModel(this);
     expenseModel->setExpenses(expenses);
+
     expenseView = new QTableView(expenseTab);
     expenseView->setModel(expenseModel);
     expenseView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     expenseView->setAlternatingRowColors(true);
     expenseView->setSelectionBehavior(QAbstractItemView::SelectRows);
-    QPushButton *addExpenseBtn = new QPushButton("Add Expense");
-    connect(addExpenseBtn, &QPushButton::clicked, this, &MainWindow::addExpense);
+
+    auto *addExpenseBtn = new QPushButton("Add Expense", expenseTab);
+    connect(addExpenseBtn, &QPushButton::clicked,
+            this, &MainWindow::addExpense);
 
     expenseLayout->addWidget(expenseView);
     expenseLayout->addWidget(addExpenseBtn);
+
     tabWidget->addTab(expenseTab, "Expenses");
 
-    // Export Logic
+    // ---- Menu (single entry points) ----
     QMenu *fileMenu = menuBar()->addMenu("&File");
 
-    QAction *importCsvAction = new QAction("Import CSV", this);
-    QAction *importJsonAction = new QAction("Import JSON", this);
+    QAction *importAction = new QAction("Import…", this);
+    QAction *exportAction = new QAction("Export…", this);
 
-    fileMenu->addAction(importCsvAction);
-    fileMenu->addAction(importJsonAction);
+    connect(importAction, &QAction::triggered,
+            this, &MainWindow::importData);
+    connect(exportAction, &QAction::triggered,
+            this, &MainWindow::exportData);
 
-    connect(importCsvAction, &QAction::triggered, this, &MainWindow::importData);
-    connect(importJsonAction, &QAction::triggered, this, &MainWindow::importData);
-
-    QAction *exportCsvAction = new QAction("Export CSV", this);
-    QAction *exportJsonAction = new QAction("Export JSON", this);
-
-    fileMenu->addAction(exportCsvAction);
-    fileMenu->addAction(exportJsonAction);
-
-    connect(exportCsvAction, &QAction::triggered, this, [this]()
-            {
-        QString filePath = QFileDialog::getSaveFileName(
-            this,
-            "Export CSV",
-            "",
-            "CSV Files (*.csv)"
-        );
-        if (!filePath.isEmpty())
-            exportCsv(filePath); });
-
-    connect(exportJsonAction, &QAction::triggered, this, [this]()
-            {
-        QString filePath = QFileDialog::getSaveFileName(
-            this,
-            "Export JSON",
-            "",
-            "JSON Files (*.json)"
-        );
-        if (!filePath.isEmpty())
-            exportJson(filePath); });
+    fileMenu->addAction(importAction);
+    fileMenu->addAction(exportAction);
 }
 
 void MainWindow::refreshProfit()
@@ -168,234 +160,32 @@ void MainWindow::exportData()
 {
     QString filter = "CSV Files (*.csv);;JSON Files (*.json)";
     QString filePath = QFileDialog::getSaveFileName(
-        this,
-        "Export Data",
-        "",
-        filter);
+        this, "Export Data", "", filter);
 
     if (filePath.isEmpty())
         return;
 
-    if (filePath.toLower().endsWith(".csv"))
-    {
-        exportCsv(filePath);
-    }
-    else if (filePath.toLower().endsWith(".json"))
-    {
-        exportJson(filePath);
-    }
+    ExportFormat format;
+    if (filePath.endsWith(".csv", Qt::CaseInsensitive))
+        format = ExportFormat::Csv;
+    else if (filePath.endsWith(".json", Qt::CaseInsensitive))
+        format = ExportFormat::Json;
     else
     {
         QMessageBox::warning(this, "Error", "Unsupported file format");
-    }
-}
-void MainWindow::exportCsv(const QString &filePath)
-{
-    QFile file(filePath);
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
-        return;
-
-    QTextStream out(&file);
-
-    out << "Invoices\n";
-    out << "Client, Amount, Paid\n";
-
-    for (const auto &inv : *invoices)
-    {
-        out << QString::fromStdString(inv.getClient()) << ","
-            << inv.getAmount() << ","
-            << (inv.isPaid() ? "Yes" : "No") << "\n";
-    }
-
-    out << "\n";
-
-    out << "Expenses\n";
-    out << "Description, Cost\n";
-
-    for (const auto &exp : *expenses)
-    {
-        out << QString::fromStdString(exp.getDescription()) << ","
-            << exp.getCost() << "\n";
-    }
-
-    file.close();
-
-    QMessageBox::information(this, "Export Complete", "CSV export successful");
-}
-
-void MainWindow::exportJson(const QString &filePath)
-{
-    QJsonObject root;
-
-    QJsonArray invoiceArray;
-    for (const auto &inv : *invoices)
-    {
-        QJsonObject obj;
-        obj["client"] = QString::fromStdString(inv.getClient());
-        obj["amount"] = inv.getAmount();
-        obj["paid"] = inv.isPaid();
-        invoiceArray.append(obj);
-    }
-    root["invoices"] = invoiceArray;
-
-    QJsonArray expenseArray;
-    for (const auto &exp : *expenses)
-    {
-        QJsonObject obj;
-        obj["description"] = QString::fromStdString(exp.getDescription());
-        obj["cost"] = exp.getCost();
-        expenseArray.append(obj);
-    }
-    root["expenses"] = expenseArray;
-
-    QFile file(filePath);
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        QMessageBox::warning(this, "Error", "Could not open file");
         return;
     }
 
-    QJsonDocument doc(root);
-    file.write(doc.toJson(QJsonDocument::Indented));
-    file.close();
+    auto exporter = ExportService::createExporter(format);
 
-    QMessageBox::information(this, "Export Complete", "JSON export successful");
-}
-
-QString MainWindow::chooseFile(const QString &filter)
-{
-    return QFileDialog::getOpenFileName(
-        this,
-        "Select File",
-        "",
-        filter);
-}
-
-void MainWindow::importCsv(QString filePath, ImportMode mode)
-{
-    if (filePath.isEmpty())
-        return;
-
-    QFile file(filePath);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    QString error;
+    if (!exporter->exportData(filePath, *invoices, *expenses, error))
     {
-        QMessageBox::warning(this, "Error", "Cannot open file");
+        QMessageBox::warning(this, "Export Failed", error);
         return;
     }
 
-    if (mode == ImportMode::Replace)
-    {
-        invoices->clear();
-        expenses->clear();
-    }
-
-    QTextStream in(&file);
-    QString line;
-    bool readingInvoices = false;
-    bool readingExpenses = false;
-
-    while (!in.atEnd())
-    {
-        line = in.readLine().trimmed();
-        if (line.isEmpty())
-            continue;
-
-        if (line.startsWith("Invoices"))
-        {
-            readingInvoices = true;
-            readingExpenses = false;
-            in.readLine();
-            continue;
-        }
-        if (line.startsWith("Expenses"))
-        {
-            readingExpenses = true;
-            readingInvoices = false;
-            in.readLine();
-            continue;
-        }
-
-        QStringList parts = line.split(',');
-        if (readingInvoices && parts.size() == 3)
-        {
-            Invoice inv;
-            inv.setClient(parts[0].toStdString());
-            inv.setAmount(parts[1].toDouble());
-            inv.setPaid(parts[2].trimmed().toLower() == "yes");
-            invoices->push_back(inv);
-        }
-        else if (readingExpenses && parts.size() == 2)
-        {
-            Expense exp;
-            exp.setDescription(parts[0].toStdString());
-            exp.setCost(parts[1].toDouble());
-            expenses->push_back(exp);
-        }
-    }
-
-    invoiceModel->setInvoices(invoices);
-    expenseModel->setExpenses(expenses);
-    refreshProfit();
-
-    QMessageBox::information(this, "Import Complete", "CSV import successful");
-}
-
-void MainWindow::importJson(QString filePath, ImportMode mode)
-{
-    if (filePath.isEmpty())
-        return;
-
-    QFile file(filePath);
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        QMessageBox::warning(this, "Error", "Cannot open file");
-        return;
-    }
-
-    QByteArray data = file.readAll();
-    file.close();
-
-    QJsonDocument doc = QJsonDocument::fromJson(data);
-    if (!doc.isObject())
-    {
-        QMessageBox::warning(this, "Error", "Invalid JSON format");
-        return;
-    }
-
-    if (mode == ImportMode::Replace)
-    {
-        invoices->clear();
-        expenses->clear();
-    }
-
-    QJsonObject root = doc.object();
-    QJsonArray invoiceArray = root["invoices"].toArray();
-    for (const QJsonValue &val : invoiceArray)
-    {
-        QJsonObject obj = val.toObject();
-        Invoice inv;
-
-        inv.setClient(obj["client"].toString().toStdString());
-        inv.setAmount(obj["amount"].toDouble());
-        inv.setPaid(obj["paid"].toBool());
-        invoices->push_back(inv);
-    }
-
-    QJsonArray expenseArray = root["expenses"].toArray();
-    for (const QJsonValue &val : expenseArray)
-    {
-        QJsonObject obj = val.toObject();
-        Expense exp;
-        exp.setDescription(obj["description"].toString().toStdString());
-        exp.setCost(obj["cost"].toDouble());
-        expenses->push_back(exp);
-    }
-
-    invoiceModel->setInvoices(invoices);
-    expenseModel->setExpenses(expenses);
-    refreshProfit();
-
-    QMessageBox::information(this, "Import Complete", "JSON import successful");
+    QMessageBox::information(this, "Export Complete", "Export successful");
 }
 
 void MainWindow::importData()
@@ -410,39 +200,64 @@ void MainWindow::importData()
     if (filePath.isEmpty())
         return;
 
-    ImportMode mode;
-    try
-    {
-        mode = askImportMode();
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    
+    std::optional<ImportMode> modeOpt = askImportMode();
+    if (!modeOpt.has_value())
+        return;
+
+    ImportMode mode = *modeOpt;
+    std::optional<ImportResult> result;
+
     if (filePath.endsWith(".json", Qt::CaseInsensitive))
     {
-        importJson(filePath, mode);
+        QFile file(filePath);
+        if (!file.open(QIODevice::ReadOnly))
+        {
+            QMessageBox::warning(this, "Error", "Cannot open JSON file");
+            return;
+        }
+
+        result = JsonImporter::parse(file.readAll());
     }
     else if (filePath.endsWith(".csv", Qt::CaseInsensitive))
     {
-        importCsv(filePath, mode);
+        QFile file(filePath);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            QMessageBox::warning(this, "Error", "Cannot open CSV file");
+            return;
+        }
+
+        result = CsvImporter::parse(file.readAll());
     }
     else
     {
         QMessageBox::warning(this, "Error", "Unsupported file format");
     }
+
+    if (!result.has_value())
+    {
+        QMessageBox::warning(this, "Error", "Faild to parse file");
+        return;
+    }
+
+    applyImport(*invoices, result->invoices, mode);
+    applyImport(*expenses, result->expenses, mode);
+
+    invoiceModel->setInvoices(invoices);
+    expenseModel->setExpenses(expenses);
+    refreshProfit();
+
+    QMessageBox::information(this, "Import Complete", "Data imported successfully");
 }
 
-MainWindow::ImportMode MainWindow::askImportMode()
+ImportMode MainWindow::askImportMode()
 {
     QMessageBox msgBox(this);
     msgBox.setWindowTitle("Import Data");
     msgBox.setText("How would you like to import the data?");
     msgBox.setInformativeText(
         "Replace will delete existing data.\n"
-        "Merge will add to existing data."
-    );
+        "Merge will add to existing data.");
 
     QPushButton *replaceBtn =
         msgBox.addButton("Replace", QMessageBox::DestructiveRole);

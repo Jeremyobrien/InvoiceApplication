@@ -1011,4 +1011,5 @@ CMakeFiles/invoice-tracker.dir/src/main.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h \
   /usr/local/lib/QtCore.framework/Headers/QAbstractTableModel \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.h
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportMode.h

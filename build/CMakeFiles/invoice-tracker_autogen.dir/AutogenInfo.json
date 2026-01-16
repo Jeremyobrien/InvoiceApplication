@@ -387,6 +387,36 @@
 			null
 		],
 		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/CsvExporter.h",
+			"MU",
+			"VVYQMJ4NRL/moc_CsvExporter.cpp",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.h",
+			"MU",
+			"VVYQMJ4NRL/moc_ExportService.cpp",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/JsonExporter.h",
+			"MU",
+			"VVYQMJ4NRL/moc_JsonExporter.cpp",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.h",
+			"MU",
+			"HK2UQ27XJ4/moc_CsvImporter.cpp",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.h",
+			"MU",
+			"HK2UQ27XJ4/moc_JsonImporter.cpp",
+			null
+		],
+		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.h",
 			"MU",
 			"M4YTXQ7V2H/moc_Expense.cpp",
@@ -425,6 +455,8 @@
 	"MOC_INCLUDES" : 
 	[
 		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export",
 		"/usr/local/lib/QtWidgets.framework/Headers",
 		"/usr/local/lib/QtWidgets.framework",
 		"/usr/local/lib/QtCore.framework/Headers",
@@ -483,6 +515,31 @@
 		],
 		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/InvoiceDialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/CsvExporter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/JsonExporter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.cpp",
 			"MU",
 			null
 		],

@@ -251,6 +251,126 @@ src/dialogs/InvoiceDialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/dialogs/InvoiceDialog.cpp.s
 .PHONY : src/dialogs/InvoiceDialog.cpp.s
 
+src/export/CsvExporter.o: src/export/CsvExporter.cpp.o
+.PHONY : src/export/CsvExporter.o
+
+# target to build an object file
+src/export/CsvExporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/CsvExporter.cpp.o
+.PHONY : src/export/CsvExporter.cpp.o
+
+src/export/CsvExporter.i: src/export/CsvExporter.cpp.i
+.PHONY : src/export/CsvExporter.i
+
+# target to preprocess a source file
+src/export/CsvExporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/CsvExporter.cpp.i
+.PHONY : src/export/CsvExporter.cpp.i
+
+src/export/CsvExporter.s: src/export/CsvExporter.cpp.s
+.PHONY : src/export/CsvExporter.s
+
+# target to generate assembly for a file
+src/export/CsvExporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/CsvExporter.cpp.s
+.PHONY : src/export/CsvExporter.cpp.s
+
+src/export/ExportService.o: src/export/ExportService.cpp.o
+.PHONY : src/export/ExportService.o
+
+# target to build an object file
+src/export/ExportService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/ExportService.cpp.o
+.PHONY : src/export/ExportService.cpp.o
+
+src/export/ExportService.i: src/export/ExportService.cpp.i
+.PHONY : src/export/ExportService.i
+
+# target to preprocess a source file
+src/export/ExportService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/ExportService.cpp.i
+.PHONY : src/export/ExportService.cpp.i
+
+src/export/ExportService.s: src/export/ExportService.cpp.s
+.PHONY : src/export/ExportService.s
+
+# target to generate assembly for a file
+src/export/ExportService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/ExportService.cpp.s
+.PHONY : src/export/ExportService.cpp.s
+
+src/export/JsonExporter.o: src/export/JsonExporter.cpp.o
+.PHONY : src/export/JsonExporter.o
+
+# target to build an object file
+src/export/JsonExporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/JsonExporter.cpp.o
+.PHONY : src/export/JsonExporter.cpp.o
+
+src/export/JsonExporter.i: src/export/JsonExporter.cpp.i
+.PHONY : src/export/JsonExporter.i
+
+# target to preprocess a source file
+src/export/JsonExporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/JsonExporter.cpp.i
+.PHONY : src/export/JsonExporter.cpp.i
+
+src/export/JsonExporter.s: src/export/JsonExporter.cpp.s
+.PHONY : src/export/JsonExporter.s
+
+# target to generate assembly for a file
+src/export/JsonExporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/export/JsonExporter.cpp.s
+.PHONY : src/export/JsonExporter.cpp.s
+
+src/import/CsvImporter.o: src/import/CsvImporter.cpp.o
+.PHONY : src/import/CsvImporter.o
+
+# target to build an object file
+src/import/CsvImporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/import/CsvImporter.cpp.o
+.PHONY : src/import/CsvImporter.cpp.o
+
+src/import/CsvImporter.i: src/import/CsvImporter.cpp.i
+.PHONY : src/import/CsvImporter.i
+
+# target to preprocess a source file
+src/import/CsvImporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/import/CsvImporter.cpp.i
+.PHONY : src/import/CsvImporter.cpp.i
+
+src/import/CsvImporter.s: src/import/CsvImporter.cpp.s
+.PHONY : src/import/CsvImporter.s
+
+# target to generate assembly for a file
+src/import/CsvImporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/import/CsvImporter.cpp.s
+.PHONY : src/import/CsvImporter.cpp.s
+
+src/import/JsonImporter.o: src/import/JsonImporter.cpp.o
+.PHONY : src/import/JsonImporter.o
+
+# target to build an object file
+src/import/JsonImporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/import/JsonImporter.cpp.o
+.PHONY : src/import/JsonImporter.cpp.o
+
+src/import/JsonImporter.i: src/import/JsonImporter.cpp.i
+.PHONY : src/import/JsonImporter.i
+
+# target to preprocess a source file
+src/import/JsonImporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/import/JsonImporter.cpp.i
+.PHONY : src/import/JsonImporter.cpp.i
+
+src/import/JsonImporter.s: src/import/JsonImporter.cpp.s
+.PHONY : src/import/JsonImporter.s
+
+# target to generate assembly for a file
+src/import/JsonImporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/import/JsonImporter.cpp.s
+.PHONY : src/import/JsonImporter.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -394,6 +514,21 @@ help:
 	@echo "... src/dialogs/InvoiceDialog.o"
 	@echo "... src/dialogs/InvoiceDialog.i"
 	@echo "... src/dialogs/InvoiceDialog.s"
+	@echo "... src/export/CsvExporter.o"
+	@echo "... src/export/CsvExporter.i"
+	@echo "... src/export/CsvExporter.s"
+	@echo "... src/export/ExportService.o"
+	@echo "... src/export/ExportService.i"
+	@echo "... src/export/ExportService.s"
+	@echo "... src/export/JsonExporter.o"
+	@echo "... src/export/JsonExporter.i"
+	@echo "... src/export/JsonExporter.s"
+	@echo "... src/import/CsvImporter.o"
+	@echo "... src/import/CsvImporter.i"
+	@echo "... src/import/CsvImporter.s"
+	@echo "... src/import/JsonImporter.o"
+	@echo "... src/import/JsonImporter.i"
+	@echo "... src/import/JsonImporter.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

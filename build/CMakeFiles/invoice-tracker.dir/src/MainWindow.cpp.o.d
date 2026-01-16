@@ -999,6 +999,7 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h \
   /usr/local/lib/QtCore.framework/Headers/QAbstractTableModel \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportMode.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/InvoiceDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialog \
   /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -1083,4 +1084,12 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
   /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportResult.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.h \
+  /usr/local/lib/QtCore.framework/Headers/QByteArray \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.h \
+  /usr/local/lib/QtCore.framework/Headers/QString \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportUtils.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/Exporter.h
