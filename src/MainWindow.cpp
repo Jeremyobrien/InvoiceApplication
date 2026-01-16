@@ -5,6 +5,17 @@
 #include <QVBoxLayout>
 #include <QTableView>
 #include <QHeaderView>
+#include <QFileDialog>
+#include <QFile>
+#include <QTextStream>
+#include <QTextStream>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QMenuBar>
+#include <QMenu>
+#include <QAction>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,6 +36,11 @@ void MainWindow::setupTabs()
     tabWidget = new QTabWidget(this);
     mainLayout->addWidget(tabWidget);
     mainLayout->addWidget(profitLabel);
+    QPushButton *exportBtn = new QPushButton("Export Data");
+    connect(exportBtn, &QPushButton::clicked,
+            this, &MainWindow::exportData);
+   
+    mainLayout->addWidget(exportBtn);
 
     QWidget *invoiceTab = new QWidget();
     QVBoxLayout *invoiceLayout = new QVBoxLayout(invoiceTab);
@@ -61,6 +77,36 @@ void MainWindow::setupTabs()
     expenseLayout->addWidget(expenseView);
     expenseLayout->addWidget(addExpenseBtn);
     tabWidget->addTab(expenseTab, "Expenses");
+
+    // Export Logic
+    QMenu *fileMenu = menuBar()->addMenu("&File");
+
+    QAction *exportCsvAction = new QAction("Export CSV", this);
+    QAction *exportJsonAction = new QAction("Export JSON", this);
+
+    fileMenu->addAction(exportCsvAction);
+    fileMenu->addAction(exportJsonAction);
+    connect(exportCsvAction, &QAction::triggered, this, [this]() {
+        QString filePath = QFileDialog::getSaveFileName(
+            this,
+            "Export CSV",
+            "",
+            "CSV Files (*.csv)"
+        );
+        if (!filePath.isEmpty())
+            exportCsv(filePath);
+    });
+
+    connect(exportJsonAction, &QAction::triggered, this, [this]() {
+        QString filePath = QFileDialog::getSaveFileName(
+            this,
+            "Export JSON",
+            "",
+            "JSON Files (*.json)"
+        );
+        if (!filePath.isEmpty())
+            exportJson(filePath);
+    });
 }
 
 void MainWindow::refreshProfit()
@@ -96,4 +142,103 @@ void MainWindow::addExpense()
         expenseModel->setExpenses(expenses);
         refreshProfit();
     }
+}
+
+void MainWindow::exportData()
+{
+    QString filter = "CSV Files (*.csv);;JSON Files (*.json)";
+    QString filePath = QFileDialog::getSaveFileName(
+        this,
+        "Export Data",
+        "",
+        filter
+    );
+
+    if (filePath.isEmpty())
+        return;
+    
+    if (filePath.toLower().endsWith(".csv"))
+    {
+        exportCsv(filePath);
+    }
+    else if (filePath.toLower().endsWith(".json"))
+    {
+        exportJson(filePath);
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Unsupported file format");
+    }
+}
+void MainWindow::exportCsv(const QString& filePath)
+{
+    QFile file(filePath);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        return;
+
+    QTextStream out(&file);
+
+    out << "Invoices\n";
+    out << "Client, Amount, Paid\n";
+
+    for (const auto &inv : *invoices)
+    {
+        out << QString::fromStdString(inv.getClient()) << ","
+            << inv.getAmount() << ","
+            << (inv.isPaid() ? "Yes" : "No") << "\n";
+    }
+
+    out << "\n";
+
+    out << "Expenses\n";
+    out << "Description, Cost\n";
+
+    for (const auto &exp : *expenses)
+    {
+        out << QString::fromStdString(exp.getDescription()) << ","
+            << exp.getCost() << "\n";
+    }
+
+    file.close();
+
+    QMessageBox::information(this, "Export Complete", "CSV export successful");
+}
+
+void MainWindow::exportJson(const QString& filePath)
+{
+    QJsonObject root;
+
+    QJsonArray invoiceArray;
+    for (const auto &inv : *invoices)
+    {
+        QJsonObject obj;
+        obj["client"] = QString::fromStdString(inv.getClient());
+        obj["amount"] = inv.getAmount();
+        obj["paid"] = inv.isPaid();
+        invoiceArray.append(obj);
+    }
+    root["invoices"] = invoiceArray;
+
+    QJsonArray expenseArray;
+    for (const auto &exp : *expenses)
+    {
+        QJsonObject obj;
+        obj["description"] = QString::fromStdString(exp.getDescription());
+        obj["cost"] = exp.getCost();
+        expenseArray.append(obj);
+    }
+    root["expenses"] = expenseArray;
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        QMessageBox::warning(this, "Error", "Could not open file");
+        return;
+    }
+
+    QJsonDocument doc(root);
+    file.write(doc.toJson(QJsonDocument::Indented));
+    file.close();
+
+    QMessageBox::information(this, "Export Complete", "JSON export successful");
 }

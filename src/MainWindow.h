@@ -17,6 +17,9 @@ class MainWindow : public QMainWindow
 private slots:
     void addInvoice();
     void addExpense();
+    void exportData();
+    void exportCsv(const QString& filePath);
+    void exportJson(const QString& filePath);
 
 private:
     std::shared_ptr<std::vector<Invoice>> invoices;
