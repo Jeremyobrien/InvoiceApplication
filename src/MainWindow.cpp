@@ -15,6 +15,7 @@
 #include <QMenu>
 #include <QAction>
 #include <QMessageBox>
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -270,7 +271,7 @@ QString MainWindow::chooseFile(const QString &filter)
         filter);
 }
 
-void MainWindow::importCsv(QString filePath)
+void MainWindow::importCsv(QString filePath, ImportMode mode)
 {
     if (filePath.isEmpty())
         return;
@@ -282,8 +283,11 @@ void MainWindow::importCsv(QString filePath)
         return;
     }
 
-    invoices->clear();
-    expenses->clear();
+    if (mode == ImportMode::Replace)
+    {
+        invoices->clear();
+        expenses->clear();
+    }
 
     QTextStream in(&file);
     QString line;
@@ -336,7 +340,7 @@ void MainWindow::importCsv(QString filePath)
     QMessageBox::information(this, "Import Complete", "CSV import successful");
 }
 
-void MainWindow::importJson(QString filePath)
+void MainWindow::importJson(QString filePath, ImportMode mode)
 {
     if (filePath.isEmpty())
         return;
@@ -358,10 +362,13 @@ void MainWindow::importJson(QString filePath)
         return;
     }
 
-    QJsonObject root = doc.object();
-    invoices->clear();
-    expenses->clear();
+    if (mode == ImportMode::Replace)
+    {
+        invoices->clear();
+        expenses->clear();
+    }
 
+    QJsonObject root = doc.object();
     QJsonArray invoiceArray = root["invoices"].toArray();
     for (const QJsonValue &val : invoiceArray)
     {
@@ -393,7 +400,7 @@ void MainWindow::importJson(QString filePath)
 
 void MainWindow::importData()
 {
-    QString filter = "JSON File (*.json);;CSV Files (*.csv)";
+    QString filter = "JSON Files (*.json);;CSV Files (*.csv)";
     QString filePath = QFileDialog::getOpenFileName(
         this,
         "Import Data",
@@ -403,16 +410,53 @@ void MainWindow::importData()
     if (filePath.isEmpty())
         return;
 
+    ImportMode mode;
+    try
+    {
+        mode = askImportMode();
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
     if (filePath.endsWith(".json", Qt::CaseInsensitive))
     {
-        importJson(filePath);
+        importJson(filePath, mode);
     }
     else if (filePath.endsWith(".csv", Qt::CaseInsensitive))
     {
-        importCsv(filePath);
+        importCsv(filePath, mode);
     }
     else
     {
         QMessageBox::warning(this, "Error", "Unsupported file format");
     }
+}
+
+MainWindow::ImportMode MainWindow::askImportMode()
+{
+    QMessageBox msgBox(this);
+    msgBox.setWindowTitle("Import Data");
+    msgBox.setText("How would you like to import the data?");
+    msgBox.setInformativeText(
+        "Replace will delete existing data.\n"
+        "Merge will add to existing data."
+    );
+
+    QPushButton *replaceBtn =
+        msgBox.addButton("Replace", QMessageBox::DestructiveRole);
+    QPushButton *mergeBtn =
+        msgBox.addButton("Merge", QMessageBox::AcceptRole);
+    msgBox.addButton(QMessageBox::Cancel);
+
+    msgBox.exec();
+
+    if (msgBox.clickedButton() == replaceBtn)
+        return ImportMode::Replace;
+
+    if (msgBox.clickedButton() == mergeBtn)
+        return ImportMode::Merge;
+
+    throw std::runtime_error("Import canceled");
 }
