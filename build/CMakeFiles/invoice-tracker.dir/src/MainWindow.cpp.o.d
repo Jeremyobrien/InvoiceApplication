@@ -1082,4 +1082,5 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/QAction \
   /usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
   /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h
+  /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream
