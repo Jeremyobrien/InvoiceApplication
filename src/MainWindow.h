@@ -2,6 +2,7 @@
 
 #include <QMainWindow>
 #include <QTableView>
+
 #include <QLabel>
 #include <memory>
 #include <QPushButton>
@@ -17,6 +18,10 @@ class MainWindow : public QMainWindow
 private slots:
     void addInvoice();
     void addExpense();
+    QString chooseFile(const QString& filter);
+    void importCsv(QString filePath);
+    void importJson(QString filePath);
+    void importData();
     void exportData();
     void exportCsv(const QString& filePath);
     void exportJson(const QString& filePath);

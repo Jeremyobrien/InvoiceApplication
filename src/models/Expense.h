@@ -9,9 +9,14 @@ private:
     double cost;
 
 public:
+    Expense() = default;
+
     Expense(std::string description, double cost)
         : description(std::move(description)), cost(cost) {}
 
     double getCost() const;
     std::string getDescription() const;
+
+    void setCost(double cost);
+    void setDescription(const std::string& description);
 };

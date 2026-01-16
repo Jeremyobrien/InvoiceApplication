@@ -8,7 +8,6 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QTextStream>
-#include <QTextStream>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
@@ -18,7 +17,9 @@
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+    : QMainWindow(parent),
+      invoices(std::make_shared<std::vector<Invoice>>()),
+      expenses(std::make_shared<std::vector<Expense>>())
 {
     setupTabs();
 }
@@ -36,17 +37,26 @@ void MainWindow::setupTabs()
     tabWidget = new QTabWidget(this);
     mainLayout->addWidget(tabWidget);
     mainLayout->addWidget(profitLabel);
-    QPushButton *exportBtn = new QPushButton("Export Data");
+
+    QHBoxLayout *buttonLayout = new QHBoxLayout();
+
+    QPushButton *importBtn = new QPushButton("Import");
+    QPushButton *exportBtn = new QPushButton("Export");
+
+    buttonLayout->addStretch();
+    buttonLayout->addWidget(importBtn);
+    buttonLayout->addWidget(exportBtn);
+    connect(importBtn, &QPushButton::clicked,
+            this, &MainWindow::importData);
     connect(exportBtn, &QPushButton::clicked,
             this, &MainWindow::exportData);
-   
-    mainLayout->addWidget(exportBtn);
+
+    mainLayout->addLayout(buttonLayout);
 
     QWidget *invoiceTab = new QWidget();
     QVBoxLayout *invoiceLayout = new QVBoxLayout(invoiceTab);
 
     invoiceModel = new InvoiceTableModel(this);
-    invoices = std::make_shared<std::vector<Invoice>>();
     invoiceModel->setInvoices(invoices);
 
     invoiceView = new QTableView(invoiceTab);
@@ -64,7 +74,6 @@ void MainWindow::setupTabs()
     QVBoxLayout *expenseLayout = new QVBoxLayout(expenseTab);
 
     expenseModel = new ExpenseTableModel(this);
-    expenses = std::make_shared<std::vector<Expense>>();
     expenseModel->setExpenses(expenses);
     expenseView = new QTableView(expenseTab);
     expenseView->setModel(expenseModel);
@@ -81,12 +90,23 @@ void MainWindow::setupTabs()
     // Export Logic
     QMenu *fileMenu = menuBar()->addMenu("&File");
 
+    QAction *importCsvAction = new QAction("Import CSV", this);
+    QAction *importJsonAction = new QAction("Import JSON", this);
+
+    fileMenu->addAction(importCsvAction);
+    fileMenu->addAction(importJsonAction);
+
+    connect(importCsvAction, &QAction::triggered, this, &MainWindow::importData);
+    connect(importJsonAction, &QAction::triggered, this, &MainWindow::importData);
+
     QAction *exportCsvAction = new QAction("Export CSV", this);
     QAction *exportJsonAction = new QAction("Export JSON", this);
 
     fileMenu->addAction(exportCsvAction);
     fileMenu->addAction(exportJsonAction);
-    connect(exportCsvAction, &QAction::triggered, this, [this]() {
+
+    connect(exportCsvAction, &QAction::triggered, this, [this]()
+            {
         QString filePath = QFileDialog::getSaveFileName(
             this,
             "Export CSV",
@@ -94,10 +114,10 @@ void MainWindow::setupTabs()
             "CSV Files (*.csv)"
         );
         if (!filePath.isEmpty())
-            exportCsv(filePath);
-    });
+            exportCsv(filePath); });
 
-    connect(exportJsonAction, &QAction::triggered, this, [this]() {
+    connect(exportJsonAction, &QAction::triggered, this, [this]()
+            {
         QString filePath = QFileDialog::getSaveFileName(
             this,
             "Export JSON",
@@ -105,8 +125,7 @@ void MainWindow::setupTabs()
             "JSON Files (*.json)"
         );
         if (!filePath.isEmpty())
-            exportJson(filePath);
-    });
+            exportJson(filePath); });
 }
 
 void MainWindow::refreshProfit()
@@ -151,12 +170,11 @@ void MainWindow::exportData()
         this,
         "Export Data",
         "",
-        filter
-    );
+        filter);
 
     if (filePath.isEmpty())
         return;
-    
+
     if (filePath.toLower().endsWith(".csv"))
     {
         exportCsv(filePath);
@@ -170,7 +188,7 @@ void MainWindow::exportData()
         QMessageBox::warning(this, "Error", "Unsupported file format");
     }
 }
-void MainWindow::exportCsv(const QString& filePath)
+void MainWindow::exportCsv(const QString &filePath)
 {
     QFile file(filePath);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
@@ -204,7 +222,7 @@ void MainWindow::exportCsv(const QString& filePath)
     QMessageBox::information(this, "Export Complete", "CSV export successful");
 }
 
-void MainWindow::exportJson(const QString& filePath)
+void MainWindow::exportJson(const QString &filePath)
 {
     QJsonObject root;
 
@@ -241,4 +259,160 @@ void MainWindow::exportJson(const QString& filePath)
     file.close();
 
     QMessageBox::information(this, "Export Complete", "JSON export successful");
+}
+
+QString MainWindow::chooseFile(const QString &filter)
+{
+    return QFileDialog::getOpenFileName(
+        this,
+        "Select File",
+        "",
+        filter);
+}
+
+void MainWindow::importCsv(QString filePath)
+{
+    if (filePath.isEmpty())
+        return;
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        QMessageBox::warning(this, "Error", "Cannot open file");
+        return;
+    }
+
+    invoices->clear();
+    expenses->clear();
+
+    QTextStream in(&file);
+    QString line;
+    bool readingInvoices = false;
+    bool readingExpenses = false;
+
+    while (!in.atEnd())
+    {
+        line = in.readLine().trimmed();
+        if (line.isEmpty())
+            continue;
+
+        if (line.startsWith("Invoices"))
+        {
+            readingInvoices = true;
+            readingExpenses = false;
+            in.readLine();
+            continue;
+        }
+        if (line.startsWith("Expenses"))
+        {
+            readingExpenses = true;
+            readingInvoices = false;
+            in.readLine();
+            continue;
+        }
+
+        QStringList parts = line.split(',');
+        if (readingInvoices && parts.size() == 3)
+        {
+            Invoice inv;
+            inv.setClient(parts[0].toStdString());
+            inv.setAmount(parts[1].toDouble());
+            inv.setPaid(parts[2].trimmed().toLower() == "yes");
+            invoices->push_back(inv);
+        }
+        else if (readingExpenses && parts.size() == 2)
+        {
+            Expense exp;
+            exp.setDescription(parts[0].toStdString());
+            exp.setCost(parts[1].toDouble());
+            expenses->push_back(exp);
+        }
+    }
+
+    invoiceModel->setInvoices(invoices);
+    expenseModel->setExpenses(expenses);
+    refreshProfit();
+
+    QMessageBox::information(this, "Import Complete", "CSV import successful");
+}
+
+void MainWindow::importJson(QString filePath)
+{
+    if (filePath.isEmpty())
+        return;
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        QMessageBox::warning(this, "Error", "Cannot open file");
+        return;
+    }
+
+    QByteArray data = file.readAll();
+    file.close();
+
+    QJsonDocument doc = QJsonDocument::fromJson(data);
+    if (!doc.isObject())
+    {
+        QMessageBox::warning(this, "Error", "Invalid JSON format");
+        return;
+    }
+
+    QJsonObject root = doc.object();
+    invoices->clear();
+    expenses->clear();
+
+    QJsonArray invoiceArray = root["invoices"].toArray();
+    for (const QJsonValue &val : invoiceArray)
+    {
+        QJsonObject obj = val.toObject();
+        Invoice inv;
+
+        inv.setClient(obj["client"].toString().toStdString());
+        inv.setAmount(obj["amount"].toDouble());
+        inv.setPaid(obj["paid"].toBool());
+        invoices->push_back(inv);
+    }
+
+    QJsonArray expenseArray = root["expenses"].toArray();
+    for (const QJsonValue &val : expenseArray)
+    {
+        QJsonObject obj = val.toObject();
+        Expense exp;
+        exp.setDescription(obj["description"].toString().toStdString());
+        exp.setCost(obj["cost"].toDouble());
+        expenses->push_back(exp);
+    }
+
+    invoiceModel->setInvoices(invoices);
+    expenseModel->setExpenses(expenses);
+    refreshProfit();
+
+    QMessageBox::information(this, "Import Complete", "JSON import successful");
+}
+
+void MainWindow::importData()
+{
+    QString filter = "JSON File (*.json);;CSV Files (*.csv)";
+    QString filePath = QFileDialog::getOpenFileName(
+        this,
+        "Import Data",
+        "",
+        filter);
+
+    if (filePath.isEmpty())
+        return;
+
+    if (filePath.endsWith(".json", Qt::CaseInsensitive))
+    {
+        importJson(filePath);
+    }
+    else if (filePath.endsWith(".csv", Qt::CaseInsensitive))
+    {
+        importCsv(filePath);
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Unsupported file format");
+    }
 }
