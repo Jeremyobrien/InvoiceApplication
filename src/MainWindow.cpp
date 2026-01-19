@@ -22,6 +22,7 @@
 #include "import/CsvImporter.h"
 #include "import/ImportUtils.h"
 #include "export/ExportService.h"
+#include "ui/EditUtils.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -74,13 +75,24 @@ void MainWindow::setupTabs()
     invoiceView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     invoiceView->setAlternatingRowColors(true);
     invoiceView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    invoiceView->setSelectionMode(QAbstractItemView::SingleSelection);
 
     auto *addInvoiceBtn = new QPushButton("Add Invoice", invoiceTab);
     connect(addInvoiceBtn, &QPushButton::clicked,
             this, &MainWindow::addInvoice);
 
+    QPushButton *deleteInvoiceBtn = new QPushButton("Delete Invoice");
+    connect(deleteInvoiceBtn, &QPushButton::clicked,
+            this, &MainWindow::deleteInvoice);
+
+    auto *editInvoiceBtn = new QPushButton("Edit Invoice");
+    connect(editInvoiceBtn, &QPushButton::clicked,
+            this, &MainWindow::editInvoice);
+
     invoiceLayout->addWidget(invoiceView);
     invoiceLayout->addWidget(addInvoiceBtn);
+    invoiceLayout->addWidget(deleteInvoiceBtn);
+    invoiceLayout->addWidget(editInvoiceBtn);
 
     tabWidget->addTab(invoiceTab, "Invoices");
 
@@ -96,13 +108,22 @@ void MainWindow::setupTabs()
     expenseView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     expenseView->setAlternatingRowColors(true);
     expenseView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    expenseView->setSelectionMode(QAbstractItemView::SingleSelection);
 
     auto *addExpenseBtn = new QPushButton("Add Expense", expenseTab);
     connect(addExpenseBtn, &QPushButton::clicked,
             this, &MainWindow::addExpense);
+    QPushButton *deleteExpenseBtn = new QPushButton("Delete Expense");
+    connect(deleteExpenseBtn, &QPushButton::clicked,
+            this, &MainWindow::deleteExpense);
+    auto *editExpenseBtn = new QPushButton("Edit Expense");
+    connect(editExpenseBtn, &QPushButton::clicked,
+            this, &MainWindow::editExpense);
 
     expenseLayout->addWidget(expenseView);
     expenseLayout->addWidget(addExpenseBtn);
+    expenseLayout->addWidget(deleteExpenseBtn);
+    expenseLayout->addWidget(editExpenseBtn);
 
     tabWidget->addTab(expenseTab, "Expenses");
 
@@ -274,4 +295,74 @@ ImportMode MainWindow::askImportMode()
         return ImportMode::Merge;
 
     throw std::runtime_error("Import canceled");
+}
+
+void MainWindow::deleteInvoice()
+{
+    QModelIndex index = invoiceView->currentIndex();
+    if (!index.isValid())
+        return;
+
+    int row = index.row();
+
+    auto reply = QMessageBox::question(
+        this,
+        "Delete Invoice",
+        "Are you sure you want to delete this invoice?",
+        QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes)
+    {
+        invoiceModel->removeRow(row);
+        refreshProfit();
+    }
+}
+
+void MainWindow::deleteExpense()
+{
+    QModelIndex index = expenseView->currentIndex();
+    if (!index.isValid())
+        return;
+
+    int row = index.row();
+
+    auto reply = QMessageBox::question(
+        this,
+        "Delete Expense",
+        "Are you sure you want to delete this expense?",
+        QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes)
+    {
+        expenseModel->removeRow(row);
+        refreshProfit();
+    }
+}
+
+void MainWindow::editInvoice()
+{
+    editSelectedRow<Invoice>(
+        this,
+        invoiceView,
+        invoiceModel,
+        [](QWidget *parent, const Invoice &inv)
+        {
+            return InvoiceDialog(parent, inv);
+        });
+
+    refreshProfit();
+}
+
+void MainWindow::editExpense()
+{
+    editSelectedRow<Expense>(
+        this,
+        expenseView,
+        expenseModel,
+        [](QWidget *parent, const Expense &exp)
+        {
+            return ExpenseDialog(parent, exp);
+        });
+
+    refreshProfit();
 }

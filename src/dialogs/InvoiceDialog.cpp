@@ -30,6 +30,37 @@ InvoiceDialog::InvoiceDialog(QWidget *parent)
     layout->addWidget(buttons);
 }
 
+InvoiceDialog::InvoiceDialog(QWidget* parent, const Invoice& invoice)
+    : QDialog(parent)
+{
+    setWindowTitle("Edit Invoice");
+
+    clientInput = new QLineEdit(this);
+    amountInput = new QLineEdit(this);
+    paidCheck = new QCheckBox("Paid", this);
+
+    clientInput->setText(QString::fromStdString(invoice.getClient()));
+    amountInput->setText(QString::number(invoice.getAmount()));
+    paidCheck->setChecked(invoice.isPaid());
+
+    auto *costValidator =
+        new QDoubleValidator(0.0, 1'000'000'000.0, 2, this);
+    amountInput->setValidator(costValidator);
+
+    QFormLayout *layout = new QFormLayout(this);
+    layout->addRow("Client Name:", clientInput);
+    layout->addRow("Amount ($):", amountInput);
+    layout->addRow("", paidCheck);
+
+    QDialogButtonBox *buttons =
+        new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+
+    connect(buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
+    layout->addWidget(buttons);
+}
+
 Invoice InvoiceDialog::getInvoice() const
 {
     return Invoice(
@@ -51,4 +82,9 @@ double InvoiceDialog::amount() const
 bool InvoiceDialog::isPaid() const
 {
     return paidCheck->isChecked();
+}
+
+Invoice InvoiceDialog::getResult() const
+{
+    return getInvoice();
 }

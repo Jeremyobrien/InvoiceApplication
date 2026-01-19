@@ -78,3 +78,27 @@ QVariant InvoiceTableModel::headerData(int section,
         return QVariant();
     }
 }
+
+bool InvoiceTableModel::removeRows(int row, int count, const QModelIndex &)
+{
+    if (!invoices || row < 0 || row + count > invoices->size())
+        return false;
+    
+    beginRemoveRows(QModelIndex(), row, row + count -1);
+    invoices->erase(invoices->begin() + row,
+                    invoices->begin() + row + count);
+    endRemoveRows();
+
+    return true;
+}
+
+std::vector<Invoice>* InvoiceTableModel::items()
+{
+    return invoices.get();
+}
+
+void InvoiceTableModel::updateRow(int row, const Invoice& updated)
+{
+    (*invoices)[row] = updated;
+    emit dataChanged(index(row, 0), index(row, columnCount()-1));
+}

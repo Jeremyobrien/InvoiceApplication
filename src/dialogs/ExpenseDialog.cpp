@@ -28,6 +28,34 @@ ExpenseDialog::ExpenseDialog(QWidget *parent)
     layout->addWidget(buttons);
 }
 
+ExpenseDialog::ExpenseDialog(QWidget* parent, const Expense& expense)
+    : QDialog(parent)
+{
+    setWindowTitle("Edit Expense");
+
+    expenseInput = new QLineEdit(this);
+    amountInput = new QLineEdit(this);
+
+    expenseInput->setText(QString::fromStdString(expense.getDescription()));
+    amountInput->setText(QString::number(expense.getCost()));
+
+    auto *costValidator =
+        new QDoubleValidator(0.0, 1'000'000'000.0, 2, this);
+    amountInput->setValidator(costValidator);
+
+    QFormLayout *layout = new QFormLayout(this);
+    layout->addRow("Expense Description:", expenseInput);
+    layout->addRow("Amount ($):", amountInput);
+
+    QDialogButtonBox *buttons =
+        new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+
+    connect(buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
+    layout->addWidget(buttons);
+}
+
 QString ExpenseDialog::description() const
 {
     return expenseInput->text();
@@ -44,4 +72,9 @@ Expense ExpenseDialog::getExpense() const
     return Expense(
         expenseInput->text().toStdString(),
         amountInput->text().toDouble());
+}
+
+Expense ExpenseDialog::getResult() const
+{
+    return getExpense();
 }

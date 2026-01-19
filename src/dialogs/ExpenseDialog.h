@@ -14,6 +14,8 @@ private:
 
 public:
     ExpenseDialog(QWidget *parent = nullptr);
+    ExpenseDialog(QWidget* parent, const Expense& expense);
+    Expense getResult() const;
     Expense getExpense() const;
     QString description() const;
     double amount() const;

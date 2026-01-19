@@ -22,6 +22,10 @@ public:
 private slots:
     void addInvoice();
     void addExpense();
+    void deleteInvoice();
+    void deleteExpense();
+    void editInvoice();
+    void editExpense();
     void importData();
     void exportData();
 
@@ -38,5 +42,5 @@ private:
 
     void setupTabs();
     void refreshProfit();
-    ImportMode askImportMode(); 
+    ImportMode askImportMode();
 };

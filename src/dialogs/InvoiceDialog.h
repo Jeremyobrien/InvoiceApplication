@@ -15,7 +15,9 @@ private:
     QCheckBox *paidCheck;
 
 public:
-    InvoiceDialog(QWidget *parent = nullptr);
+    explicit InvoiceDialog(QWidget *parent = nullptr);
+    InvoiceDialog(QWidget* parent, const Invoice& invoice);
+    Invoice getResult() const;
     Invoice getInvoice() const;
     QString client() const;
     double amount() const;

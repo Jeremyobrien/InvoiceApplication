@@ -74,3 +74,14 @@ QVariant ExpenseTableModel::headerData(int section, Qt::Orientation orientation,
         return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);
     }
 }
+
+std::vector<Expense>* ExpenseTableModel::items()
+{
+    return expenses.get();
+}
+
+void ExpenseTableModel::updateRow(int row, const Expense& updated)
+{
+    (*expenses)[row] = updated;
+    emit dataChanged(index(row, 0), index(row, columnCount() -1));
+}
