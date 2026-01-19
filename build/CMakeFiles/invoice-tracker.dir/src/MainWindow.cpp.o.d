@@ -1092,4 +1092,5 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtCore.framework/Headers/QString \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportUtils.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/Exporter.h
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/Exporter.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/EditUtils.h
