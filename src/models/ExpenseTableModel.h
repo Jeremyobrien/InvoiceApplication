@@ -18,7 +18,8 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     std::vector<Expense>* items();
     void updateRow(int row, const Expense& updated);
-
+    void refresh();
+    
 private:
     std::shared_ptr<std::vector<Expense>> expenses;
 };

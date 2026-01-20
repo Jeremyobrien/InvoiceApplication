@@ -1093,4 +1093,6 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportUtils.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/Exporter.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/EditUtils.h
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/EditUtils.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/CreateUtils.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/DeleteUtils.h

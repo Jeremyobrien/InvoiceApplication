@@ -102,3 +102,9 @@ void InvoiceTableModel::updateRow(int row, const Invoice& updated)
     (*invoices)[row] = updated;
     emit dataChanged(index(row, 0), index(row, columnCount()-1));
 }
+
+void InvoiceTableModel::refresh()
+{
+    beginResetModel();
+    endResetModel();
+}

@@ -23,6 +23,8 @@
 #include "import/ImportUtils.h"
 #include "export/ExportService.h"
 #include "ui/EditUtils.h"
+#include "ui/CreateUtils.h"
+#include "ui/DeleteUtils.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -157,24 +159,28 @@ void MainWindow::refreshProfit()
 
 void MainWindow::addInvoice()
 {
-    InvoiceDialog dialog(this);
-    if (dialog.exec() == QDialog::Accepted)
-    {
-        invoices->push_back(dialog.getInvoice());
-        invoiceModel->setInvoices(invoices);
-        refreshProfit();
-    }
+    createItem<Invoice>(
+        this,
+        invoiceModel,
+        [](QWidget* parent) {
+            return InvoiceDialog(parent);
+        }
+    );
+
+    refreshProfit();
 }
 
 void MainWindow::addExpense()
 {
-    ExpenseDialog dialog(this);
-    if (dialog.exec() == QDialog::Accepted)
-    {
-        expenses->push_back(dialog.getExpense());
-        expenseModel->setExpenses(expenses);
-        refreshProfit();
-    }
+    createItem<Expense>(
+        this,
+        expenseModel,
+        [](QWidget* parent) {
+            return ExpenseDialog(parent);
+        }
+    );
+
+    refreshProfit();
 }
 
 void MainWindow::exportData()
@@ -299,44 +305,28 @@ ImportMode MainWindow::askImportMode()
 
 void MainWindow::deleteInvoice()
 {
-    QModelIndex index = invoiceView->currentIndex();
-    if (!index.isValid())
-        return;
-
-    int row = index.row();
-
-    auto reply = QMessageBox::question(
+    deleteSelected(
         this,
+        invoiceView,
+        invoiceModel,
         "Delete Invoice",
-        "Are you sure you want to delete this invoice?",
-        QMessageBox::Yes | QMessageBox::No);
+        "Are you sure you want to delete this invoice?"
+    );
 
-    if (reply == QMessageBox::Yes)
-    {
-        invoiceModel->removeRow(row);
-        refreshProfit();
-    }
+    refreshProfit();
 }
 
 void MainWindow::deleteExpense()
 {
-    QModelIndex index = expenseView->currentIndex();
-    if (!index.isValid())
-        return;
-
-    int row = index.row();
-
-    auto reply = QMessageBox::question(
+    deleteSelected(
         this,
+        expenseView,
+        expenseModel,
         "Delete Expense",
-        "Are you sure you want to delete this expense?",
-        QMessageBox::Yes | QMessageBox::No);
+        "Are you sure you want to delete this expense?"
+    );
 
-    if (reply == QMessageBox::Yes)
-    {
-        expenseModel->removeRow(row);
-        refreshProfit();
-    }
+    refreshProfit();
 }
 
 void MainWindow::editInvoice()

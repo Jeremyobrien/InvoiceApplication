@@ -85,3 +85,9 @@ void ExpenseTableModel::updateRow(int row, const Expense& updated)
     (*expenses)[row] = updated;
     emit dataChanged(index(row, 0), index(row, columnCount() -1));
 }
+
+void ExpenseTableModel::refresh()
+{
+    beginResetModel();
+    endResetModel();
+}
