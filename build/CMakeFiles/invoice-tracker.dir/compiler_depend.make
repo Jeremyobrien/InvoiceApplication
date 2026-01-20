@@ -756,6 +756,8 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.cpp \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QAbstractTableModel \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -928,6 +930,7 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
+  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QStyledItemDelegate \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QTableView \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
@@ -946,6 +949,7 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
+  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyleditemdelegate.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qtableview.h \
@@ -1355,8 +1359,6 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 
 /usr/local/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake:
 
-/usr/local/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
-
 /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
 
 /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
@@ -1519,6 +1521,8 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h:
 
+/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyleditemdelegate.h:
+
 /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qslider.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h:
@@ -1536,6 +1540,8 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h:
+
+/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QStyledItemDelegate:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QPushButton:
 
@@ -1721,12 +1727,6 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qfloat16.h:
 
-/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qmargins.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h:
-
-/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qendian.h:
-
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h:
@@ -1786,6 +1786,12 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivially_copyable.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h:
+
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h:
+
+/usr/local/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
+
+/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/memory_order.h:
 
@@ -3219,12 +3225,6 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/mutex.h:
 
-/usr/local/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/concepts.h:
-
-/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h:
-
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
@@ -3555,6 +3555,12 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h:
 
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qmargins.h:
+
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qendian.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/compare:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:
@@ -3596,6 +3602,12 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/error_functions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/equal.h:
+
+/usr/local/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
+
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/concepts.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h:
 

@@ -1,8 +1,8 @@
-CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/MainWindow.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/MainWindow.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
-  /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
+CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.o: \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QStyledItemDelegate \
+  /usr/local/lib/QtWidgets.framework/Headers/qstyleditemdelegate.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /usr/local/lib/QtGui.framework/Headers/qtguiglobal.h \
   /usr/local/lib/QtCore.framework/Headers/qglobal.h \
@@ -708,8 +708,8 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/qtguiexports.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-  /usr/local/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
+  /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtCore.framework/Headers/qobjectdefs.h \
   /usr/local/lib/QtCore.framework/Headers/qnamespace.h \
   /usr/local/lib/QtCore.framework/Headers/qcompare.h \
@@ -848,7 +848,6 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtCore.framework/Headers/qtmetamacros.h \
   /usr/local/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
   /usr/local/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtCore.framework/Headers/qstring.h \
   /usr/local/lib/QtCore.framework/Headers/qchar.h \
   /usr/local/lib/QtCore.framework/Headers/qstringview.h \
@@ -917,10 +916,30 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
-  /usr/local/lib/QtCore.framework/Headers/qmargins.h \
-  /usr/local/lib/QtCore.framework/Headers/qcheckedint_impl.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /usr/local/lib/QtCore.framework/Headers/qlocale.h \
+  /usr/local/lib/QtCore.framework/Headers/qvariant.h \
+  /usr/local/lib/QtCore.framework/Headers/qdebug.h \
+  /usr/local/lib/QtCore.framework/Headers/qtextstream.h \
+  /usr/local/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /usr/local/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /usr/local/lib/QtCore.framework/Headers/qshareddata.h \
+  /usr/local/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
+  /usr/local/lib/QtCore.framework/Headers/qmap.h \
+  /usr/local/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /usr/local/lib/QtCore.framework/Headers/qset.h \
+  /usr/local/lib/QtCore.framework/Headers/qhash.h \
+  /usr/local/lib/QtCore.framework/Headers/qvarlengtharray.h \
+  /usr/local/lib/QtCore.framework/Headers/qalloc.h \
   /usr/local/lib/QtCore.framework/Headers/q23utility.h \
   /usr/local/lib/QtCore.framework/Headers/q20utility.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+  /usr/local/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /usr/local/lib/QtCore.framework/Headers/qmargins.h \
+  /usr/local/lib/QtCore.framework/Headers/qcheckedint_impl.h \
   /usr/local/lib/QtGui.framework/Headers/qaction.h \
   /usr/local/lib/QtGui.framework/Headers/qkeysequence.h \
   /usr/local/lib/QtGui.framework/Headers/qicon.h \
@@ -932,7 +951,6 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtGui.framework/Headers/qcolor.h \
   /usr/local/lib/QtGui.framework/Headers/qrgb.h \
   /usr/local/lib/QtGui.framework/Headers/qrgba64.h \
-  /usr/local/lib/QtCore.framework/Headers/qshareddata.h \
   /usr/local/lib/QtGui.framework/Headers/qimage.h \
   /usr/local/lib/QtGui.framework/Headers/qpixelformat.h \
   /usr/local/lib/QtGui.framework/Headers/qtransform.h \
@@ -942,20 +960,6 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /usr/local/lib/QtCore.framework/Headers/q20iterator.h \
   /usr/local/lib/QtCore.framework/Headers/qline.h \
-  /usr/local/lib/QtCore.framework/Headers/qvariant.h \
-  /usr/local/lib/QtCore.framework/Headers/qdebug.h \
-  /usr/local/lib/QtCore.framework/Headers/qtextstream.h \
-  /usr/local/lib/QtCore.framework/Headers/qcontiguouscache.h \
-  /usr/local/lib/QtCore.framework/Headers/qsharedpointer.h \
-  /usr/local/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
-  /usr/local/lib/QtCore.framework/Headers/qmap.h \
-  /usr/local/lib/QtCore.framework/Headers/qshareddata_impl.h \
-  /usr/local/lib/QtCore.framework/Headers/qset.h \
-  /usr/local/lib/QtCore.framework/Headers/qhash.h \
-  /usr/local/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /usr/local/lib/QtCore.framework/Headers/qalloc.h \
   /usr/local/lib/QtGui.framework/Headers/qpalette.h \
   /usr/local/lib/QtGui.framework/Headers/qbrush.h \
   /usr/local/lib/QtGui.framework/Headers/qfont.h \
@@ -966,136 +970,31 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /usr/local/lib/QtGui.framework/Headers/qcursor.h \
   /usr/local/lib/QtGui.framework/Headers/qbitmap.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QTableView \
-  /usr/local/lib/QtWidgets.framework/Headers/qtableview.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qframe.h \
-  /usr/local/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /usr/local/lib/QtCore.framework/Headers/qitemselectionmodel.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /usr/local/lib/QtCore.framework/Headers/qlocale.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
   /usr/local/lib/QtGui.framework/Headers/qvalidator.h \
   /usr/local/lib/QtCore.framework/Headers/qregularexpression.h \
   /usr/local/lib/QtWidgets.framework/Headers/qslider.h \
   /usr/local/lib/QtWidgets.framework/Headers/qabstractslider.h \
   /usr/local/lib/QtWidgets.framework/Headers/qstyle.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /usr/local/lib/QtWidgets.framework/Headers/qrubberband.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QLabel \
-  /usr/local/lib/QtWidgets.framework/Headers/qlabel.h \
-  /usr/local/lib/QtGui.framework/Headers/qpicture.h \
-  /usr/local/lib/QtCore.framework/Headers/qiodevice.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextdocument.h \
-  /usr/local/lib/QtCore.framework/Headers/qurl.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QPushButton \
-  /usr/local/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h \
-  /usr/local/lib/QtCore.framework/Headers/QAbstractTableModel \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportMode.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/InvoiceDialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QLineEdit \
-  /usr/local/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextcursor.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextformat.h \
-  /usr/local/lib/QtGui.framework/Headers/qpen.h \
+  /usr/local/lib/QtWidgets.framework/Headers/qframe.h \
+  /usr/local/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QApplication \
+  /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
+  /usr/local/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /usr/local/lib/QtCore.framework/Headers/qcoreevent.h \
+  /usr/local/lib/QtCore.framework/Headers/qbasictimer.h \
+  /usr/local/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /usr/local/lib/QtCore.framework/Headers/qeventloop.h \
+  /usr/local/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /usr/local/lib/QtCore.framework/Headers/qnativeinterface.h \
+  /usr/local/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
+  /usr/local/lib/QtGui.framework/Headers/qguiapplication.h \
+  /usr/local/lib/QtGui.framework/Headers/qinputmethod.h \
+  /usr/local/lib/QtGui.framework/Headers/qguiapplication_platform.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QStyle \
+  /usr/local/lib/QtGui.framework/Headers/QPainter \
+  /usr/local/lib/QtGui.framework/Headers/qpainter.h \
   /usr/local/lib/QtGui.framework/Headers/qtextoption.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/ExpenseDialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QTabWidget \
-  /usr/local/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /usr/local/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qlayout.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qgridlayout.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QHeaderView \
-  /usr/local/lib/QtWidgets.framework/Headers/qheaderview.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QFileDialog \
-  /usr/local/lib/QtWidgets.framework/Headers/qfiledialog.h \
-  /usr/local/lib/QtCore.framework/Headers/qdir.h \
-  /usr/local/lib/QtCore.framework/Headers/qdirlisting.h \
-  /usr/local/lib/QtCore.framework/Headers/qfiledevice.h \
-  /usr/local/lib/QtCore.framework/Headers/qdatetime.h \
-  /usr/local/lib/QtCore.framework/Headers/qcalendar.h \
-  /usr/local/lib/QtCore.framework/Headers/qfile.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /usr/local/lib/QtCore.framework/Headers/qfileinfo.h \
-  /usr/local/lib/QtCore.framework/Headers/qtimezone.h \
-  /usr/local/lib/QtCore.framework/Headers/QFile \
-  /usr/local/lib/QtCore.framework/Headers/QTextStream \
-  /usr/local/lib/QtCore.framework/Headers/QJsonDocument \
-  /usr/local/lib/QtCore.framework/Headers/qjsondocument.h \
-  /usr/local/lib/QtCore.framework/Headers/qjsonparseerror.h \
-  /usr/local/lib/QtCore.framework/Headers/QJsonObject \
-  /usr/local/lib/QtCore.framework/Headers/qjsonobject.h \
-  /usr/local/lib/QtCore.framework/Headers/qjsonvalue.h \
-  /usr/local/lib/QtCore.framework/Headers/qcborvalue.h \
-  /usr/local/lib/QtCore.framework/Headers/qcborcommon.h \
-  /usr/local/lib/QtCore.framework/Headers/quuid.h \
-  /usr/local/lib/QtCore.framework/Headers/QJsonArray \
-  /usr/local/lib/QtCore.framework/Headers/qjsonarray.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
-  /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qmenu.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QMenu \
-  /usr/local/lib/QtGui.framework/Headers/QAction \
-  /usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportResult.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.h \
-  /usr/local/lib/QtCore.framework/Headers/QByteArray \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.h \
-  /usr/local/lib/QtCore.framework/Headers/QString \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/ImportUtils.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/ExportService.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export/Exporter.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/EditUtils.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/CreateUtils.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/DeleteUtils.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QStyledItemDelegate \
-  /usr/local/lib/QtWidgets.framework/Headers/qstyleditemdelegate.h
+  /usr/local/lib/QtGui.framework/Headers/qpen.h

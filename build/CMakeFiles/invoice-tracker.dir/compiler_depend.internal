@@ -757,6 +757,8 @@
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.cpp
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h
+ /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp
+ /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QAbstractTableModel
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20functional.h
@@ -929,6 +931,7 @@
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QPushButton
+ /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QStyledItemDelegate
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QTableView
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h
@@ -947,6 +950,7 @@
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qslider.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h
+ /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyleditemdelegate.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qtableview.h

@@ -491,6 +491,30 @@ src/models/InvoiceTableModel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.s
 .PHONY : src/models/InvoiceTableModel.cpp.s
 
+src/ui/PaidDelegate.o: src/ui/PaidDelegate.cpp.o
+.PHONY : src/ui/PaidDelegate.o
+
+# target to build an object file
+src/ui/PaidDelegate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.o
+.PHONY : src/ui/PaidDelegate.cpp.o
+
+src/ui/PaidDelegate.i: src/ui/PaidDelegate.cpp.i
+.PHONY : src/ui/PaidDelegate.i
+
+# target to preprocess a source file
+src/ui/PaidDelegate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.i
+.PHONY : src/ui/PaidDelegate.cpp.i
+
+src/ui/PaidDelegate.s: src/ui/PaidDelegate.cpp.s
+.PHONY : src/ui/PaidDelegate.s
+
+# target to generate assembly for a file
+src/ui/PaidDelegate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.s
+.PHONY : src/ui/PaidDelegate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -544,6 +568,9 @@ help:
 	@echo "... src/models/InvoiceTableModel.o"
 	@echo "... src/models/InvoiceTableModel.i"
 	@echo "... src/models/InvoiceTableModel.s"
+	@echo "... src/ui/PaidDelegate.o"
+	@echo "... src/ui/PaidDelegate.i"
+	@echo "... src/ui/PaidDelegate.s"
 .PHONY : help
 
 

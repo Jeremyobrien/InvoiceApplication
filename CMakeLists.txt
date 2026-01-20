@@ -24,6 +24,7 @@ add_executable(invoice-tracker
     src/models/Expense.cpp
     src/models/InvoiceTableModel.cpp
     src/models/ExpenseTableModel.cpp
+    src/ui/PaidDelegate.cpp
 )
 
 target_include_directories(invoice-tracker PRIVATE

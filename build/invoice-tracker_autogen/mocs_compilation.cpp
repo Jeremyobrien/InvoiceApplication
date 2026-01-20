@@ -4,3 +4,4 @@
 #include "RGRURCYE3Z/moc_InvoiceDialog.cpp"
 #include "M4YTXQ7V2H/moc_ExpenseTableModel.cpp"
 #include "M4YTXQ7V2H/moc_InvoiceTableModel.cpp"
+#include "YPKJ5OE7LN/moc_PaidDelegate.cpp"

@@ -30,6 +30,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/invoice-tracker.dir/src/models/Invoice.cpp.o.d"
   "CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.o"
   "CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.o.d"
+  "CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.o"
+  "CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.o.d"
   "invoice-tracker"
   "invoice-tracker.pdb"
   "invoice-tracker_autogen/mocs_compilation.cpp"

@@ -439,6 +439,12 @@
 			"MU",
 			"M4YTXQ7V2H/moc_InvoiceTableModel.cpp",
 			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h",
+			"MU",
+			"YPKJ5OE7LN/moc_PaidDelegate.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -565,6 +571,11 @@
 		],
 		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp",
 			"MU",
 			null
 		]

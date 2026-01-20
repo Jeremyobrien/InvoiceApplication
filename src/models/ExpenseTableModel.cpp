@@ -33,7 +33,7 @@ QVariant ExpenseTableModel::data(const QModelIndex &index, int role) const
 
     const auto &exp = expenses->at(index.row());
 
-    if (role == Qt::DisplayRole)
+    if (role == Qt::DisplayRole || role == Qt::EditRole)
     {
         switch (index.column())
         {
@@ -91,3 +91,41 @@ void ExpenseTableModel::refresh()
     beginResetModel();
     endResetModel();
 }
+
+Qt::ItemFlags ExpenseTableModel::flags(const QModelIndex &index) const
+{
+    if (!index.isValid())
+        return Qt::NoItemFlags;
+
+    return Qt::ItemIsSelectable
+         | Qt::ItemIsEnabled
+         | Qt::ItemIsEditable;
+}
+
+bool ExpenseTableModel::setData(
+    const QModelIndex &index,
+    const QVariant &value,
+    int role)
+{
+    if (!index.isValid() || role != Qt::EditRole)
+        return false;
+
+    Expense &expense = (*expenses)[index.row()];
+
+    switch (index.column())
+    {
+    case 0:
+        expense.setDescription(value.toString().toStdString());
+        break;
+    case 1:
+        expense.setCost(value.toDouble());
+        break;
+    default:
+        return false;
+    }
+
+    emit dataChanged(index, index);
+    return true;
+}
+
+

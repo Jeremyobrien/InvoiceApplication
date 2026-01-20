@@ -35,7 +35,7 @@ QVariant InvoiceTableModel::data(const QModelIndex &index, int role) const
     const auto &inv = invoices->at(index.row());
 
     // Display the cell text
-    if (role == Qt::DisplayRole)
+    if (role == Qt::DisplayRole || role == Qt::EditRole)
     {
         switch (index.column())
         {
@@ -44,17 +44,20 @@ QVariant InvoiceTableModel::data(const QModelIndex &index, int role) const
         case 1:
             return inv.getAmount();
         case 2:
-            return inv.isPaid() ? "Yes" : "No";
+            return inv.isPaid() ? QVariant("Yes"): QVariant("No");
         default:
             return QVariant();
         }
     }
 
     // Align text in the center
-    if (role == Qt::TextAlignmentRole)
+    if (role == Qt::TextAlignmentRole && index.column() != 2)
     {
         return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);
     }
+
+    if (role == Qt::CheckStateRole && index.column() == 2)
+        return inv.isPaid() ? Qt::Checked : Qt::Unchecked;
 
     return QVariant();
 }
@@ -107,4 +110,60 @@ void InvoiceTableModel::refresh()
 {
     beginResetModel();
     endResetModel();
+}
+
+Qt::ItemFlags InvoiceTableModel::flags(const QModelIndex &index) const
+{
+    if (!index.isValid())
+        return Qt::NoItemFlags;
+
+    
+    if (index.column() == 2) // Paid checkbox override
+        return Qt::ItemIsSelectable
+             | Qt::ItemIsEnabled
+             | Qt::ItemIsEditable
+             | Qt::ItemIsUserCheckable;
+
+    return Qt::ItemIsSelectable
+        |  Qt::ItemIsEnabled
+        |  Qt::ItemIsEditable;
+}
+
+bool InvoiceTableModel::setData(
+    const QModelIndex &index,
+    const QVariant &value,
+    int role)
+{
+    if (!index.isValid())
+        return false;
+    
+    Invoice &invoice = (*invoices)[index.row()];
+
+    if (role == Qt::CheckStateRole && index.column() == 2)
+    {
+        invoice.setPaid(value.toInt() == Qt::Checked);
+        emit dataChanged(index, index, {Qt::CheckStateRole});
+        return true;
+    }
+
+    if (role != Qt::EditRole)
+        return false;
+    
+    switch (index.column())
+    {
+        case 0:
+            invoice.setClient(value.toString().toStdString());
+            break;
+        case 1:
+            invoice.setAmount(value.toDouble());
+            break;
+        case 2:
+            invoice.setPaid(value.toBool());
+            break;
+        default:
+            return false;
+    }
+
+    emit dataChanged(index, index);
+    return true;
 }

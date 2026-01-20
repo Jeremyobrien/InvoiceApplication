@@ -20,6 +20,8 @@ public:
     std::vector<Invoice> *items();
     void updateRow(int row, const Invoice &updated);
     void refresh();
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
 private:
     std::shared_ptr<std::vector<Invoice>> invoices;

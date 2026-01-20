@@ -25,6 +25,7 @@
 #include "ui/EditUtils.h"
 #include "ui/CreateUtils.h"
 #include "ui/DeleteUtils.h"
+#include "ui/PaidDelegate.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -90,7 +91,22 @@ void MainWindow::setupTabs()
     auto *editInvoiceBtn = new QPushButton("Edit Invoice");
     connect(editInvoiceBtn, &QPushButton::clicked,
             this, &MainWindow::editInvoice);
+    //Add double-click edit triggers
+    invoiceView->setEditTriggers(
+            QAbstractItemView::DoubleClicked |
+            QAbstractItemView::SelectedClicked |
+            QAbstractItemView::EditKeyPressed
+        );
+    
+    invoiceView->setItemDelegateForColumn(
+    2,
+    new PaidDelegate(invoiceView)
+    );
 
+    //Update Profit after edit
+    connect(invoiceModel, &QAbstractItemModel::dataChanged,
+        this, &MainWindow::refreshProfit);
+    
     invoiceLayout->addWidget(invoiceView);
     invoiceLayout->addWidget(addInvoiceBtn);
     invoiceLayout->addWidget(deleteInvoiceBtn);
@@ -115,6 +131,16 @@ void MainWindow::setupTabs()
     auto *addExpenseBtn = new QPushButton("Add Expense", expenseTab);
     connect(addExpenseBtn, &QPushButton::clicked,
             this, &MainWindow::addExpense);
+    expenseView->setEditTriggers(
+        QAbstractItemView::DoubleClicked |
+        QAbstractItemView::SelectedClicked |
+        QAbstractItemView::EditKeyPressed
+    );
+
+    //Update profit after edit
+    connect(expenseModel, &QAbstractItemModel::dataChanged,
+        this, &MainWindow::refreshProfit);
+
     QPushButton *deleteExpenseBtn = new QPushButton("Delete Expense");
     connect(deleteExpenseBtn, &QPushButton::clicked,
             this, &MainWindow::deleteExpense);
