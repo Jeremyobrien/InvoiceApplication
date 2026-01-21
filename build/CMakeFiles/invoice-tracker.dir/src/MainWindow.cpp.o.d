@@ -985,12 +985,21 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/qstyle.h \
   /usr/local/lib/QtWidgets.framework/Headers/qtabbar.h \
   /usr/local/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QLineEdit \
+  /usr/local/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/lib/QtGui.framework/Headers/qtextcursor.h \
+  /usr/local/lib/QtGui.framework/Headers/qtextdocument.h \
+  /usr/local/lib/QtCore.framework/Headers/qurl.h \
+  /usr/local/lib/QtGui.framework/Headers/qtextformat.h \
+  /usr/local/lib/QtGui.framework/Headers/qpen.h \
+  /usr/local/lib/QtGui.framework/Headers/qtextoption.h \
+  /usr/local/lib/QtCore.framework/Headers/QSortFilterProxyModel \
+  /usr/local/lib/QtCore.framework/Headers/qsortfilterproxymodel.h \
+  /usr/local/lib/QtCore.framework/Headers/qabstractproxymodel.h \
   /usr/local/lib/QtWidgets.framework/Headers/QLabel \
   /usr/local/lib/QtWidgets.framework/Headers/qlabel.h \
   /usr/local/lib/QtGui.framework/Headers/qpicture.h \
   /usr/local/lib/QtCore.framework/Headers/qiodevice.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextdocument.h \
-  /usr/local/lib/QtCore.framework/Headers/qurl.h \
   /usr/local/lib/QtWidgets.framework/Headers/QPushButton \
   /usr/local/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /usr/local/lib/QtWidgets.framework/Headers/qabstractbutton.h \
@@ -1003,12 +1012,6 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/InvoiceDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialog \
   /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QLineEdit \
-  /usr/local/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextcursor.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextformat.h \
-  /usr/local/lib/QtGui.framework/Headers/qpen.h \
-  /usr/local/lib/QtGui.framework/Headers/qtextoption.h \
   /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
   /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/dialogs/ExpenseDialog.h \
@@ -1098,4 +1101,5 @@ CMakeFiles/invoice-tracker.dir/src/MainWindow.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/DeleteUtils.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h \
   /usr/local/lib/QtWidgets.framework/Headers/QStyledItemDelegate \
-  /usr/local/lib/QtWidgets.framework/Headers/qstyleditemdelegate.h
+  /usr/local/lib/QtWidgets.framework/Headers/qstyleditemdelegate.h \
+  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/SearchBinder.h

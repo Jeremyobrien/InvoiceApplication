@@ -755,6 +755,7 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QAbstractTableModel \
+  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QSortFilterProxyModel \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -764,6 +765,7 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h \
+  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractproxymodel.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalloc.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
@@ -844,6 +846,7 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsize.h \
+  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsortfilterproxymodel.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qspan.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h \
   /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qstring.h \
@@ -1798,8 +1801,6 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h:
 
-/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qshareddata_impl.h:
-
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qshareddata.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qset.h:
@@ -1873,6 +1874,8 @@ invoice-tracker_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pl
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qfunctionaltools_impl.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qforeach.h:
+
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qfloat16.h:
 
 /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qmargins.h:
 
@@ -2508,6 +2511,10 @@ invoice-tracker_autogen/moc_predefs.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qshareddata_impl.h:
+
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QSortFilterProxyModel:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_floating_point.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
@@ -3062,6 +3069,8 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/weak_result_type.h:
 
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractproxymodel.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
 /usr/local/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake:
@@ -3542,6 +3551,8 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
 
+/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsortfilterproxymodel.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:
 
 /usr/local/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake:
@@ -3703,8 +3714,6 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
-
-/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qfloat16.h:
 
 /usr/local/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginDependencies.cmake:
 

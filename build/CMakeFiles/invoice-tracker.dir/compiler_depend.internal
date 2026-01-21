@@ -756,6 +756,7 @@
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp
  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QAbstractTableModel
+ /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QSortFilterProxyModel
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20functional.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20iterator.h
@@ -765,6 +766,7 @@
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q23utility.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h
+ /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractproxymodel.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalloc.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qanystringview.h
@@ -845,6 +847,7 @@
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsize.h
+ /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsortfilterproxymodel.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qspan.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h
  /usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qstring.h

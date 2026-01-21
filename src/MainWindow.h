@@ -2,7 +2,8 @@
 
 #include <QMainWindow>
 #include <QTableView>
-
+#include <QLineEdit>
+#include <QSortFilterProxyModel>
 #include <QLabel>
 #include <memory>
 #include <QPushButton>
@@ -11,7 +12,6 @@
 #include "models/InvoiceTableModel.h"
 #include "models/ExpenseTableModel.h"
 #include "import/ImportMode.h"
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -32,7 +32,10 @@ private slots:
 private:
     std::shared_ptr<std::vector<Invoice>> invoices;
     std::shared_ptr<std::vector<Expense>> expenses;
-
+    QLineEdit *invoiceSearch;
+    QLineEdit *expenseSearch;
+    QSortFilterProxyModel *invoiceProxy = nullptr;
+    QSortFilterProxyModel *expenseProxy = nullptr;
     QTabWidget *tabWidget;
     InvoiceTableModel *invoiceModel;
     ExpenseTableModel *expenseModel;

@@ -3450,6 +3450,7 @@
  mdp:/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h
  mdp:/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QAbstractTableModel
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/QSortFilterProxyModel
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20functional.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q20iterator.h
@@ -3459,6 +3460,7 @@
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/q23utility.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qabstractproxymodel.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qalloc.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qanystringview.h
@@ -3539,6 +3541,7 @@
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsize.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qsortfilterproxymodel.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qspan.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtCore.framework/Versions/A/Headers/qstring.h
@@ -3597,6 +3600,7 @@
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qpalette.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qpen.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qpicture.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qpixmap.h
@@ -3604,7 +3608,10 @@
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qregion.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qrgb.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qrgba64.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtextformat.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtextoption.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h
@@ -3612,6 +3619,7 @@
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qvalidator.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QLabel
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QPushButton
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/QTableView
@@ -3623,6 +3631,7 @@
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qframe.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h
+ mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h
  mdp:/usr/local/Cellar/qtbase/6.10.1/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h

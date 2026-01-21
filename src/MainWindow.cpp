@@ -26,6 +26,7 @@
 #include "ui/CreateUtils.h"
 #include "ui/DeleteUtils.h"
 #include "ui/PaidDelegate.h"
+#include "ui/SearchBinder.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -70,6 +71,10 @@ void MainWindow::setupTabs()
     auto *invoiceTab = new QWidget(this);
     auto *invoiceLayout = new QVBoxLayout(invoiceTab);
 
+    invoiceSearch = new QLineEdit(invoiceTab);
+    invoiceSearch->setPlaceholderText("Search invoices...");
+    invoiceLayout->addWidget(invoiceSearch);
+
     invoiceModel = new InvoiceTableModel(this);
     invoiceModel->setInvoices(invoices);
 
@@ -91,22 +96,20 @@ void MainWindow::setupTabs()
     auto *editInvoiceBtn = new QPushButton("Edit Invoice");
     connect(editInvoiceBtn, &QPushButton::clicked,
             this, &MainWindow::editInvoice);
-    //Add double-click edit triggers
+    // Add double-click edit triggers
     invoiceView->setEditTriggers(
-            QAbstractItemView::DoubleClicked |
-            QAbstractItemView::SelectedClicked |
-            QAbstractItemView::EditKeyPressed
-        );
-    
-    invoiceView->setItemDelegateForColumn(
-    2,
-    new PaidDelegate(invoiceView)
-    );
+        QAbstractItemView::DoubleClicked |
+        QAbstractItemView::SelectedClicked |
+        QAbstractItemView::EditKeyPressed);
 
-    //Update Profit after edit
+    invoiceView->setItemDelegateForColumn(
+        2,
+        new PaidDelegate(invoiceView));
+
+    // Update Profit after edit
     connect(invoiceModel, &QAbstractItemModel::dataChanged,
-        this, &MainWindow::refreshProfit);
-    
+            this, &MainWindow::refreshProfit);
+
     invoiceLayout->addWidget(invoiceView);
     invoiceLayout->addWidget(addInvoiceBtn);
     invoiceLayout->addWidget(deleteInvoiceBtn);
@@ -114,9 +117,18 @@ void MainWindow::setupTabs()
 
     tabWidget->addTab(invoiceTab, "Invoices");
 
+    auto *invoiceProxy = bindSearch(
+        this,
+        invoiceSearch,
+        invoiceView,
+        invoiceModel);
     // ---- Expense tab ----
     auto *expenseTab = new QWidget(this);
     auto *expenseLayout = new QVBoxLayout(expenseTab);
+
+    expenseSearch = new QLineEdit(expenseTab);
+    expenseSearch->setPlaceholderText("Search expenses...");
+    expenseLayout->addWidget(expenseSearch);
 
     expenseModel = new ExpenseTableModel(this);
     expenseModel->setExpenses(expenses);
@@ -134,12 +146,11 @@ void MainWindow::setupTabs()
     expenseView->setEditTriggers(
         QAbstractItemView::DoubleClicked |
         QAbstractItemView::SelectedClicked |
-        QAbstractItemView::EditKeyPressed
-    );
+        QAbstractItemView::EditKeyPressed);
 
-    //Update profit after edit
+    // Update profit after edit
     connect(expenseModel, &QAbstractItemModel::dataChanged,
-        this, &MainWindow::refreshProfit);
+            this, &MainWindow::refreshProfit);
 
     QPushButton *deleteExpenseBtn = new QPushButton("Delete Expense");
     connect(deleteExpenseBtn, &QPushButton::clicked,
@@ -155,6 +166,12 @@ void MainWindow::setupTabs()
 
     tabWidget->addTab(expenseTab, "Expenses");
 
+    auto *expenseProxy = bindSearch(
+        this,
+        expenseSearch,
+        expenseView,
+        expenseModel
+    );
     // ---- Menu (single entry points) ----
     QMenu *fileMenu = menuBar()->addMenu("&File");
 
@@ -188,10 +205,10 @@ void MainWindow::addInvoice()
     createItem<Invoice>(
         this,
         invoiceModel,
-        [](QWidget* parent) {
+        [](QWidget *parent)
+        {
             return InvoiceDialog(parent);
-        }
-    );
+        });
 
     refreshProfit();
 }
@@ -201,10 +218,10 @@ void MainWindow::addExpense()
     createItem<Expense>(
         this,
         expenseModel,
-        [](QWidget* parent) {
+        [](QWidget *parent)
+        {
             return ExpenseDialog(parent);
-        }
-    );
+        });
 
     refreshProfit();
 }
@@ -336,8 +353,7 @@ void MainWindow::deleteInvoice()
         invoiceView,
         invoiceModel,
         "Delete Invoice",
-        "Are you sure you want to delete this invoice?"
-    );
+        "Are you sure you want to delete this invoice?");
 
     refreshProfit();
 }
@@ -349,8 +365,7 @@ void MainWindow::deleteExpense()
         expenseView,
         expenseModel,
         "Delete Expense",
-        "Are you sure you want to delete this expense?"
-    );
+        "Are you sure you want to delete this expense?");
 
     refreshProfit();
 }
