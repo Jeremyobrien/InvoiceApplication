@@ -7,9 +7,63 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/CMakeLists.txt",
+		"/usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake",
+		"/usr/local/share/cmake/Modules/CMakeSystem.cmake.in",
 		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/4.1.2/CMakeSystem.cmake",
+		"/usr/local/share/cmake/Modules/CMakeUnixFindMake.cmake",
 		"/usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake",
+		"/usr/local/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake",
+		"/usr/local/share/cmake/Modules/CMakeDetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake",
+		"/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake",
+		"/usr/local/share/cmake/Modules/CMakeCompilerIdDetection.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
+		"/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake",
+		"/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in",
 		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake",
 		"/usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/local/share/cmake/Modules/CMakeGenericSystem.cmake",
@@ -27,12 +81,27 @@
 		"/usr/local/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake",
 		"/usr/local/share/cmake/Modules/Platform/Apple-Clang.cmake",
 		"/usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake",
+		"/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake",
+		"/usr/local/share/cmake/Modules/CMakeTestCompilerCommon.cmake",
+		"/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake",
+		"/usr/local/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake",
+		"/usr/local/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake",
+		"/usr/local/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake",
+		"/usr/local/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake",
+		"/usr/local/share/cmake/Modules/CMakeTestCompilerCommon.cmake",
+		"/usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp",
+		"/usr/local/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake",
+		"/usr/local/share/cmake/Modules/Internal/FeatureTesting.cmake",
+		"/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake",
 		"/usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake",
 		"/usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake",
 		"/usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake",
 		"/usr/local/share/cmake/Modules/Linker/AppleClang.cmake",
 		"/usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake",
 		"/usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake",
+		"/usr/local/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake",
+		"/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in",
 		"/usr/local/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/usr/local/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/usr/local/lib/cmake/Qt6/Qt6Config.cmake",
@@ -360,7 +429,17 @@
 		"/usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake",
 		"/usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake",
 		"/usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake",
-		"/usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake"
+		"/usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestConfigVersion.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestConfig.cmake",
+		"/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestDependencies.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestTargets.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestTargets-release.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake",
+		"/usr/local/lib/cmake/Qt6Test/QtTestProperties.cmake",
+		"/usr/local/lib/cmake/Qt6Test/Qt6TestVersionlessAliasTargets.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker",
 	"CROSS_CONFIG" : false,
@@ -417,30 +496,6 @@
 			null
 		],
 		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.h",
-			"MU",
-			"M4YTXQ7V2H/moc_Expense.cpp",
-			null
-		],
-		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.h",
-			"MU",
-			"M4YTXQ7V2H/moc_ExpenseTableModel.cpp",
-			null
-		],
-		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h",
-			"MU",
-			"M4YTXQ7V2H/moc_Invoice.cpp",
-			null
-		],
-		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.h",
-			"MU",
-			"M4YTXQ7V2H/moc_InvoiceTableModel.cpp",
-			null
-		],
-		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.h",
 			"MU",
 			"YPKJ5OE7LN/moc_PaidDelegate.cpp",
@@ -461,8 +516,6 @@
 	"MOC_INCLUDES" : 
 	[
 		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src",
-		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import",
-		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/export",
 		"/usr/local/lib/QtWidgets.framework/Headers",
 		"/usr/local/lib/QtWidgets.framework",
 		"/usr/local/lib/QtCore.framework/Headers",
@@ -498,7 +551,10 @@
 	],
 	"MOC_PREDEFS_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/models_core_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
 	"PARSE_CACHE_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles/invoice-tracker_autogen.dir/ParseCache.txt",
@@ -555,26 +611,6 @@
 			null
 		],
 		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.cpp",
-			"MU",
-			null
-		],
-		[
 			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp",
 			"MU",
 			null
@@ -582,7 +618,10 @@
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/models_core_autogen/mocs_compilation.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0

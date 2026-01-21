@@ -1,0 +1,5 @@
+InvoiceTests 1 0.647407
+ExpenseTests 1 0.505226
+InvoiceTableModelTests 1 0.502722
+ExpenseTableModelTests 1 0.516525
+---

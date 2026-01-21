@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/jeremyobrien/Desktop/Code/invoice-tracker/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/local/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -117,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named models_core
+
+# Build rule for target.
+models_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 models_core
+.PHONY : models_core
+
+# fast build rule for target.
+models_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/build
+.PHONY : models_core/fast
+
+#=============================================================================
 # Target rules for targets named invoice-tracker
 
 # Build rule for target.
@@ -128,6 +151,32 @@ invoice-tracker: cmake_check_build_system
 invoice-tracker/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/build
 .PHONY : invoice-tracker/fast
+
+#=============================================================================
+# Target rules for targets named models_core_autogen_timestamp_deps
+
+# Build rule for target.
+models_core_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 models_core_autogen_timestamp_deps
+.PHONY : models_core_autogen_timestamp_deps
+
+# fast build rule for target.
+models_core_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen_timestamp_deps.dir/build.make CMakeFiles/models_core_autogen_timestamp_deps.dir/build
+.PHONY : models_core_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named models_core_autogen
+
+# Build rule for target.
+models_core_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 models_core_autogen
+.PHONY : models_core_autogen
+
+# fast build rule for target.
+models_core_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen.dir/build.make CMakeFiles/models_core_autogen.dir/build
+.PHONY : models_core_autogen/fast
 
 #=============================================================================
 # Target rules for targets named invoice-tracker_autogen_timestamp_deps
@@ -155,6 +204,162 @@ invoice-tracker_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen.dir/build.make CMakeFiles/invoice-tracker_autogen.dir/build
 .PHONY : invoice-tracker_autogen/fast
 
+#=============================================================================
+# Target rules for targets named test_invoice
+
+# Build rule for target.
+test_invoice: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_invoice
+.PHONY : test_invoice
+
+# fast build rule for target.
+test_invoice/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice.dir/build.make tests/CMakeFiles/test_invoice.dir/build
+.PHONY : test_invoice/fast
+
+#=============================================================================
+# Target rules for targets named test_expense
+
+# Build rule for target.
+test_expense: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_expense
+.PHONY : test_expense
+
+# fast build rule for target.
+test_expense/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense.dir/build.make tests/CMakeFiles/test_expense.dir/build
+.PHONY : test_expense/fast
+
+#=============================================================================
+# Target rules for targets named test_model_invoice
+
+# Build rule for target.
+test_model_invoice: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_model_invoice
+.PHONY : test_model_invoice
+
+# fast build rule for target.
+test_model_invoice/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice.dir/build.make tests/CMakeFiles/test_model_invoice.dir/build
+.PHONY : test_model_invoice/fast
+
+#=============================================================================
+# Target rules for targets named test_model_expense
+
+# Build rule for target.
+test_model_expense: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_model_expense
+.PHONY : test_model_expense
+
+# fast build rule for target.
+test_model_expense/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense.dir/build.make tests/CMakeFiles/test_model_expense.dir/build
+.PHONY : test_model_expense/fast
+
+#=============================================================================
+# Target rules for targets named test_invoice_autogen_timestamp_deps
+
+# Build rule for target.
+test_invoice_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_invoice_autogen_timestamp_deps
+.PHONY : test_invoice_autogen_timestamp_deps
+
+# fast build rule for target.
+test_invoice_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build
+.PHONY : test_invoice_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_invoice_autogen
+
+# Build rule for target.
+test_invoice_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_invoice_autogen
+.PHONY : test_invoice_autogen
+
+# fast build rule for target.
+test_invoice_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen.dir/build.make tests/CMakeFiles/test_invoice_autogen.dir/build
+.PHONY : test_invoice_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_expense_autogen_timestamp_deps
+
+# Build rule for target.
+test_expense_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_expense_autogen_timestamp_deps
+.PHONY : test_expense_autogen_timestamp_deps
+
+# fast build rule for target.
+test_expense_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build
+.PHONY : test_expense_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_expense_autogen
+
+# Build rule for target.
+test_expense_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_expense_autogen
+.PHONY : test_expense_autogen
+
+# fast build rule for target.
+test_expense_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen.dir/build.make tests/CMakeFiles/test_expense_autogen.dir/build
+.PHONY : test_expense_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_model_invoice_autogen_timestamp_deps
+
+# Build rule for target.
+test_model_invoice_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_model_invoice_autogen_timestamp_deps
+.PHONY : test_model_invoice_autogen_timestamp_deps
+
+# fast build rule for target.
+test_model_invoice_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build
+.PHONY : test_model_invoice_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_model_invoice_autogen
+
+# Build rule for target.
+test_model_invoice_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_model_invoice_autogen
+.PHONY : test_model_invoice_autogen
+
+# fast build rule for target.
+test_model_invoice_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen.dir/build.make tests/CMakeFiles/test_model_invoice_autogen.dir/build
+.PHONY : test_model_invoice_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_model_expense_autogen_timestamp_deps
+
+# Build rule for target.
+test_model_expense_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_model_expense_autogen_timestamp_deps
+.PHONY : test_model_expense_autogen_timestamp_deps
+
+# fast build rule for target.
+test_model_expense_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build
+.PHONY : test_model_expense_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_model_expense_autogen
+
+# Build rule for target.
+test_model_expense_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_model_expense_autogen
+.PHONY : test_model_expense_autogen
+
+# fast build rule for target.
+test_model_expense_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen.dir/build.make tests/CMakeFiles/test_model_expense_autogen.dir/build
+.PHONY : test_model_expense_autogen/fast
+
 invoice-tracker_autogen/mocs_compilation.o: invoice-tracker_autogen/mocs_compilation.cpp.o
 .PHONY : invoice-tracker_autogen/mocs_compilation.o
 
@@ -178,6 +383,30 @@ invoice-tracker_autogen/mocs_compilation.s: invoice-tracker_autogen/mocs_compila
 invoice-tracker_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/invoice-tracker_autogen/mocs_compilation.cpp.s
 .PHONY : invoice-tracker_autogen/mocs_compilation.cpp.s
+
+models_core_autogen/mocs_compilation.o: models_core_autogen/mocs_compilation.cpp.o
+.PHONY : models_core_autogen/mocs_compilation.o
+
+# target to build an object file
+models_core_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/models_core_autogen/mocs_compilation.cpp.o
+.PHONY : models_core_autogen/mocs_compilation.cpp.o
+
+models_core_autogen/mocs_compilation.i: models_core_autogen/mocs_compilation.cpp.i
+.PHONY : models_core_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+models_core_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/models_core_autogen/mocs_compilation.cpp.i
+.PHONY : models_core_autogen/mocs_compilation.cpp.i
+
+models_core_autogen/mocs_compilation.s: models_core_autogen/mocs_compilation.cpp.s
+.PHONY : models_core_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+models_core_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/models_core_autogen/mocs_compilation.cpp.s
+.PHONY : models_core_autogen/mocs_compilation.cpp.s
 
 src/MainWindow.o: src/MainWindow.cpp.o
 .PHONY : src/MainWindow.o
@@ -400,7 +629,7 @@ src/models/Expense.o: src/models/Expense.cpp.o
 
 # target to build an object file
 src/models/Expense.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/Expense.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/Expense.cpp.o
 .PHONY : src/models/Expense.cpp.o
 
 src/models/Expense.i: src/models/Expense.cpp.i
@@ -408,7 +637,7 @@ src/models/Expense.i: src/models/Expense.cpp.i
 
 # target to preprocess a source file
 src/models/Expense.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/Expense.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/Expense.cpp.i
 .PHONY : src/models/Expense.cpp.i
 
 src/models/Expense.s: src/models/Expense.cpp.s
@@ -416,7 +645,7 @@ src/models/Expense.s: src/models/Expense.cpp.s
 
 # target to generate assembly for a file
 src/models/Expense.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/Expense.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/Expense.cpp.s
 .PHONY : src/models/Expense.cpp.s
 
 src/models/ExpenseTableModel.o: src/models/ExpenseTableModel.cpp.o
@@ -424,7 +653,7 @@ src/models/ExpenseTableModel.o: src/models/ExpenseTableModel.cpp.o
 
 # target to build an object file
 src/models/ExpenseTableModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/ExpenseTableModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/ExpenseTableModel.cpp.o
 .PHONY : src/models/ExpenseTableModel.cpp.o
 
 src/models/ExpenseTableModel.i: src/models/ExpenseTableModel.cpp.i
@@ -432,7 +661,7 @@ src/models/ExpenseTableModel.i: src/models/ExpenseTableModel.cpp.i
 
 # target to preprocess a source file
 src/models/ExpenseTableModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/ExpenseTableModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/ExpenseTableModel.cpp.i
 .PHONY : src/models/ExpenseTableModel.cpp.i
 
 src/models/ExpenseTableModel.s: src/models/ExpenseTableModel.cpp.s
@@ -440,7 +669,7 @@ src/models/ExpenseTableModel.s: src/models/ExpenseTableModel.cpp.s
 
 # target to generate assembly for a file
 src/models/ExpenseTableModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/ExpenseTableModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/ExpenseTableModel.cpp.s
 .PHONY : src/models/ExpenseTableModel.cpp.s
 
 src/models/Invoice.o: src/models/Invoice.cpp.o
@@ -448,7 +677,7 @@ src/models/Invoice.o: src/models/Invoice.cpp.o
 
 # target to build an object file
 src/models/Invoice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/Invoice.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/Invoice.cpp.o
 .PHONY : src/models/Invoice.cpp.o
 
 src/models/Invoice.i: src/models/Invoice.cpp.i
@@ -456,7 +685,7 @@ src/models/Invoice.i: src/models/Invoice.cpp.i
 
 # target to preprocess a source file
 src/models/Invoice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/Invoice.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/Invoice.cpp.i
 .PHONY : src/models/Invoice.cpp.i
 
 src/models/Invoice.s: src/models/Invoice.cpp.s
@@ -464,7 +693,7 @@ src/models/Invoice.s: src/models/Invoice.cpp.s
 
 # target to generate assembly for a file
 src/models/Invoice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/Invoice.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/Invoice.cpp.s
 .PHONY : src/models/Invoice.cpp.s
 
 src/models/InvoiceTableModel.o: src/models/InvoiceTableModel.cpp.o
@@ -472,7 +701,7 @@ src/models/InvoiceTableModel.o: src/models/InvoiceTableModel.cpp.o
 
 # target to build an object file
 src/models/InvoiceTableModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/InvoiceTableModel.cpp.o
 .PHONY : src/models/InvoiceTableModel.cpp.o
 
 src/models/InvoiceTableModel.i: src/models/InvoiceTableModel.cpp.i
@@ -480,7 +709,7 @@ src/models/InvoiceTableModel.i: src/models/InvoiceTableModel.cpp.i
 
 # target to preprocess a source file
 src/models/InvoiceTableModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/InvoiceTableModel.cpp.i
 .PHONY : src/models/InvoiceTableModel.cpp.i
 
 src/models/InvoiceTableModel.s: src/models/InvoiceTableModel.cpp.s
@@ -488,7 +717,7 @@ src/models/InvoiceTableModel.s: src/models/InvoiceTableModel.cpp.s
 
 # target to generate assembly for a file
 src/models/InvoiceTableModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/src/models/InvoiceTableModel.cpp.s
 .PHONY : src/models/InvoiceTableModel.cpp.s
 
 src/ui/PaidDelegate.o: src/ui/PaidDelegate.cpp.o
@@ -523,12 +752,31 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... invoice-tracker_autogen"
 	@echo "... invoice-tracker_autogen_timestamp_deps"
+	@echo "... models_core_autogen"
+	@echo "... models_core_autogen_timestamp_deps"
+	@echo "... test_expense_autogen"
+	@echo "... test_expense_autogen_timestamp_deps"
+	@echo "... test_invoice_autogen"
+	@echo "... test_invoice_autogen_timestamp_deps"
+	@echo "... test_model_expense_autogen"
+	@echo "... test_model_expense_autogen_timestamp_deps"
+	@echo "... test_model_invoice_autogen"
+	@echo "... test_model_invoice_autogen_timestamp_deps"
 	@echo "... invoice-tracker"
+	@echo "... models_core"
+	@echo "... test_expense"
+	@echo "... test_invoice"
+	@echo "... test_model_expense"
+	@echo "... test_model_invoice"
 	@echo "... invoice-tracker_autogen/mocs_compilation.o"
 	@echo "... invoice-tracker_autogen/mocs_compilation.i"
 	@echo "... invoice-tracker_autogen/mocs_compilation.s"
+	@echo "... models_core_autogen/mocs_compilation.o"
+	@echo "... models_core_autogen/mocs_compilation.i"
+	@echo "... models_core_autogen/mocs_compilation.s"
 	@echo "... src/MainWindow.o"
 	@echo "... src/MainWindow.i"
 	@echo "... src/MainWindow.s"

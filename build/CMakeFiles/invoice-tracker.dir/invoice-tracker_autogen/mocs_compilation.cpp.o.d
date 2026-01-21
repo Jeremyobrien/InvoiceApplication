@@ -1020,10 +1020,6 @@ CMakeFiles/invoice-tracker.dir/invoice-tracker_autogen/mocs_compilation.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
   /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/M4YTXQ7V2H/moc_ExpenseTableModel.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/M4YTXQ7V2H/../../../src/models/ExpenseTableModel.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/M4YTXQ7V2H/moc_InvoiceTableModel.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/M4YTXQ7V2H/../../../src/models/InvoiceTableModel.h \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/YPKJ5OE7LN/moc_PaidDelegate.cpp \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/YPKJ5OE7LN/../../../src/ui/PaidDelegate.h \
   /usr/local/lib/QtWidgets.framework/Headers/QStyledItemDelegate \

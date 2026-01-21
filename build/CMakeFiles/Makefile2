@@ -63,37 +63,115 @@ CMAKE_BINARY_DIR = /Users/jeremyobrien/Desktop/Code/invoice-tracker/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/models_core.dir/all
 all: CMakeFiles/invoice-tracker.dir/all
+all: tests/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/models_core.dir/codegen
 codegen: CMakeFiles/invoice-tracker.dir/codegen
+codegen: tests/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: tests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/models_core.dir/clean
 clean: CMakeFiles/invoice-tracker.dir/clean
+clean: CMakeFiles/models_core_autogen_timestamp_deps.dir/clean
+clean: CMakeFiles/models_core_autogen.dir/clean
 clean: CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/clean
 clean: CMakeFiles/invoice-tracker_autogen.dir/clean
+clean: tests/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory tests
+
+# Recursive "all" directory target.
+tests/all: tests/CMakeFiles/test_invoice.dir/all
+tests/all: tests/CMakeFiles/test_expense.dir/all
+tests/all: tests/CMakeFiles/test_model_invoice.dir/all
+tests/all: tests/CMakeFiles/test_model_expense.dir/all
+.PHONY : tests/all
+
+# Recursive "codegen" directory target.
+tests/codegen: tests/CMakeFiles/test_invoice.dir/codegen
+tests/codegen: tests/CMakeFiles/test_expense.dir/codegen
+tests/codegen: tests/CMakeFiles/test_model_invoice.dir/codegen
+tests/codegen: tests/CMakeFiles/test_model_expense.dir/codegen
+.PHONY : tests/codegen
+
+# Recursive "preinstall" directory target.
+tests/preinstall:
+.PHONY : tests/preinstall
+
+# Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/test_invoice.dir/clean
+tests/clean: tests/CMakeFiles/test_expense.dir/clean
+tests/clean: tests/CMakeFiles/test_model_invoice.dir/clean
+tests/clean: tests/CMakeFiles/test_model_expense.dir/clean
+tests/clean: tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_invoice_autogen.dir/clean
+tests/clean: tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_expense_autogen.dir/clean
+tests/clean: tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_model_invoice_autogen.dir/clean
+tests/clean: tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_model_expense_autogen.dir/clean
+.PHONY : tests/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/models_core.dir
+
+# All Build rule for target.
+CMakeFiles/models_core.dir/all: CMakeFiles/models_core_autogen_timestamp_deps.dir/all
+CMakeFiles/models_core.dir/all: CMakeFiles/models_core_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=15,16,17,18,19,20,21 "Built target models_core"
+.PHONY : CMakeFiles/models_core.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/models_core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/models_core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : CMakeFiles/models_core.dir/rule
+
+# Convenience name for target.
+models_core: CMakeFiles/models_core.dir/rule
+.PHONY : models_core
+
+# codegen rule for target.
+CMakeFiles/models_core.dir/codegen: CMakeFiles/models_core_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=15,16,17,18,19,20,21 "Finished codegen for target models_core"
+.PHONY : CMakeFiles/models_core.dir/codegen
+
+# clean rule for target.
+CMakeFiles/models_core.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core.dir/build.make CMakeFiles/models_core.dir/clean
+.PHONY : CMakeFiles/models_core.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/invoice-tracker.dir
 
 # All Build rule for target.
+CMakeFiles/invoice-tracker.dir/all: CMakeFiles/models_core.dir/all
 CMakeFiles/invoice-tracker.dir/all: CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all
 CMakeFiles/invoice-tracker.dir/all: CMakeFiles/invoice-tracker_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target invoice-tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target invoice-tracker"
 .PHONY : CMakeFiles/invoice-tracker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/invoice-tracker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/invoice-tracker.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
 .PHONY : CMakeFiles/invoice-tracker.dir/rule
@@ -105,7 +183,7 @@ invoice-tracker: CMakeFiles/invoice-tracker.dir/rule
 # codegen rule for target.
 CMakeFiles/invoice-tracker.dir/codegen: CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker.dir/build.make CMakeFiles/invoice-tracker.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Finished codegen for target invoice-tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Finished codegen for target invoice-tracker"
 .PHONY : CMakeFiles/invoice-tracker.dir/codegen
 
 # clean rule for target.
@@ -114,10 +192,74 @@ CMakeFiles/invoice-tracker.dir/clean:
 .PHONY : CMakeFiles/invoice-tracker.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/models_core_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+CMakeFiles/models_core_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen_timestamp_deps.dir/build.make CMakeFiles/models_core_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen_timestamp_deps.dir/build.make CMakeFiles/models_core_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Built target models_core_autogen_timestamp_deps"
+.PHONY : CMakeFiles/models_core_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/models_core_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/models_core_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : CMakeFiles/models_core_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+models_core_autogen_timestamp_deps: CMakeFiles/models_core_autogen_timestamp_deps.dir/rule
+.PHONY : models_core_autogen_timestamp_deps
+
+# codegen rule for target.
+CMakeFiles/models_core_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen_timestamp_deps.dir/build.make CMakeFiles/models_core_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Finished codegen for target models_core_autogen_timestamp_deps"
+.PHONY : CMakeFiles/models_core_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+CMakeFiles/models_core_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen_timestamp_deps.dir/build.make CMakeFiles/models_core_autogen_timestamp_deps.dir/clean
+.PHONY : CMakeFiles/models_core_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/models_core_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/models_core_autogen.dir/all: CMakeFiles/models_core_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen.dir/build.make CMakeFiles/models_core_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen.dir/build.make CMakeFiles/models_core_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=22 "Built target models_core_autogen"
+.PHONY : CMakeFiles/models_core_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/models_core_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/models_core_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : CMakeFiles/models_core_autogen.dir/rule
+
+# Convenience name for target.
+models_core_autogen: CMakeFiles/models_core_autogen.dir/rule
+.PHONY : models_core_autogen
+
+# codegen rule for target.
+CMakeFiles/models_core_autogen.dir/codegen: CMakeFiles/models_core_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen.dir/build.make CMakeFiles/models_core_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=22 "Finished codegen for target models_core_autogen"
+.PHONY : CMakeFiles/models_core_autogen.dir/codegen
+
+# clean rule for target.
+CMakeFiles/models_core_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/models_core_autogen.dir/build.make CMakeFiles/models_core_autogen.dir/clean
+.PHONY : CMakeFiles/models_core_autogen.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all:
+CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all: CMakeFiles/models_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/build.make CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/build.make CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Built target invoice-tracker_autogen_timestamp_deps"
@@ -125,7 +267,7 @@ CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
 .PHONY : CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/rule
@@ -152,12 +294,12 @@ CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/clean:
 CMakeFiles/invoice-tracker_autogen.dir/all: CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen.dir/build.make CMakeFiles/invoice-tracker_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen.dir/build.make CMakeFiles/invoice-tracker_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=18 "Built target invoice-tracker_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=14 "Built target invoice-tracker_autogen"
 .PHONY : CMakeFiles/invoice-tracker_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/invoice-tracker_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/invoice-tracker_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
 .PHONY : CMakeFiles/invoice-tracker_autogen.dir/rule
@@ -169,13 +311,405 @@ invoice-tracker_autogen: CMakeFiles/invoice-tracker_autogen.dir/rule
 # codegen rule for target.
 CMakeFiles/invoice-tracker_autogen.dir/codegen: CMakeFiles/invoice-tracker_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen.dir/build.make CMakeFiles/invoice-tracker_autogen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=18 "Finished codegen for target invoice-tracker_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=14 "Finished codegen for target invoice-tracker_autogen"
 .PHONY : CMakeFiles/invoice-tracker_autogen.dir/codegen
 
 # clean rule for target.
 CMakeFiles/invoice-tracker_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/invoice-tracker_autogen.dir/build.make CMakeFiles/invoice-tracker_autogen.dir/clean
 .PHONY : CMakeFiles/invoice-tracker_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_invoice.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_invoice.dir/all: CMakeFiles/models_core.dir/all
+tests/CMakeFiles/test_invoice.dir/all: tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_invoice.dir/all: tests/CMakeFiles/test_invoice_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice.dir/build.make tests/CMakeFiles/test_invoice.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice.dir/build.make tests/CMakeFiles/test_invoice.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=28,29,30,31 "Built target test_invoice"
+.PHONY : tests/CMakeFiles/test_invoice.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_invoice.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_invoice.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_invoice.dir/rule
+
+# Convenience name for target.
+test_invoice: tests/CMakeFiles/test_invoice.dir/rule
+.PHONY : test_invoice
+
+# codegen rule for target.
+tests/CMakeFiles/test_invoice.dir/codegen: tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice.dir/build.make tests/CMakeFiles/test_invoice.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=28,29,30,31 "Finished codegen for target test_invoice"
+.PHONY : tests/CMakeFiles/test_invoice.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_invoice.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice.dir/build.make tests/CMakeFiles/test_invoice.dir/clean
+.PHONY : tests/CMakeFiles/test_invoice.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_expense.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_expense.dir/all: CMakeFiles/models_core.dir/all
+tests/CMakeFiles/test_expense.dir/all: tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_expense.dir/all: tests/CMakeFiles/test_expense_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense.dir/build.make tests/CMakeFiles/test_expense.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense.dir/build.make tests/CMakeFiles/test_expense.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=23,24,25,26 "Built target test_expense"
+.PHONY : tests/CMakeFiles/test_expense.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_expense.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_expense.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_expense.dir/rule
+
+# Convenience name for target.
+test_expense: tests/CMakeFiles/test_expense.dir/rule
+.PHONY : test_expense
+
+# codegen rule for target.
+tests/CMakeFiles/test_expense.dir/codegen: tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense.dir/build.make tests/CMakeFiles/test_expense.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=23,24,25,26 "Finished codegen for target test_expense"
+.PHONY : tests/CMakeFiles/test_expense.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_expense.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense.dir/build.make tests/CMakeFiles/test_expense.dir/clean
+.PHONY : tests/CMakeFiles/test_expense.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_model_invoice.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_model_invoice.dir/all: CMakeFiles/models_core.dir/all
+tests/CMakeFiles/test_model_invoice.dir/all: tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_model_invoice.dir/all: tests/CMakeFiles/test_model_invoice_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice.dir/build.make tests/CMakeFiles/test_model_invoice.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice.dir/build.make tests/CMakeFiles/test_model_invoice.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=38,39,40,41 "Built target test_model_invoice"
+.PHONY : tests/CMakeFiles/test_model_invoice.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_model_invoice.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_model_invoice.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_model_invoice.dir/rule
+
+# Convenience name for target.
+test_model_invoice: tests/CMakeFiles/test_model_invoice.dir/rule
+.PHONY : test_model_invoice
+
+# codegen rule for target.
+tests/CMakeFiles/test_model_invoice.dir/codegen: tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice.dir/build.make tests/CMakeFiles/test_model_invoice.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=38,39,40,41 "Finished codegen for target test_model_invoice"
+.PHONY : tests/CMakeFiles/test_model_invoice.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_model_invoice.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice.dir/build.make tests/CMakeFiles/test_model_invoice.dir/clean
+.PHONY : tests/CMakeFiles/test_model_invoice.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_model_expense.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_model_expense.dir/all: CMakeFiles/models_core.dir/all
+tests/CMakeFiles/test_model_expense.dir/all: tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_model_expense.dir/all: tests/CMakeFiles/test_model_expense_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense.dir/build.make tests/CMakeFiles/test_model_expense.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense.dir/build.make tests/CMakeFiles/test_model_expense.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=33,34,35,36 "Built target test_model_expense"
+.PHONY : tests/CMakeFiles/test_model_expense.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_model_expense.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_model_expense.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_model_expense.dir/rule
+
+# Convenience name for target.
+test_model_expense: tests/CMakeFiles/test_model_expense.dir/rule
+.PHONY : test_model_expense
+
+# codegen rule for target.
+tests/CMakeFiles/test_model_expense.dir/codegen: tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense.dir/build.make tests/CMakeFiles/test_model_expense.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=33,34,35,36 "Finished codegen for target test_model_expense"
+.PHONY : tests/CMakeFiles/test_model_expense.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_model_expense.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense.dir/build.make tests/CMakeFiles/test_model_expense.dir/clean
+.PHONY : tests/CMakeFiles/test_model_expense.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all: CMakeFiles/models_core.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Built target test_invoice_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_invoice_autogen_timestamp_deps: tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/rule
+.PHONY : test_invoice_autogen_timestamp_deps
+
+# codegen rule for target.
+tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Finished codegen for target test_invoice_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_invoice_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_invoice_autogen.dir/all: tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen.dir/build.make tests/CMakeFiles/test_invoice_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen.dir/build.make tests/CMakeFiles/test_invoice_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=32 "Built target test_invoice_autogen"
+.PHONY : tests/CMakeFiles/test_invoice_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_invoice_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_invoice_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_invoice_autogen.dir/rule
+
+# Convenience name for target.
+test_invoice_autogen: tests/CMakeFiles/test_invoice_autogen.dir/rule
+.PHONY : test_invoice_autogen
+
+# codegen rule for target.
+tests/CMakeFiles/test_invoice_autogen.dir/codegen: tests/CMakeFiles/test_invoice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen.dir/build.make tests/CMakeFiles/test_invoice_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=32 "Finished codegen for target test_invoice_autogen"
+.PHONY : tests/CMakeFiles/test_invoice_autogen.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_invoice_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_invoice_autogen.dir/build.make tests/CMakeFiles/test_invoice_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_invoice_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all: CMakeFiles/models_core.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Built target test_expense_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_expense_autogen_timestamp_deps: tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/rule
+.PHONY : test_expense_autogen_timestamp_deps
+
+# codegen rule for target.
+tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Finished codegen for target test_expense_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_expense_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_expense_autogen.dir/all: tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen.dir/build.make tests/CMakeFiles/test_expense_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen.dir/build.make tests/CMakeFiles/test_expense_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=27 "Built target test_expense_autogen"
+.PHONY : tests/CMakeFiles/test_expense_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_expense_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_expense_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_expense_autogen.dir/rule
+
+# Convenience name for target.
+test_expense_autogen: tests/CMakeFiles/test_expense_autogen.dir/rule
+.PHONY : test_expense_autogen
+
+# codegen rule for target.
+tests/CMakeFiles/test_expense_autogen.dir/codegen: tests/CMakeFiles/test_expense_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen.dir/build.make tests/CMakeFiles/test_expense_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=27 "Finished codegen for target test_expense_autogen"
+.PHONY : tests/CMakeFiles/test_expense_autogen.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_expense_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_expense_autogen.dir/build.make tests/CMakeFiles/test_expense_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_expense_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all: CMakeFiles/models_core.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Built target test_model_invoice_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_model_invoice_autogen_timestamp_deps: tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/rule
+.PHONY : test_model_invoice_autogen_timestamp_deps
+
+# codegen rule for target.
+tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Finished codegen for target test_model_invoice_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_model_invoice_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_model_invoice_autogen.dir/all: tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen.dir/build.make tests/CMakeFiles/test_model_invoice_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen.dir/build.make tests/CMakeFiles/test_model_invoice_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=42 "Built target test_model_invoice_autogen"
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_model_invoice_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_model_invoice_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen.dir/rule
+
+# Convenience name for target.
+test_model_invoice_autogen: tests/CMakeFiles/test_model_invoice_autogen.dir/rule
+.PHONY : test_model_invoice_autogen
+
+# codegen rule for target.
+tests/CMakeFiles/test_model_invoice_autogen.dir/codegen: tests/CMakeFiles/test_model_invoice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen.dir/build.make tests/CMakeFiles/test_model_invoice_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=42 "Finished codegen for target test_model_invoice_autogen"
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_model_invoice_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_invoice_autogen.dir/build.make tests/CMakeFiles/test_model_invoice_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_model_invoice_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all: CMakeFiles/models_core.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Built target test_model_expense_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_model_expense_autogen_timestamp_deps: tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/rule
+.PHONY : test_model_expense_autogen_timestamp_deps
+
+# codegen rule for target.
+tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num= "Finished codegen for target test_model_expense_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_model_expense_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_model_expense_autogen.dir/all: tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen.dir/build.make tests/CMakeFiles/test_model_expense_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen.dir/build.make tests/CMakeFiles/test_model_expense_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=37 "Built target test_model_expense_autogen"
+.PHONY : tests/CMakeFiles/test_model_expense_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_model_expense_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_model_expense_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_model_expense_autogen.dir/rule
+
+# Convenience name for target.
+test_model_expense_autogen: tests/CMakeFiles/test_model_expense_autogen.dir/rule
+.PHONY : test_model_expense_autogen
+
+# codegen rule for target.
+tests/CMakeFiles/test_model_expense_autogen.dir/codegen: tests/CMakeFiles/test_model_expense_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen.dir/build.make tests/CMakeFiles/test_model_expense_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/CMakeFiles --progress-num=37 "Finished codegen for target test_model_expense_autogen"
+.PHONY : tests/CMakeFiles/test_model_expense_autogen.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_model_expense_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_model_expense_autogen.dir/build.make tests/CMakeFiles/test_model_expense_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_model_expense_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

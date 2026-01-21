@@ -19,10 +19,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/CsvImporter.cpp" "CMakeFiles/invoice-tracker.dir/src/import/CsvImporter.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/import/CsvImporter.cpp.o.d"
   "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/import/JsonImporter.cpp" "CMakeFiles/invoice-tracker.dir/src/import/JsonImporter.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/import/JsonImporter.cpp.o.d"
   "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/main.cpp" "CMakeFiles/invoice-tracker.dir/src/main.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/main.cpp.o.d"
-  "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.cpp" "CMakeFiles/invoice-tracker.dir/src/models/Expense.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/models/Expense.cpp.o.d"
-  "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/ExpenseTableModel.cpp" "CMakeFiles/invoice-tracker.dir/src/models/ExpenseTableModel.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/models/ExpenseTableModel.cpp.o.d"
-  "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.cpp" "CMakeFiles/invoice-tracker.dir/src/models/Invoice.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/models/Invoice.cpp.o.d"
-  "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/InvoiceTableModel.cpp" "CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/models/InvoiceTableModel.cpp.o.d"
   "/Users/jeremyobrien/Desktop/Code/invoice-tracker/src/ui/PaidDelegate.cpp" "CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.o" "gcc" "CMakeFiles/invoice-tracker.dir/src/ui/PaidDelegate.cpp.o.d"
   )
 
