@@ -19,19 +19,36 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets Test)
 # -----------------------
 # Models library
 # -----------------------
-add_library(models_core
+add_library(invoice_tracker_core
     src/models/Invoice.cpp
     src/models/Expense.cpp
     src/models/InvoiceTableModel.cpp
     src/models/ExpenseTableModel.cpp
+    src/import/CsvImporter.cpp
+    src/import/JsonImporter.cpp
+    src/export/CsvExporter.cpp
+    src/export/JsonExporter.cpp
+    src/export/ExportService.cpp 
 )
 
-target_include_directories(models_core PUBLIC
+target_include_directories(invoice_tracker_core PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-target_link_libraries(models_core
+target_link_libraries(invoice_tracker_core
     Qt6::Widgets
+)
+
+add_library(invoice_tracker_ui
+    src/dialogs/InvoiceDialog.cpp
+    src/dialogs/ExpenseDialog.cpp
+    src/ui/PaidDelegate.cpp
+    src/ui/GenericSearchProxy.cpp
+)
+
+target_link_libraries(invoice_tracker_ui
+    Qt6::Widgets
+    invoice_tracker_core
 )
 
 # -----------------------
@@ -40,14 +57,6 @@ target_link_libraries(models_core
 add_executable(invoice-tracker
     src/main.cpp
     src/MainWindow.cpp
-    src/import/CsvImporter.cpp
-    src/import/JsonImporter.cpp
-    src/export/CsvExporter.cpp
-    src/export/JsonExporter.cpp
-    src/export/ExportService.cpp 
-    src/dialogs/InvoiceDialog.cpp
-    src/dialogs/ExpenseDialog.cpp
-    src/ui/PaidDelegate.cpp
 )
 
 target_include_directories(invoice-tracker PRIVATE
@@ -56,7 +65,8 @@ target_include_directories(invoice-tracker PRIVATE
 
 target_link_libraries(invoice-tracker
     Qt6::Widgets
-    models_core
+    invoice_tracker_core
+    invoice_tracker_ui
 )
 
 # -----------------------

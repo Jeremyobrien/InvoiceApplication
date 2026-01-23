@@ -1,12 +1,19 @@
 #include "CsvImporter.h"
-
+#include "ImportResult.h"
 #include <QStringList>
+#include <QString>
+
 
 std::optional<ImportResult> CsvImporter::parse(const QString &csvText)
 {
-    ImportResult result;
+    if (csvText.trimmed().isEmpty())
+        return std::nullopt;
+    
+    QStringList lines = csvText.split('\n', Qt::SkipEmptyParts);
+        if (lines.size() < 2)
+        return std::nullopt;
 
-    QStringList lines = csvText.split('\n');
+    ImportResult result;
     bool invoices = false;
     bool expenses = false;
 
@@ -15,13 +22,14 @@ std::optional<ImportResult> CsvImporter::parse(const QString &csvText)
         line = line.trimmed();
         if (line.isEmpty())
             continue;
-        
+
         if (line == "Invoices")
         {
             invoices = true;
             expenses = false;
             continue;
         }
+
         if (line == "Expenses")
         {
             invoices = false;
@@ -30,6 +38,13 @@ std::optional<ImportResult> CsvImporter::parse(const QString &csvText)
         }
 
         QStringList parts = line.split(',');
+        if (parts.isEmpty())
+            continue;
+
+        if (invoices && parts[0] == "Client")
+            continue;
+        if (expenses && parts[0] == "Description")
+            continue;
 
         if (invoices && parts.size() == 3)
         {
@@ -48,6 +63,9 @@ std::optional<ImportResult> CsvImporter::parse(const QString &csvText)
             result.expenses.push_back(exp);
         }
     }
+
+    if (result.invoices.empty() && result.expenses.empty())
+        return std::nullopt;
 
     return result;
 }

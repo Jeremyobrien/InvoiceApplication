@@ -4,12 +4,6 @@
 class GenericSearchProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
-
 public:
-    explicit GenericSearchProxy(QObject *parent = nullptr)
-        : QSortFilterProxyModel(parent)
-    {
-        setFilterCaseSensitivity(Qt::CaseInsensitive);
-        setFilterKeyColumn(-1);
-    }
+    explicit GenericSearchProxy(QObject *parent = nullptr);
 };
