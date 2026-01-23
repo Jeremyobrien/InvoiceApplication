@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinvoice_tracker_ui.a CMakeFiles/invoice_tracker_ui.dir/invoice_tracker_ui_autogen/mocs_compilation.cpp.o CMakeFiles/invoice_tracker_ui.dir/src/dialogs/InvoiceDialog.cpp.o CMakeFiles/invoice_tracker_ui.dir/src/dialogs/ExpenseDialog.cpp.o CMakeFiles/invoice_tracker_ui.dir/src/ui/PaidDelegate.cpp.o CMakeFiles/invoice_tracker_ui.dir/src/ui/GenericSearchProxy.cpp.o
+/usr/bin/ranlib libinvoice_tracker_ui.a

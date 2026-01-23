@@ -1012,18 +1012,4 @@ CMakeFiles/invoice-tracker.dir/invoice-tracker_autogen/mocs_compilation.cpp.o: \
   /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/UVLADIE3JM/../../../src/import/ImportMode.h \
   /usr/local/lib/QtCore.framework/Headers/qtmochelpers.h \
   /usr/local/lib/QtCore.framework/Headers/qtmocconstants.h \
-  /usr/local/lib/QtCore.framework/Headers/q20algorithm.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/RGRURCYE3Z/moc_ExpenseDialog.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/RGRURCYE3Z/../../../src/dialogs/ExpenseDialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QDialog \
-  /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Expense.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/RGRURCYE3Z/moc_InvoiceDialog.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/RGRURCYE3Z/../../../src/dialogs/InvoiceDialog.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QCheckBox \
-  /usr/local/lib/QtWidgets.framework/Headers/qcheckbox.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/src/models/Invoice.h \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/YPKJ5OE7LN/moc_PaidDelegate.cpp \
-  /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/invoice-tracker_autogen/YPKJ5OE7LN/../../../src/ui/PaidDelegate.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QStyledItemDelegate \
-  /usr/local/lib/QtWidgets.framework/Headers/qstyleditemdelegate.h
+  /usr/local/lib/QtCore.framework/Headers/q20algorithm.h

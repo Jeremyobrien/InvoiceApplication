@@ -119,7 +119,7 @@ tests/test_expense: tests/CMakeFiles/test_expense.dir/test_expense_autogen/mocs_
 tests/test_expense: tests/CMakeFiles/test_expense.dir/test_expense.cpp.o
 tests/test_expense: tests/CMakeFiles/test_expense.dir/build.make
 tests/test_expense: /usr/local/lib/QtTest.framework/Versions/A/QtTest
-tests/test_expense: libmodels_core.a
+tests/test_expense: libinvoice_tracker_core.a
 tests/test_expense: /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets
 tests/test_expense: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 tests/test_expense: /usr/local/lib/QtCore.framework/Versions/A/QtCore

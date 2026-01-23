@@ -1,0 +1,165 @@
+{
+	"BUILD_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_importer_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/tests",
+	"CMAKE_EXECUTABLE" : "/usr/local/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/tests/CMakeLists.txt",
+		"/usr/local/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
+		"/usr/local/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
+		"/usr/local/lib/cmake/Qt6/Qt6Config.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/Qt6ConfigExtras.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtInstallPaths.cmake",
+		"/usr/local/lib/cmake/Qt6/Qt6Targets.cmake",
+		"/usr/local/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake",
+		"/usr/local/lib/cmake/Qt6/QtFeature.cmake",
+		"/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake",
+		"/usr/local/lib/cmake/Qt6/QtFeatureCommon.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicAppleHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicGitHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicTargetHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicTestHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicToolHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake",
+		"/usr/local/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake",
+		"/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/local/lib/cmake/Qt6/Qt6Dependencies.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_importer_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "test_csv_importer_autogen/timestamp",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_importer_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_importer_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_TESTCASE_BUILDDIR=\"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests\"",
+		"QT_TESTCASE_SOURCEDIR=\"/Users/jeremyobrien/Desktop/Code/invoice-tracker/tests\"",
+		"QT_TESTLIB_LIB",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/src",
+		"/usr/local/lib/QtTest.framework/Headers",
+		"/usr/local/lib/QtTest.framework",
+		"/usr/local/lib/QtCore.framework/Headers",
+		"/usr/local/lib/QtCore.framework",
+		"/usr/local/share/qt/mkspecs/macx-clang",
+		"/usr/local/lib/QtWidgets.framework/Headers",
+		"/usr/local/lib/QtWidgets.framework",
+		"/usr/local/lib/QtGui.framework/Headers",
+		"/usr/local/lib/QtGui.framework",
+		"/usr/local/include",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-std=gnu++17",
+		"-w",
+		"-dM",
+		"-E",
+		"/usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_importer_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_exporter_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_expense_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_expense_dialog_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_export_service_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_invoice_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_invoice_dialog_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_json_exporter_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_model_expense_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_model_invoice_autogen/mocs_compilation.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/CMakeFiles/test_csv_importer_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/local/share/qt/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/local/share/qt/libexec/uic",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 10,
+	"SETTINGS_FILE" : "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/CMakeFiles/test_csv_importer_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/Users/jeremyobrien/Desktop/Code/invoice-tracker/tests/test_csv_importer.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : 
+	[
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_exporter_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_expense_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_expense_dialog_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_export_service_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_invoice_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_invoice_dialog_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_json_exporter_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_model_expense_autogen/mocs_compilation.cpp",
+		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_model_invoice_autogen/mocs_compilation.cpp"
+	],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

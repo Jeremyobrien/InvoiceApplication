@@ -1,0 +1,20 @@
+InvoiceTests 5 0.120176
+ExpenseTests 5 0.106303
+InvoiceTableModelTests 5 0.101609
+ExpenseTableModelTests 5 0.10951
+ExpenseDialogTests 5 0.116795
+InvoiceDialogTests 5 0.113391
+ExportServiceTests 5 0.0973852
+CsvExporterTests 5 0.103007
+JsonExporterTests 5 0.0959783
+CsvImporterTests 1 0.484582
+ApplyImportTests 5 0.0908513
+JsonImporterTests 5 0.101739
+CreateItemTests 5 0.0970556
+DeleteSelectedTests 5 0.172992
+EditSelectedRowTests 5 0.116346
+GenericSearchProxyTests 5 0.0988966
+PaidDelegateTests 5 0.100267
+ReadSelectedTests 5 0.142477
+BindSearchTests 5 0.11442
+---

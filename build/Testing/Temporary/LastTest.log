@@ -1,0 +1,431 @@
+Start testing: Jan 23 18:50 EST
+----------------------------------------------------------
+1/19 Testing: InvoiceTests
+1/19 Test: InvoiceTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_invoice"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"InvoiceTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of InvoiceTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : InvoiceTests::initTestCase()
+PASS   : InvoiceTests::testDefaultConstructor()
+PASS   : InvoiceTests::testSettersAndGetters()
+PASS   : InvoiceTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of InvoiceTests *********
+<end of output>
+Test time =   0.60 sec
+----------------------------------------------------------
+Test Passed.
+"InvoiceTests" end time: Jan 23 18:50 EST
+"InvoiceTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/19 Testing: ExpenseTests
+2/19 Test: ExpenseTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_expense"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"ExpenseTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of ExpenseTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : ExpenseTests::initTestCase()
+PASS   : ExpenseTests::constructor_sets_values()
+PASS   : ExpenseTests::testSettersAndGetters()
+PASS   : ExpenseTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of ExpenseTests *********
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Passed.
+"ExpenseTests" end time: Jan 23 18:50 EST
+"ExpenseTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/19 Testing: InvoiceTableModelTests
+3/19 Test: InvoiceTableModelTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_model_invoice"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"InvoiceTableModelTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of InvoiceTableModelTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : InvoiceTableModelTests::initTestCase()
+PASS   : InvoiceTableModelTests::rowCount_empty()
+PASS   : InvoiceTableModelTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of InvoiceTableModelTests *********
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"InvoiceTableModelTests" end time: Jan 23 18:50 EST
+"InvoiceTableModelTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/19 Testing: ExpenseTableModelTests
+4/19 Test: ExpenseTableModelTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_model_expense"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"ExpenseTableModelTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of ExpenseTableModelTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : ExpenseTableModelTests::initTestCase()
+PASS   : ExpenseTableModelTests::rowCount_empty()
+PASS   : ExpenseTableModelTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of ExpenseTableModelTests *********
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"ExpenseTableModelTests" end time: Jan 23 18:50 EST
+"ExpenseTableModelTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/19 Testing: ExpenseDialogTests
+5/19 Test: ExpenseDialogTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_expense_dialog"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"ExpenseDialogTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of ExpenseDialogTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : ExpenseDialogTests::initTestCase()
+PASS   : ExpenseDialogTests::default_constructor_initial_state()
+PASS   : ExpenseDialogTests::constructor_with_expense_populates_fields()
+PASS   : ExpenseDialogTests::getExpense_returns_expected_model()
+PASS   : ExpenseDialogTests::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 83ms
+********* Finished testing of ExpenseDialogTests *********
+<end of output>
+Test time =   0.58 sec
+----------------------------------------------------------
+Test Passed.
+"ExpenseDialogTests" end time: Jan 23 18:50 EST
+"ExpenseDialogTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/19 Testing: InvoiceDialogTests
+6/19 Test: InvoiceDialogTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_invoice_dialog"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"InvoiceDialogTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of InvoiceDialogTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : InvoiceDialogTests::initTestCase()
+PASS   : InvoiceDialogTests::default_constructor_initial_state()
+PASS   : InvoiceDialogTests::constructor_with_invoice_populates_fields()
+PASS   : InvoiceDialogTests::getInvoice_returns_expected_model()
+PASS   : InvoiceDialogTests::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 84ms
+********* Finished testing of InvoiceDialogTests *********
+<end of output>
+Test time =   0.57 sec
+----------------------------------------------------------
+Test Passed.
+"InvoiceDialogTests" end time: Jan 23 18:50 EST
+"InvoiceDialogTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/19 Testing: ExportServiceTests
+7/19 Test: ExportServiceTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_export_service"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"ExportServiceTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of ExportServiceTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : ExportServiceTests::initTestCase()
+PASS   : ExportServiceTests::creates_csv_exporter()
+PASS   : ExportServiceTests::creates_json_exporter()
+PASS   : ExportServiceTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of ExportServiceTests *********
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Passed.
+"ExportServiceTests" end time: Jan 23 18:50 EST
+"ExportServiceTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/19 Testing: CsvExporterTests
+8/19 Test: CsvExporterTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_exporter"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"CsvExporterTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of CsvExporterTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : CsvExporterTests::initTestCase()
+PASS   : CsvExporterTests::exports_file_successfully()
+PASS   : CsvExporterTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 3ms
+********* Finished testing of CsvExporterTests *********
+<end of output>
+Test time =   0.52 sec
+----------------------------------------------------------
+Test Passed.
+"CsvExporterTests" end time: Jan 23 18:50 EST
+"CsvExporterTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/19 Testing: JsonExporterTests
+9/19 Test: JsonExporterTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_json_exporter"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"JsonExporterTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of JsonExporterTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : JsonExporterTests::initTestCase()
+PASS   : JsonExporterTests::exports_file_successfully()
+PASS   : JsonExporterTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 3ms
+********* Finished testing of JsonExporterTests *********
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Passed.
+"JsonExporterTests" end time: Jan 23 18:50 EST
+"JsonExporterTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/19 Testing: CsvImporterTests
+10/19 Test: CsvImporterTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_csv_importer"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"CsvImporterTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of CsvImporterTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : CsvImporterTests::initTestCase()
+PASS   : CsvImporterTests::parse_valid_csv()
+PASS   : CsvImporterTests::parse_invalid_csv_returns_nullopt()
+PASS   : CsvImporterTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of CsvImporterTests *********
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Passed.
+"CsvImporterTests" end time: Jan 23 18:50 EST
+"CsvImporterTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/19 Testing: ApplyImportTests
+11/19 Test: ApplyImportTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_apply_import"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"ApplyImportTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of ApplyImportTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : ApplyImportTests::initTestCase()
+PASS   : ApplyImportTests::cleanupTestCase()
+Totals: 2 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of ApplyImportTests *********
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"ApplyImportTests" end time: Jan 23 18:50 EST
+"ApplyImportTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/19 Testing: JsonImporterTests
+12/19 Test: JsonImporterTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_json_importer"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"JsonImporterTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of JsonImporterTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : JsonImporterTests::initTestCase()
+PASS   : JsonImporterTests::parse_empty_json()
+PASS   : JsonImporterTests::parse_invalid_json_returns_nullopt()
+PASS   : JsonImporterTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of JsonImporterTests *********
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"JsonImporterTests" end time: Jan 23 18:50 EST
+"JsonImporterTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/19 Testing: CreateItemTests
+13/19 Test: CreateItemTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_create_item"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"CreateItemTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of CreateItemTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : CreateItemTests::initTestCase()
+PASS   : CreateItemTests::adds_item_on_accept()
+PASS   : CreateItemTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of CreateItemTests *********
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Passed.
+"CreateItemTests" end time: Jan 23 18:50 EST
+"CreateItemTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/19 Testing: DeleteSelectedTests
+14/19 Test: DeleteSelectedTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_delete_selected"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"DeleteSelectedTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of DeleteSelectedTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : DeleteSelectedTests::initTestCase()
+PASS   : DeleteSelectedTests::no_selection_does_nothing()
+PASS   : DeleteSelectedTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 90ms
+********* Finished testing of DeleteSelectedTests *********
+<end of output>
+Test time =   0.86 sec
+----------------------------------------------------------
+Test Passed.
+"DeleteSelectedTests" end time: Jan 23 18:50 EST
+"DeleteSelectedTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/19 Testing: EditSelectedRowTests
+15/19 Test: EditSelectedRowTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_edit_utils"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"EditSelectedRowTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of EditSelectedRowTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : EditSelectedRowTests::initTestCase()
+PASS   : EditSelectedRowTests::no_selection_does_nothing()
+PASS   : EditSelectedRowTests::dialog_rejected_does_not_update()
+PASS   : EditSelectedRowTests::dialog_accepted_updates_row()
+PASS   : EditSelectedRowTests::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 95ms
+********* Finished testing of EditSelectedRowTests *********
+<end of output>
+Test time =   0.58 sec
+----------------------------------------------------------
+Test Passed.
+"EditSelectedRowTests" end time: Jan 23 18:50 EST
+"EditSelectedRowTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/19 Testing: GenericSearchProxyTests
+16/19 Test: GenericSearchProxyTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_generic_search_proxy"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"GenericSearchProxyTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of GenericSearchProxyTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : GenericSearchProxyTests::initTestCase()
+PASS   : GenericSearchProxyTests::default_configuration()
+PASS   : GenericSearchProxyTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of GenericSearchProxyTests *********
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Passed.
+"GenericSearchProxyTests" end time: Jan 23 18:50 EST
+"GenericSearchProxyTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/19 Testing: PaidDelegateTests
+17/19 Test: PaidDelegateTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_paid_delegate"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"PaidDelegateTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of PaidDelegateTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : PaidDelegateTests::initTestCase()
+PASS   : PaidDelegateTests::paint_does_not_crash()
+PASS   : PaidDelegateTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of PaidDelegateTests *********
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Passed.
+"PaidDelegateTests" end time: Jan 23 18:50 EST
+"PaidDelegateTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/19 Testing: ReadSelectedTests
+18/19 Test: ReadSelectedTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_read_selected"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"ReadSelectedTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of ReadSelectedTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : ReadSelectedTests::initTestCase()
+PASS   : ReadSelectedTests::no_selection_returns_nullopt()
+PASS   : ReadSelectedTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 81ms
+********* Finished testing of ReadSelectedTests *********
+<end of output>
+Test time =   0.71 sec
+----------------------------------------------------------
+Test Passed.
+"ReadSelectedTests" end time: Jan 23 18:50 EST
+"ReadSelectedTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/19 Testing: BindSearchTests
+19/19 Test: BindSearchTests
+Command: "/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/test_bind_search"
+Directory: /Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests
+"BindSearchTests" start time: Jan 23 18:50 EST
+Output:
+----------------------------------------------------------
+********* Start testing of BindSearchTests *********
+Config: Using QtTest library 6.10.1, Qt 6.10.1 (x86_64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.6)), macos 26.2.0
+PASS   : BindSearchTests::initTestCase()
+PASS   : BindSearchTests::proxy_is_configured()
+PASS   : BindSearchTests::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 82ms
+********* Finished testing of BindSearchTests *********
+<end of output>
+Test time =   0.57 sec
+----------------------------------------------------------
+Test Passed.
+"BindSearchTests" end time: Jan 23 18:50 EST
+"BindSearchTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 23 18:50 EST

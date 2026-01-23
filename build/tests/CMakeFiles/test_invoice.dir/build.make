@@ -119,7 +119,7 @@ tests/test_invoice: tests/CMakeFiles/test_invoice.dir/test_invoice_autogen/mocs_
 tests/test_invoice: tests/CMakeFiles/test_invoice.dir/test_invoice.cpp.o
 tests/test_invoice: tests/CMakeFiles/test_invoice.dir/build.make
 tests/test_invoice: /usr/local/lib/QtTest.framework/Versions/A/QtTest
-tests/test_invoice: libmodels_core.a
+tests/test_invoice: libinvoice_tracker_core.a
 tests/test_invoice: /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets
 tests/test_invoice: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 tests/test_invoice: /usr/local/lib/QtCore.framework/Versions/A/QtCore
