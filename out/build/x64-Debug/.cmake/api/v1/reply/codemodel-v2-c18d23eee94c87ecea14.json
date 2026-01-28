@@ -1,0 +1,664 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-70e4927a02b591d5c1f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "invoice-tracker",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice-tracker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice-tracker-Debug-f9d7d69cf7b8e6055f34.json",
+					"name" : "invoice-tracker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice-tracker_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice-tracker_autogen-Debug-f1418178507104d64002.json",
+					"name" : "invoice-tracker_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice-tracker_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice-tracker_autogen_timestamp_deps-Debug-d128680d6f465ab8abb2.json",
+					"name" : "invoice-tracker_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice_tracker_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice_tracker_core-Debug-f28dae52e19bb73d3c18.json",
+					"name" : "invoice_tracker_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice_tracker_core_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice_tracker_core_autogen-Debug-dab4d44cbf1f588f150b.json",
+					"name" : "invoice_tracker_core_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice_tracker_core_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice_tracker_core_autogen_timestamp_deps-Debug-7af7d12fc37486c165e8.json",
+					"name" : "invoice_tracker_core_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice_tracker_ui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice_tracker_ui-Debug-524ccb2d0fdef9661d2b.json",
+					"name" : "invoice_tracker_ui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice_tracker_ui_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice_tracker_ui_autogen-Debug-9d2289c45760d7248231.json",
+					"name" : "invoice_tracker_ui_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "invoice_tracker_ui_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-invoice_tracker_ui_autogen_timestamp_deps-Debug-6a17ff56e23629a59553.json",
+					"name" : "invoice_tracker_ui_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_apply_import::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_apply_import-Debug-9fe9acda395614f6e2a3.json",
+					"name" : "test_apply_import",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_apply_import_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_apply_import_autogen-Debug-cd558d43da931508f4ee.json",
+					"name" : "test_apply_import_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_apply_import_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_apply_import_autogen_timestamp_deps-Debug-6d2027b67a3a4a554fe1.json",
+					"name" : "test_apply_import_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_bind_search::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_bind_search-Debug-a4a7428a30317571409e.json",
+					"name" : "test_bind_search",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_bind_search_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_bind_search_autogen-Debug-209f6acf943fc6488c7f.json",
+					"name" : "test_bind_search_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_bind_search_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_bind_search_autogen_timestamp_deps-Debug-4ec0d59c8ade96335998.json",
+					"name" : "test_bind_search_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_create_item::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_create_item-Debug-d9e29eb8bc17cfa41a31.json",
+					"name" : "test_create_item",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_create_item_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_create_item_autogen-Debug-e6c4e0a1938d8af38160.json",
+					"name" : "test_create_item_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_create_item_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_create_item_autogen_timestamp_deps-Debug-03be01148455d1246e7a.json",
+					"name" : "test_create_item_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_csv_exporter::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_csv_exporter-Debug-b262549ad4ea7c0bbfea.json",
+					"name" : "test_csv_exporter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_csv_exporter_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_csv_exporter_autogen-Debug-37a9184dbdb99e9b49b5.json",
+					"name" : "test_csv_exporter_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_csv_exporter_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_csv_exporter_autogen_timestamp_deps-Debug-d3da7bd8328273913876.json",
+					"name" : "test_csv_exporter_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_csv_importer::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_csv_importer-Debug-ed64d7e2ecc22605bfb4.json",
+					"name" : "test_csv_importer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_csv_importer_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_csv_importer_autogen-Debug-84285e513ac2d30bedbf.json",
+					"name" : "test_csv_importer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_csv_importer_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_csv_importer_autogen_timestamp_deps-Debug-e0cbd2a0e1ac0d8b2762.json",
+					"name" : "test_csv_importer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_delete_selected::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_delete_selected-Debug-5aa772ab2c2e246ba1c7.json",
+					"name" : "test_delete_selected",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_delete_selected_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_delete_selected_autogen-Debug-a21a30b04b540b5de3ea.json",
+					"name" : "test_delete_selected_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_delete_selected_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_delete_selected_autogen_timestamp_deps-Debug-5ed79b0705a0cfff5194.json",
+					"name" : "test_delete_selected_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_edit_utils::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_edit_utils-Debug-a82f7d940c5ef17895e2.json",
+					"name" : "test_edit_utils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_edit_utils_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_edit_utils_autogen-Debug-ab6ba1c5b67a2525623f.json",
+					"name" : "test_edit_utils_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_edit_utils_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_edit_utils_autogen_timestamp_deps-Debug-4287346d006831428d74.json",
+					"name" : "test_edit_utils_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_expense::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_expense-Debug-045091f1c1a2b7327601.json",
+					"name" : "test_expense",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_expense_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_expense_autogen-Debug-1e292b284b0a6129f2a2.json",
+					"name" : "test_expense_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_expense_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_expense_autogen_timestamp_deps-Debug-f1ecaa4f8ffa0d4c3b6f.json",
+					"name" : "test_expense_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_expense_dialog::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_expense_dialog-Debug-36cdc5f785e137b77789.json",
+					"name" : "test_expense_dialog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_expense_dialog_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_expense_dialog_autogen-Debug-096271da128c12078212.json",
+					"name" : "test_expense_dialog_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_expense_dialog_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_expense_dialog_autogen_timestamp_deps-Debug-09f76cc9d67698f059db.json",
+					"name" : "test_expense_dialog_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_export_service::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_export_service-Debug-d3200c6fc5ebb7547f08.json",
+					"name" : "test_export_service",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_export_service_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_export_service_autogen-Debug-e0efca285192ac7132bf.json",
+					"name" : "test_export_service_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_export_service_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_export_service_autogen_timestamp_deps-Debug-b9db803c847c0340b039.json",
+					"name" : "test_export_service_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_generic_search_proxy::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_generic_search_proxy-Debug-e20cb80f81618a81fba8.json",
+					"name" : "test_generic_search_proxy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_generic_search_proxy_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_generic_search_proxy_autogen-Debug-09120bc9d5232d5351c7.json",
+					"name" : "test_generic_search_proxy_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_generic_search_proxy_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_generic_search_proxy_autogen_timestamp_deps-Debug-d3efcd6da6f3cc940b94.json",
+					"name" : "test_generic_search_proxy_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_invoice::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_invoice-Debug-8c54e997800456bc439d.json",
+					"name" : "test_invoice",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_invoice_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_invoice_autogen-Debug-8ec0cecd81e67c307418.json",
+					"name" : "test_invoice_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_invoice_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_invoice_autogen_timestamp_deps-Debug-34e480a139440f1f4ac5.json",
+					"name" : "test_invoice_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_invoice_dialog::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_invoice_dialog-Debug-f502a48a1fb3b9e4a403.json",
+					"name" : "test_invoice_dialog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_invoice_dialog_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_invoice_dialog_autogen-Debug-b7fb26f78da2e1fceed1.json",
+					"name" : "test_invoice_dialog_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_invoice_dialog_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_invoice_dialog_autogen_timestamp_deps-Debug-ed406ca97cb916ce1cc4.json",
+					"name" : "test_invoice_dialog_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_json_exporter::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_json_exporter-Debug-38298ec309a7b83ef847.json",
+					"name" : "test_json_exporter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_json_exporter_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_json_exporter_autogen-Debug-6382ddbdb42abba86f74.json",
+					"name" : "test_json_exporter_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_json_exporter_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_json_exporter_autogen_timestamp_deps-Debug-ae0fc6e777fba3b0f598.json",
+					"name" : "test_json_exporter_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_json_importer::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_json_importer-Debug-c6bf88aab2e0ca2908a4.json",
+					"name" : "test_json_importer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_json_importer_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_json_importer_autogen-Debug-bf64d0ce6092900bdce1.json",
+					"name" : "test_json_importer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_json_importer_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_json_importer_autogen_timestamp_deps-Debug-99833a6a714b376a1e1b.json",
+					"name" : "test_json_importer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_model_expense::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_model_expense-Debug-0dc050d0fcae828cf93e.json",
+					"name" : "test_model_expense",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_model_expense_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_model_expense_autogen-Debug-312744f51e5050afc661.json",
+					"name" : "test_model_expense_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_model_expense_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_model_expense_autogen_timestamp_deps-Debug-38a14fd0d7215dba1278.json",
+					"name" : "test_model_expense_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_model_invoice::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_model_invoice-Debug-2263ddae34a44337b4ed.json",
+					"name" : "test_model_invoice",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_model_invoice_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_model_invoice_autogen-Debug-fed9ae449da64a65333a.json",
+					"name" : "test_model_invoice_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_model_invoice_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_model_invoice_autogen_timestamp_deps-Debug-49447f019ecc9ff3f140.json",
+					"name" : "test_model_invoice_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_paid_delegate::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_paid_delegate-Debug-0582c07b75ed3e9053af.json",
+					"name" : "test_paid_delegate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_paid_delegate_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_paid_delegate_autogen-Debug-a00335ed988b66693513.json",
+					"name" : "test_paid_delegate_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_paid_delegate_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_paid_delegate_autogen_timestamp_deps-Debug-893182a3d623e280880d.json",
+					"name" : "test_paid_delegate_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_read_selected::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_read_selected-Debug-7d517cb7558ffa4ab855.json",
+					"name" : "test_read_selected",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_read_selected_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_read_selected_autogen-Debug-888ad399fae65c3a3bbb.json",
+					"name" : "test_read_selected_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_read_selected_autogen_timestamp_deps::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_read_selected_autogen_timestamp_deps-Debug-fdbc40dfd1cdb8d6dc74.json",
+					"name" : "test_read_selected_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jerem/source/repos/InvoiceApplication/out/build/x64-Debug",
+		"source" : "C:/Users/jerem/source/repos/InvoiceApplication"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -4,9 +4,9 @@
 class Invoice
 {
 private:
-    std::string clientName;
-    double amount;
-    bool paid;
+    std::string clientName = "";
+    double amount = 0.0;
+    bool paid = false;
 
 public:
     Invoice() = default;

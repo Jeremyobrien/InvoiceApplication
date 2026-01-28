@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta charset="utf-8"/>
+	    <title>ExpenseTableModel.cpp</title>
+	    <link href="../../third-party/google-code-prettify/prettify-CppCoverage.css" type="text/css" rel="stylesheet" />
+	    <script type="text/javascript" src="../../third-party/google-code-prettify/prettify.js"></script>
+	</head>
+    <body onload="prettyPrint()">
+        <h4></h4>
+        <pre class="prettyprint lang-cpp linenums">
+#include "ExpenseTableModel.h"
+#include &lt;QString&gt;
+#include &lt;Qt&gt;
+#include &lt;QFlags&gt;
+#include &lt;QVariant&gt;
+
+ExpenseTableModel::ExpenseTableModel(QObject *parent)
+<span style = "background-color:#dfd">    : QAbstractTableModel(parent)
+{
+}</span>
+
+void ExpenseTableModel::setExpenses(std::shared_ptr&lt;std::vector&lt;Expense&gt;&gt; expenses_)
+<span style = "background-color:#fdd">{
+    beginResetModel(); // 1. Notify view data is changing
+    expenses = expenses_;
+    endResetModel(); // 2. Notify view data reset is complete
+}</span>
+
+int ExpenseTableModel::rowCount(const QModelIndex &amp;) const
+<span style = "background-color:#dfd">{
+    return expenses ? static_cast&lt;int&gt;(expenses-&gt;size()) : 0;
+}</span>
+
+int ExpenseTableModel::columnCount(const QModelIndex &amp;) const
+<span style = "background-color:#fdd">{
+    return 2; // Description, Amount
+}</span>
+
+QVariant ExpenseTableModel::data(const QModelIndex &amp;index, int role) const
+<span style = "background-color:#fdd">{
+    if (!expenses || !index.isValid())
+        return QVariant();</span>
+
+<span style = "background-color:#fdd">    const auto &amp;exp = expenses-&gt;at(index.row());</span>
+
+<span style = "background-color:#fdd">    if (role == Qt::DisplayRole || role == Qt::EditRole)</span>
+    {
+<span style = "background-color:#fdd">        switch (index.column())</span>
+        {
+        case 0:
+<span style = "background-color:#fdd">            return QString::fromStdString(exp.getDescription());</span>
+        case 1:
+<span style = "background-color:#fdd">            return exp.getCost();</span>
+        default:
+<span style = "background-color:#fdd">            return QVariant();</span>
+        }
+    }
+
+<span style = "background-color:#fdd">    if (role == Qt::TextAlignmentRole)</span>
+    {
+<span style = "background-color:#fdd">        return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);</span>
+    }
+
+<span style = "background-color:#fdd">    return QVariant();
+}</span>
+
+QVariant ExpenseTableModel::headerData(int section, Qt::Orientation orientation, int role) const
+<span style = "background-color:#fdd">{
+    if (role != Qt::DisplayRole || orientation != Qt::Horizontal)
+        return QVariant();</span>
+
+<span style = "background-color:#fdd">    switch (section)</span>
+    {
+    case 0:
+<span style = "background-color:#fdd">        return "Description";</span>
+    case 1:
+<span style = "background-color:#fdd">        return "Amount";</span>
+    default:
+<span style = "background-color:#fdd">        return QVariant();</span>
+    }
+
+<span style = "background-color:#fdd">    if (role == Qt::TextAlignmentRole)</span>
+    {
+<span style = "background-color:#fdd">        return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);</span>
+    }
+<span style = "background-color:#fdd">}</span>
+
+std::vector&lt;Expense&gt;* ExpenseTableModel::items()
+<span style = "background-color:#fdd">{
+    return expenses.get();
+}</span>
+
+void ExpenseTableModel::updateRow(int row, const Expense&amp; updated)
+<span style = "background-color:#fdd">{
+    (*expenses)[row] = updated;
+    emit dataChanged(index(row, 0), index(row, columnCount() -1));
+}</span>
+
+void ExpenseTableModel::refresh()
+<span style = "background-color:#fdd">{
+    beginResetModel();
+    endResetModel();
+}</span>
+
+Qt::ItemFlags ExpenseTableModel::flags(const QModelIndex &amp;index) const
+<span style = "background-color:#fdd">{
+    if (!index.isValid())
+        return Qt::NoItemFlags;</span>
+
+<span style = "background-color:#fdd">    return Qt::ItemIsSelectable</span>
+         | Qt::ItemIsEnabled
+         | Qt::ItemIsEditable;
+<span style = "background-color:#fdd">}</span>
+
+bool ExpenseTableModel::setData(
+    const QModelIndex &amp;index,
+    const QVariant &amp;value,
+    int role)
+<span style = "background-color:#fdd">{
+    if (!index.isValid() || role != Qt::EditRole)
+        return false;</span>
+
+<span style = "background-color:#fdd">    Expense &amp;expense = (*expenses)[index.row()];</span>
+
+<span style = "background-color:#fdd">    switch (index.column())</span>
+    {
+    case 0:
+<span style = "background-color:#fdd">        expense.setDescription(value.toString().toStdString());
+        break;</span>
+    case 1:
+<span style = "background-color:#fdd">        expense.setCost(value.toDouble());
+        break;</span>
+    default:
+<span style = "background-color:#fdd">        return false;</span>
+    }
+
+<span style = "background-color:#fdd">    emit dataChanged(index, index);
+    return true;
+}</span>
+
+</pre>
+        <hr />
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th align="center">
+                        <small>Generated by</small>
+                        <a href="https://github.com/OpenCppCoverage/OpenCppCoverage/releases">
+                            <strong>OpenCppCoverage (Version: 0.9.9.0)</strong>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>

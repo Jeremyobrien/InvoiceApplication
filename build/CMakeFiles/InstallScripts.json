@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/cmake_install.cmake",
-		"/Users/jeremyobrien/Desktop/Code/invoice-tracker/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

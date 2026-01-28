@@ -73,3 +73,8 @@ target_link_libraries(invoice-tracker
 # Add tests
 # -----------------------
 add_subdirectory(tests)
+
+if (MSVC)
+    add_compile_options(/Zi /Od)
+    add_link_options(/DEBUG)
+endif()

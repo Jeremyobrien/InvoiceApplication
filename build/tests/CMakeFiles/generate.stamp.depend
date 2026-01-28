@@ -1,0 +1,25 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6Dependencies.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6Targets.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtFeature.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtFeatureCommon.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake
+C:/Qt/6.7.3/msvc2022_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake
+C:/Users/jerem/source/repos/InvoiceApplication/tests/CMakeLists.txt

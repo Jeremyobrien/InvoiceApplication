@@ -1,0 +1,10 @@
+C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core_autogen\mocs_compilation_Debug.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\mocs_compilation_Debug.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\models\Invoice.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\Invoice.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\models\Expense.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\Expense.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\models\InvoiceTableModel.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\InvoiceTableModel.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\models\ExpenseTableModel.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\ExpenseTableModel.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\import\CsvImporter.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\CsvImporter.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\import\JsonImporter.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\JsonImporter.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\export\CsvExporter.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\CsvExporter.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\export\JsonExporter.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\JsonExporter.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\export\ExportService.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_core.dir\Debug\ExportService.obj

@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta charset="utf-8"/>
+	    <title>InvoiceTableModel.cpp</title>
+	    <link href="../../third-party/google-code-prettify/prettify-CppCoverage.css" type="text/css" rel="stylesheet" />
+	    <script type="text/javascript" src="../../third-party/google-code-prettify/prettify.js"></script>
+	</head>
+    <body onload="prettyPrint()">
+        <h4></h4>
+        <pre class="prettyprint lang-cpp linenums">
+
+#include "InvoiceTableModel.h"
+#include &lt;QString&gt;
+#include &lt;Qt&gt;
+#include &lt;QFlags&gt;
+#include &lt;QVariant&gt;
+
+InvoiceTableModel::InvoiceTableModel(QObject *parent)
+<span style = "background-color:#dfd">    : QAbstractTableModel(parent)
+{
+}</span>
+
+void InvoiceTableModel::setInvoices(std::shared_ptr&lt;std::vector&lt;Invoice&gt;&gt; invoices_)
+<span style = "background-color:#fdd">{
+    beginResetModel();
+    invoices = invoices_;
+    endResetModel();
+}</span>
+
+int InvoiceTableModel::rowCount(const QModelIndex &amp;) const
+<span style = "background-color:#dfd">{
+    return invoices ? static_cast&lt;int&gt;(invoices-&gt;size()) : 0;
+}</span>
+
+int InvoiceTableModel::columnCount(const QModelIndex &amp;) const
+<span style = "background-color:#fdd">{
+    return 3;
+}</span>
+
+QVariant InvoiceTableModel::data(const QModelIndex &amp;index, int role) const
+<span style = "background-color:#fdd">{
+    if (!invoices || !index.isValid())
+        return QVariant();</span>
+
+<span style = "background-color:#fdd">    const auto &amp;inv = invoices-&gt;at(index.row());</span>
+
+    // Display the cell text
+<span style = "background-color:#fdd">    if (role == Qt::DisplayRole || role == Qt::EditRole)</span>
+    {
+<span style = "background-color:#fdd">        switch (index.column())</span>
+        {
+        case 0:
+<span style = "background-color:#fdd">            return QString::fromStdString(inv.getClient());</span>
+        case 1:
+<span style = "background-color:#fdd">            return inv.getAmount();</span>
+        case 2:
+<span style = "background-color:#fdd">            return inv.isPaid() ? QVariant("Yes"): QVariant("No");</span>
+        default:
+<span style = "background-color:#fdd">            return QVariant();</span>
+        }
+    }
+
+    // Align text in the center
+<span style = "background-color:#fdd">    if (role == Qt::TextAlignmentRole &amp;&amp; index.column() != 2)</span>
+    {
+<span style = "background-color:#fdd">        return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);</span>
+    }
+
+<span style = "background-color:#fdd">    if (role == Qt::CheckStateRole &amp;&amp; index.column() == 2)
+        return inv.isPaid() ? Qt::Checked : Qt::Unchecked;</span>
+
+<span style = "background-color:#fdd">    return QVariant();
+}</span>
+
+QVariant InvoiceTableModel::headerData(int section,
+                                       Qt::Orientation orientation,
+                                       int role) const
+<span style = "background-color:#fdd">{
+    if (role != Qt::DisplayRole || orientation != Qt::Horizontal)
+        return QVariant();</span>
+
+<span style = "background-color:#fdd">    switch (section)</span>
+    {
+    case 0:
+<span style = "background-color:#fdd">        return "Client";</span>
+    case 1:
+<span style = "background-color:#fdd">        return "Amount";</span>
+    case 2:
+<span style = "background-color:#fdd">        return "Paid";</span>
+    default:
+<span style = "background-color:#fdd">        return QVariant();</span>
+    }
+<span style = "background-color:#fdd">}</span>
+
+bool InvoiceTableModel::removeRows(int row, int count, const QModelIndex &amp;)
+<span style = "background-color:#fdd">{
+    if (!invoices || row &lt; 0 || row + count &gt; invoices-&gt;size())
+        return false;</span>
+    
+<span style = "background-color:#fdd">    beginRemoveRows(QModelIndex(), row, row + count -1);
+    invoices-&gt;erase(invoices-&gt;begin() + row,</span>
+                    invoices-&gt;begin() + row + count);
+<span style = "background-color:#fdd">    endRemoveRows();</span>
+
+<span style = "background-color:#fdd">    return true;
+}</span>
+
+std::vector&lt;Invoice&gt;* InvoiceTableModel::items()
+<span style = "background-color:#fdd">{
+    return invoices.get();
+}</span>
+
+void InvoiceTableModel::updateRow(int row, const Invoice&amp; updated)
+<span style = "background-color:#fdd">{
+    (*invoices)[row] = updated;
+    emit dataChanged(index(row, 0), index(row, columnCount()-1));
+}</span>
+
+void InvoiceTableModel::refresh()
+<span style = "background-color:#fdd">{
+    beginResetModel();
+    endResetModel();
+}</span>
+
+Qt::ItemFlags InvoiceTableModel::flags(const QModelIndex &amp;index) const
+<span style = "background-color:#fdd">{
+    if (!index.isValid())
+        return Qt::NoItemFlags;</span>
+
+    
+<span style = "background-color:#fdd">    if (index.column() == 2) // Paid checkbox override
+        return Qt::ItemIsSelectable</span>
+             | Qt::ItemIsEnabled
+             | Qt::ItemIsEditable
+             | Qt::ItemIsUserCheckable;
+
+<span style = "background-color:#fdd">    return Qt::ItemIsSelectable</span>
+        |  Qt::ItemIsEnabled
+        |  Qt::ItemIsEditable;
+<span style = "background-color:#fdd">}</span>
+
+bool InvoiceTableModel::setData(
+    const QModelIndex &amp;index,
+    const QVariant &amp;value,
+    int role)
+<span style = "background-color:#fdd">{
+    if (!index.isValid())
+        return false;</span>
+    
+<span style = "background-color:#fdd">    Invoice &amp;invoice = (*invoices)[index.row()];</span>
+
+<span style = "background-color:#fdd">    if (role == Qt::CheckStateRole &amp;&amp; index.column() == 2)</span>
+    {
+<span style = "background-color:#fdd">        invoice.setPaid(value.toInt() == Qt::Checked);
+        emit dataChanged(index, index, {Qt::CheckStateRole});
+        return true;</span>
+    }
+
+<span style = "background-color:#fdd">    if (role != Qt::EditRole)
+        return false;</span>
+    
+<span style = "background-color:#fdd">    switch (index.column())</span>
+    {
+        case 0:
+<span style = "background-color:#fdd">            invoice.setClient(value.toString().toStdString());
+            break;</span>
+        case 1:
+<span style = "background-color:#fdd">            invoice.setAmount(value.toDouble());
+            break;</span>
+        case 2:
+<span style = "background-color:#fdd">            invoice.setPaid(value.toBool());
+            break;</span>
+        default:
+<span style = "background-color:#fdd">            return false;</span>
+    }
+
+<span style = "background-color:#fdd">    emit dataChanged(index, index);
+    return true;
+}</span></pre>
+        <hr />
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th align="center">
+                        <small>Generated by</small>
+                        <a href="https://github.com/OpenCppCoverage/OpenCppCoverage/releases">
+                            <strong>OpenCppCoverage (Version: 0.9.9.0)</strong>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_ui_autogen\mocs_compilation_Debug.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_ui.dir\Debug\mocs_compilation_Debug.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\dialogs\InvoiceDialog.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_ui.dir\Debug\InvoiceDialog.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\dialogs\ExpenseDialog.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_ui.dir\Debug\ExpenseDialog.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\ui\PaidDelegate.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_ui.dir\Debug\PaidDelegate.obj
+C:\Users\jerem\source\repos\InvoiceApplication\src\ui\GenericSearchProxy.cpp;C:\Users\jerem\source\repos\InvoiceApplication\build\invoice_tracker_ui.dir\Debug\GenericSearchProxy.obj
