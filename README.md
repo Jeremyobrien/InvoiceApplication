@@ -20,15 +20,15 @@ Project Structure
 
 Contributing
 
-Prerequisites
+Prerequisites ✅
 
-Before building and running the project, make sure you have the following installed:
+Before building and running the project, make sure you have:
 
 Windows 10/11
 
 Visual Studio 2022 (Community or higher) with:
 
-C++ Desktop Development
+Desktop development with C++
 
 CMake support
 
@@ -40,13 +40,13 @@ Qt 6 (matching your Visual Studio configuration)
 
 OpenCppCoverage (for code coverage)
 
-Git (for cloning the repository)
+Git
 
-Clone the Repository
+Clone the Repository ⬇️
 git clone https://github.com/Jeremyobrien/InvoiceApplication.git
 cd InvoiceApplication
 
-Build Instructions
+Build Instructions 🏗️
 
 Create a build directory and configure CMake:
 
@@ -60,7 +60,7 @@ cmake --build build --config Debug
 
 This will build the main application and all test executables.
 
-Run the Application
+Run the Application ▶️
 
 After building:
 
@@ -69,31 +69,32 @@ build\Debug\InvoiceApplication.exe
 
 (Adjust path if your Visual Studio configuration is different.)
 
-Run Tests
+Run Tests 🧪
 
-To run the Qt test suite:
+You can run individual Qt test executables:
 
 cd build\tests\Debug
 .\test_invoice.exe
 .\test_expense.exe
 .\test_model_invoice.exe
 .\test_model_expense.exe
-# ... or run all tests using CTest
+
+
+Or run all tests with CTest:
+
 cd ../../..
 ctest --test-dir build --output-on-failure
 
-Generate Code Coverage
+Generate Code Coverage 📊
 
-⚠️ Important: OpenCppCoverage requires modules and sources to be absolute paths.
+⚠️ Important: OpenCppCoverage requires absolute paths and Visual Studio must be closed (locks .vs folder).
 
-Make sure Visual Studio is closed (locks .vs folder prevent coverage).
-
-Run OpenCppCoverage on all test executables. Example for a single test:
+Run OpenCppCoverage for each test executable:
 
 OpenCppCoverage.exe --modules "$(Resolve-Path build\Debug\test_invoice.exe)" --sources "$(Resolve-Path src)" -- build\Debug\test_invoice.exe
 
 
-To cover the entire solution, repeat for each test executable, e.g.:
+To cover all tests:
 
 $tests = @("test_invoice.exe", "test_expense.exe", "test_model_invoice.exe", "test_model_expense.exe")
 foreach ($t in $tests) {
@@ -101,14 +102,14 @@ foreach ($t in $tests) {
 }
 
 
-Open the generated HTML coverage report:
+Open the HTML coverage report:
 
 start build\CoverageReport-*\index.html
 
 
 Tip: Avoid putting .vs inside build to prevent locked files.
 
-Project Structure
+Project Structure 🗂️
 InvoiceApplication/
 │
 ├─ src/               # Application source files
@@ -121,15 +122,3 @@ InvoiceApplication/
 ├─ build/             # Build output (ignored in Git)
 │
 └─ README.md
-
-Contributing
-
-Fork the repository.
-
-Create a new branch: git checkout -b feature/my-feature
-
-Commit changes: git commit -am 'Add new feature'
-
-Push branch: git push origin feature/my-feature
-
-Open a Pull Request.
