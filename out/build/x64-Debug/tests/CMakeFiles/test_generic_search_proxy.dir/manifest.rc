@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/jerem/source/repos/InvoiceApplication/out/build/x64-Debug/tests/CMakeFiles/test_generic_search_proxy.dir/embed.manifest"

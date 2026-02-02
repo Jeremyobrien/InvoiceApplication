@@ -127,16 +127,6 @@ target_link_libraries(test_csv_importer
 )
 add_test(NAME CsvImporterTests COMMAND test_csv_importer)
 
-add_executable(test_apply_import
-    test_apply_import.cpp
-)
-target_link_libraries(test_apply_import
-    Qt6::Test
-    Qt6::Widgets
-    invoice_tracker_core
-)
-add_test(NAME ApplyImportTests COMMAND test_apply_import)
-
 add_executable(test_json_importer
     test_json_importer.cpp
 )

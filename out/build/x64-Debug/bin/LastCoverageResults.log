@@ -1,0 +1,35 @@
+[2026-02-02 16:26:15] [info] Load coverage file: test_bind_search.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_create_item.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_csv_exporter.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_csv_importer.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_delete_selected.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_edit_utils.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_expense.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_expense_dialog.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_export_service.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_generic_search_proxy.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_invoice.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_invoice_dialog.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_json_exporter.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_json_importer.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_model_expense.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_model_invoice.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_paid_delegate.exe.cov
+[2026-02-02 16:26:15] [info] Load coverage file: test_read_selected.exe.cov
+[2026-02-02 16:26:15] [info] Start Program:
+Modules: Selected: * Excluded: 
+Sources: Selected: C:\Users\jerem\source\repos\InvoiceApplication\src Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: html AllTestsReport 
+Input coverage: test_bind_search.exe.cov test_create_item.exe.cov test_csv_exporter.exe.cov test_csv_importer.exe.cov test_delete_selected.exe.cov test_edit_utils.exe.cov test_expense.exe.cov test_expense_dialog.exe.cov test_export_service.exe.cov test_generic_search_proxy.exe.cov test_invoice.exe.cov test_invoice_dialog.exe.cov test_json_exporter.exe.cov test_json_importer.exe.cov test_model_expense.exe.cov test_model_invoice.exe.cov test_paid_delegate.exe.cov test_read_selected.exe.cov 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+[2026-02-02 16:26:15] [info] ----------------------------------------------------
+[2026-02-02 16:26:15] [info] Coverage generated in Folder C:\Users\jerem\source\repos\InvoiceApplication\out\build\x64-Debug\bin\AllTestsReport
+[2026-02-02 16:26:15] [info] ----------------------------------------------------
+[2026-02-02 16:26:15] [info] The code coverage report is not what you expect? See the FAQ https://github.com/OpenCppCoverage/OpenCppCoverage/wiki/FAQ.

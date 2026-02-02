@@ -1,13 +1,13 @@
 {
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "..\\..\\..\\CMakeBuilds\\1102350759\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
   "ExpandedNodes": [
     ""
   ],
-  "SelectedNode": "\\invoice-tracker.sln",
-  "PreviewInSolutionExplorer": false,
-  "OutputFoldersPerTargetSystem": {
-    "Local Machine": [
-      "out\\build\\x64-Debug",
-      "out\\install\\x64-Debug"
-    ]
-  }
+  "SelectedNode": "\\C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\CMakeLists.txt",
+  "PreviewInSolutionExplorer": false
 }

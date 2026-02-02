@@ -56,23 +56,25 @@ QVariant ExpenseTableModel::data(const QModelIndex &index, int role) const
 
 QVariant ExpenseTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-    if (role != Qt::DisplayRole || orientation != Qt::Horizontal)
+    if (orientation != Qt::Horizontal)
         return QVariant();
 
-    switch (section)
+    if (role == Qt::DisplayRole)
     {
-    case 0:
-        return "Description";
-    case 1:
-        return "Amount";
-    default:
-        return QVariant();
+        switch (section)
+        {
+        case 0: return "Description";
+        case 1: return "Amount";
+        default: return QVariant();
+        }
     }
 
     if (role == Qt::TextAlignmentRole)
     {
         return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);
     }
+
+    return QVariant();
 }
 
 std::vector<Expense>* ExpenseTableModel::items()

@@ -1,6 +1,19 @@
 cmake_minimum_required(VERSION 3.16)
 project(invoice-tracker LANGUAGES CXX)
 
+# Force all executables and libraries into a single 'bin' folder
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# Ensure PDBs are generated in the same 'bin' folder for all configs
+if(MSVC)
+    set(CMAKE_PDB_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+    set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} /DEBUG:FULL")
+    set(CMAKE_SHARED_LINKER_FLAGS_DEBUG "${CMAKE_SHARED_LINKER_FLAGS_DEBUG} /DEBUG:FULL")
+    add_compile_options(/Zi /Od)
+endif()
+
 # C++17 standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -29,7 +42,7 @@ add_library(invoice_tracker_core
     src/export/CsvExporter.cpp
     src/export/JsonExporter.cpp
     src/export/ExportService.cpp 
-)
+   )
 
 target_include_directories(invoice_tracker_core PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src
@@ -44,7 +57,7 @@ add_library(invoice_tracker_ui
     src/dialogs/ExpenseDialog.cpp
     src/ui/PaidDelegate.cpp
     src/ui/GenericSearchProxy.cpp
-)
+ )
 
 target_link_libraries(invoice_tracker_ui
     Qt6::Widgets
@@ -57,7 +70,7 @@ target_link_libraries(invoice_tracker_ui
 add_executable(invoice-tracker
     src/main.cpp
     src/MainWindow.cpp
-)
+ )
 
 target_include_directories(invoice-tracker PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
@@ -74,7 +87,19 @@ target_link_libraries(invoice-tracker
 # -----------------------
 add_subdirectory(tests)
 
-if (MSVC)
-    add_compile_options(/Zi /Od)
-    add_link_options(/DEBUG)
-endif()
+# 1. Find all test executables in the build directory automatically
+file(GLOB_RECURSE FOUND_TESTS "${CMAKE_BINARY_DIR}/*test*.exe")
+
+# 2. Configure the script with the source path AND the list of tests found
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/RunAllTests.ps1"
+    "${CMAKE_CURRENT_BINARY_DIR}/RunAllTests.ps1"
+    @ONLY
+)
+
+add_custom_target(RunCoverage
+    COMMAND powershell.exe -ExecutionPolicy Bypass -File "${CMAKE_CURRENT_BINARY_DIR}/RunAllTests.ps1"
+    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
+    COMMENT "Running universal code coverage..."
+    VERBATIM
+)
