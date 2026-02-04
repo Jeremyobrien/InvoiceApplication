@@ -117,6 +117,16 @@ add_test(NAME JsonExporterTests COMMAND test_json_exporter)
 # -----------------------
 # Import tests
 # -----------------------
+add_executable(test_apply_import
+    test_apply_import.cpp
+)
+target_link_libraries(test_apply_import
+    Qt6::Test
+    Qt6::Widgets
+    invoice_tracker_core
+)
+add_test(NAME ApplyImportTests COMMAND test_apply_import)
+
 add_executable(test_csv_importer
     test_csv_importer.cpp
 )

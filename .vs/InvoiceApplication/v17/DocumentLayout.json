@@ -3,42 +3,58 @@
   "WorkspaceRootPath": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\out\\build\\x64-Debug\\bin\\RunCoverage.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:out\\build\\x64-Debug\\bin\\RunCoverage.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_json_importer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\test_json_importer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\RunAllTests.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RunAllTests.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_expense.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\test_expense.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\MainWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\MainWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\PaidDelegate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\ui\\PaidDelegate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\InvoiceTableModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\InvoiceTableModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\SearchBinder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\ui\\SearchBinder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\PaidDelegate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\ui\\PaidDelegate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_model_invoice.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\test_model_invoice.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\ExpenseTableModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\ExpenseTableModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_model_expense.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\test_model_expense.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\MainWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\MainWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_paid_delegate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\test_paid_delegate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 282,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 204,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,57 +66,161 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RunAllTests.ps1",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\RunAllTests.ps1",
-              "RelativeDocumentMoniker": "RunAllTests.ps1",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\RunAllTests.ps1",
-              "RelativeToolTip": "RunAllTests.ps1",
-              "ViewState": "AgIAACcAAAAAAAAAAAAswDQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-02T22:22:31.563Z",
+              "Title": "test_expense.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_expense.cpp",
+              "RelativeDocumentMoniker": "tests\\test_expense.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_expense.cpp",
+              "RelativeToolTip": "tests\\test_expense.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-04T02:20:33.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test_json_importer.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_json_importer.cpp",
+              "RelativeDocumentMoniker": "tests\\test_json_importer.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_json_importer.cpp",
+              "RelativeToolTip": "tests\\test_json_importer.cpp",
+              "ViewState": "AgIAAGAAAAAAAAAAAADwv2MAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-04T02:17:38.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaidDelegate.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\PaidDelegate.cpp",
+              "RelativeDocumentMoniker": "src\\ui\\PaidDelegate.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\PaidDelegate.cpp",
+              "RelativeToolTip": "src\\ui\\PaidDelegate.cpp",
+              "ViewState": "AgIAADIAAAAAAAAAAADwvzkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-04T00:44:46.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "CMakeLists.txt",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\CMakeLists.txt",
-              "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAcwFwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-02-02T22:16:02.444Z",
+              "Title": "MainWindow.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\MainWindow.cpp",
+              "RelativeDocumentMoniker": "src\\MainWindow.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\MainWindow.cpp",
+              "RelativeToolTip": "src\\MainWindow.cpp",
+              "ViewState": "AgIAAIEBAAAAAAAAAADwv4kBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-04T00:43:42.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "test_model_invoice.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_model_invoice.cpp",
+              "RelativeDocumentMoniker": "tests\\test_model_invoice.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_model_invoice.cpp",
+              "RelativeToolTip": "tests\\test_model_invoice.cpp",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAQwIkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-04T00:16:32.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvoiceTableModel.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\InvoiceTableModel.cpp",
+              "RelativeDocumentMoniker": "src\\models\\InvoiceTableModel.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\InvoiceTableModel.cpp",
+              "RelativeToolTip": "src\\models\\InvoiceTableModel.cpp",
+              "ViewState": "AgIAAI0AAAAAAAAAAADwv4IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-04T00:15:14.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SearchBinder.h",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\SearchBinder.h",
+              "RelativeDocumentMoniker": "src\\ui\\SearchBinder.h",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\SearchBinder.h",
+              "RelativeToolTip": "src\\ui\\SearchBinder.h",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvx4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-04T02:02:47.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaidDelegate.h",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\PaidDelegate.h",
+              "RelativeDocumentMoniker": "src\\ui\\PaidDelegate.h",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\ui\\PaidDelegate.h",
+              "RelativeToolTip": "src\\ui\\PaidDelegate.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvwwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-04T01:10:32.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "test_paid_delegate.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_paid_delegate.cpp",
+              "RelativeDocumentMoniker": "tests\\test_paid_delegate.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_paid_delegate.cpp",
+              "RelativeToolTip": "tests\\test_paid_delegate.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-03T23:30:40.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "test_model_expense.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_model_expense.cpp",
+              "RelativeDocumentMoniker": "tests\\test_model_expense.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\test_model_expense.cpp",
+              "RelativeToolTip": "tests\\test_model_expense.cpp",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-03T22:34:32.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExpenseTableModel.cpp",
+              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\ExpenseTableModel.cpp",
+              "RelativeDocumentMoniker": "src\\models\\ExpenseTableModel.cpp",
+              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\ExpenseTableModel.cpp",
+              "RelativeToolTip": "src\\models\\ExpenseTableModel.cpp",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAQwIAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-03T22:32:59.263Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 118,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 320,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RunCoverage.bat",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\out\\build\\x64-Debug\\bin\\RunCoverage.bat",
-              "RelativeDocumentMoniker": "out\\build\\x64-Debug\\bin\\RunCoverage.bat",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\out\\build\\x64-Debug\\bin\\RunCoverage.bat",
-              "RelativeToolTip": "out\\build\\x64-Debug\\bin\\RunCoverage.bat",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000614|",
-              "WhenOpened": "2026-02-02T21:51:32.979Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -108,58 +228,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-02T22:01:10.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExpenseTableModel.cpp",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\ExpenseTableModel.cpp",
-              "RelativeDocumentMoniker": "src\\models\\ExpenseTableModel.cpp",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\models\\ExpenseTableModel.cpp",
-              "RelativeToolTip": "src\\models\\ExpenseTableModel.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-30T23:36:12.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CMakeLists.txt",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\CMakeLists.txt",
-              "RelativeDocumentMoniker": "tests\\CMakeLists.txt",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\tests\\CMakeLists.txt",
-              "RelativeToolTip": "tests\\CMakeLists.txt",
-              "ViewState": "AgIAAHIAAAAAAAAAAADgv38AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-30T22:43:35.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.cpp",
-              "DocumentMoniker": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\MainWindow.cpp",
-              "RelativeDocumentMoniker": "src\\MainWindow.cpp",
-              "ToolTip": "C:\\Users\\jerem\\source\\repos\\InvoiceApplication\\src\\MainWindow.cpp",
-              "RelativeToolTip": "src\\MainWindow.cpp",
-              "ViewState": "AgIAACsBAAAAAAAAAAAuwDgBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-30T22:15:59.339Z",
-              "EditorCaption": ""
             }
           ]
         }
