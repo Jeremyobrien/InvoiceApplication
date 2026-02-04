@@ -1,6 +1,54 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-.vs/
+# --- OpenCppCoverage ---
 *.cov
 AllTestsReport/
+
+# --- Visual Studio Code ---
+.vscode/
+
+# --- Visual Studio ---
+.vs/
+out/
+build/
+CMakeSettings.json
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.suo
+*.db
+*.sqlite
+
+# --- Qt Specific ---
+# Ignore generated files from MOC, UIC, and RCC
+*_autogen/
+ui_*.h
+moc_*.cpp
+qrc_*.cpp
+*.qrc.depends
+
+# --- Compilers & Build Systems ---
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.lib
+*.dll
+*.exp
+*.ninja
+.ninja_deps
+.ninja_log
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# --- Operating System ---
+Thumbs.db
+.DS_Store
+
+# --- User specific ---
+*.swp
+*.lock
