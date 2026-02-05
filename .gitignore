@@ -31,8 +31,8 @@ qrc_*.cpp
 
 # --- Compilers & Build Systems ---
 *.obj
-*.exe
-*.pdb
+/build/**/*.exe
+/build/**/*.pdb
 *.ilk
 *.lib
 *.dll
@@ -44,6 +44,7 @@ CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+Testing/
 
 # --- Operating System ---
 Thumbs.db
@@ -52,3 +53,4 @@ Thumbs.db
 # --- User specific ---
 *.swp
 *.lock
+/.gitignore

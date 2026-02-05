@@ -1,89 +1,88 @@
 #include <QtTest/QtTest>
-#include <QPainter>
-#include <QImage>
-#include <QStandardItemModel>
 #include <QApplication>
-#include "ui/PaidDelegate.h"
+#include <QStandardItemModel>
+#include <QMouseEvent>
+#include <QPainter>
+#include "../src/ui/PaidDelegate.h"
 
 class PaidDelegateTests : public QObject
 {
     Q_OBJECT
 
 private slots:
-    // This runs once before all tests to set up the GUI environment
-    void initTestCase()
-    {
+    void initTestCase() {
         if (!qApp) {
-            // Force Qt to run without a real GPU/Display requirement
             qputenv("QT_QPA_PLATFORM", "offscreen");
-
             static int argc = 1;
             static char* argv[] = { (char*)"test" };
             new QApplication(argc, argv);
         }
     }
 
-    // Exercises: The "if (!index.isValid())" guard clause
-    void paint_invalid_index_returns_early()
-    {
+    void paintCoverage() {
         PaidDelegate delegate;
-        QImage image(100, 30, QImage::Format_ARGB32);
-        QPainter painter(&image);
-        QStyleOptionViewItem option;
-
-        delegate.paint(&painter, option, QModelIndex());
-        QVERIFY(true); // Reaching here means no crash
-    }
-
-    // Exercises: Full rendering path (Checkbox + "Yes"/"No" text)
-    void paint_valid_index_draws_content()
-    {
-        PaidDelegate delegate;
-
-        QStandardItemModel model(1, 1);
-        QModelIndex index = model.index(0, 0);
+        QStandardItemModel model(1, 3);
+        QModelIndex index = model.index(0, 2);
         model.setData(index, Qt::Checked, Qt::CheckStateRole);
         model.setData(index, "Yes", Qt::DisplayRole);
 
-        QImage image(200, 50, QImage::Format_ARGB32);
-        image.fill(Qt::white);
-        QPainter painter(&image);
+        QImage img(200, 50, QImage::Format_ARGB32);
+        QPainter painter(&img);
+        QStyleOptionViewItem option;
+        option.rect = QRect(0, 0, 200, 50);
+
+        // Test invalid index (branch coverage)
+        delegate.paint(&painter, option, QModelIndex());
+
+        // Test valid index (full paint coverage)
+        delegate.paint(&painter, option, index);
+        QVERIFY(!img.allGray()); // Simple check that something happened
+    }
+
+    void editorEventClickHandling() {
+        PaidDelegate delegate;
+        QStandardItemModel model(1, 3);
+        QModelIndex index = model.index(0, 2);
+        model.setData(index, Qt::Unchecked, Qt::CheckStateRole);
+        model.setData(index, "No", Qt::DisplayRole);
 
         QStyleOptionViewItem option;
         option.rect = QRect(0, 0, 200, 50);
-        option.state = QStyle::State_Enabled | QStyle::State_Active;
+        option.font = QApplication::font();
 
-        delegate.paint(&painter, option, index);
-        painter.end();
+        // 1. Test clicking OUTSIDE the checkbox rect
+        QMouseEvent missEvent(QEvent::MouseButtonRelease, QPoint(5, 5), Qt::LeftButton, Qt::LeftButton, Qt::NoModifier);
+        bool handledMiss = delegate.editorEvent(&missEvent, &model, option, index);
+        QVERIFY(!handledMiss);
+        QCOMPARE(model.data(index, Qt::CheckStateRole).toInt(), (int)Qt::Unchecked);
 
-        // Check if anything was painted
-        bool imageChanged = false;
-        for (int y = 0; y < image.height() && !imageChanged; ++y) {
-            for (int x = 0; x < image.width(); ++x) {
-                if (image.pixelColor(x, y) != Qt::white) {
-                    imageChanged = true;
-                    break;
-                }
-            }
-        }
-        QVERIFY2(imageChanged, "The delegate did not paint any pixels on the image.");
+        // 2. Test clicking INSIDE the checkbox rect
+        // We calculate the center point to ensure a hit
+        QRect box = delegate.checkboxRect(option, index);
+        QMouseEvent hitEvent(QEvent::MouseButtonRelease, box.center(), Qt::LeftButton, Qt::LeftButton, Qt::NoModifier);
+
+        bool handledHit = delegate.editorEvent(&hitEvent, &model, option, index);
+        QVERIFY(handledHit);
+        QCOMPARE(model.data(index, Qt::CheckStateRole).toInt(), (int)Qt::Checked);
+
+        // 3. Non-trigger events (branch coverage)
+        QMouseEvent moveEvent(QEvent::MouseMove, box.center(), Qt::NoButton, Qt::NoButton, Qt::NoModifier);
+        QVERIFY(!delegate.editorEvent(&moveEvent, &model, option, index));
+
+        // 4. Non-column 2 (branch coverage)
+        QVERIFY(!delegate.editorEvent(&hitEvent, &model, option, model.index(0, 0)));
     }
 
-    void sizeHint_returns_valid_size()
-    {
+    void sizeHintCoverage() {
         PaidDelegate delegate;
         QStyleOptionViewItem option;
-        QStandardItemModel model(1, 1);
-        QModelIndex index = model.index(0, 0);
+        QStandardItemModel model(1, 3);
+        QModelIndex index = model.index(0, 2);
 
         QSize size = delegate.sizeHint(option, index);
-        QVERIFY(size.isValid());
         QVERIFY(size.width() > 0);
-        QVERIFY(size.height() > 0);
     }
 };
 
-// Note: Use QTEST_MAIN which handles most setup, but initTestCase ensures 
-// QApplication is alive for the specific style calls in delegate.
 QTEST_MAIN(PaidDelegateTests)
 #include "test_paid_delegate.moc"

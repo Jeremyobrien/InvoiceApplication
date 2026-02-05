@@ -50,12 +50,6 @@ QVariant InvoiceTableModel::data(const QModelIndex &index, int role) const
         }
     }
 
-    // Align text in the center
-    if (role == Qt::TextAlignmentRole && index.column() != 2)
-    {
-        return QVariant::fromValue(Qt::AlignHCenter | Qt::AlignVCenter);
-    }
-
     if (role == Qt::CheckStateRole && index.column() == 2)
         return inv.isPaid() ? Qt::Checked : Qt::Unchecked;
 
@@ -121,7 +115,6 @@ Qt::ItemFlags InvoiceTableModel::flags(const QModelIndex &index) const
     if (index.column() == 2) // Paid checkbox override
         return Qt::ItemIsSelectable
              | Qt::ItemIsEnabled
-             | Qt::ItemIsEditable
              | Qt::ItemIsUserCheckable;
 
     return Qt::ItemIsSelectable
@@ -156,9 +149,6 @@ bool InvoiceTableModel::setData(
             break;
         case 1:
             invoice.setAmount(value.toDouble());
-            break;
-        case 2:
-            invoice.setPaid(value.toBool());
             break;
         default:
             return false;

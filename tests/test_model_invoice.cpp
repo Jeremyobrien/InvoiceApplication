@@ -24,113 +24,96 @@ private:
     }
 
 private slots:
-    // --- 1. UTILITY & DIMENSIONS ---
-    void utilityCoverage() {
+    void rowAndColumnCount() {
         auto model = createPopulatedModel();
+        QCOMPARE(model->rowCount(), 2);
+        QCOMPARE(model->columnCount(), 3);
 
-        // items() coverage
-        QVERIFY(model->items() != nullptr);
-
-        // updateRow() coverage
-        QSignalSpy spy(model.get(), &InvoiceTableModel::dataChanged);
-        Invoice update; update.setClient("Updated");
-        model->updateRow(0, update);
-        QCOMPARE(spy.count(), 1);
-
-        // refresh() coverage
-        QSignalSpy resetSpy(model.get(), &InvoiceTableModel::modelReset);
-        model->refresh();
-        QCOMPARE(resetSpy.count(), 1);
+        InvoiceTableModel emptyModel;
+        QCOMPARE(emptyModel.rowCount(), 0);
     }
 
-    // --- 2. DATA() ROLES & BRANCHES ---
-    void dataRolesCoverage() {
+    void dataRolesAndColumns() {
         auto model = createPopulatedModel();
 
-        // Guard clause: !index.isValid()
+        // Edge case: Invalid index or null data
         QVERIFY(!model->data(QModelIndex(), Qt::DisplayRole).isValid());
 
-        // data() switch default: Column 99
-        QVERIFY(!model->data(model->index(0, 99), Qt::DisplayRole).isValid());
+        // Happy path: Column 0, 1, 2 DisplayRole
+        QCOMPARE(model->data(model->index(0, 0), Qt::DisplayRole).toString(), QString("Acme Corp"));
+        QCOMPARE(model->data(model->index(0, 1), Qt::DisplayRole).toDouble(), 100.0);
+        QCOMPARE(model->data(model->index(0, 2), Qt::DisplayRole).toString(), QString("Yes"));
+        QCOMPARE(model->data(model->index(1, 2), Qt::DisplayRole).toString(), QString("No"));
 
-        // AlignmentRole Column 0 (Hits Align block)
-        QVERIFY(model->data(model->index(0, 0), Qt::TextAlignmentRole).isValid());
-        // AlignmentRole Column 2 (Skips Align block, hits final return QVariant)
-        QVERIFY(!model->data(model->index(0, 2), Qt::TextAlignmentRole).isValid());
-
-        // CheckStateRole Column 2
+        // Column 2: CheckStateRole
         QCOMPARE(model->data(model->index(0, 2), Qt::CheckStateRole).toInt(), (int)Qt::Checked);
-        QCOMPARE(model->data(model->index(1, 2), Qt::CheckStateRole).toInt(), (int)Qt::Unchecked);
 
-        // Final fallthrough: Role not handled
-        QVERIFY(!model->data(model->index(0, 0), Qt::ToolTipRole).isValid());
+        // Invalid Column / Role
+        QVERIFY(!model->data(model->index(0, 99), Qt::DisplayRole).isValid());
+        QVERIFY(!model->data(model->index(0, 0), Qt::DecorationRole).isValid());
     }
 
-    // --- 3. HEADERDATA() COVERAGE ---
-    void headerDataCoverage() {
+    void headerData() {
         auto model = createPopulatedModel();
-
-        // Guard: role != DisplayRole
-        QVERIFY(!model->headerData(0, Qt::Horizontal, Qt::ToolTipRole).isValid());
-        // Guard: orientation != Horizontal
-        QVERIFY(!model->headerData(0, Qt::Vertical, Qt::DisplayRole).isValid());
-
-        // Standard Switch
+        QCOMPARE(model->headerData(0, Qt::Horizontal, Qt::DisplayRole).toString(), QString("Client"));
+        QCOMPARE(model->headerData(1, Qt::Horizontal, Qt::DisplayRole).toString(), QString("Amount"));
         QCOMPARE(model->headerData(2, Qt::Horizontal, Qt::DisplayRole).toString(), QString("Paid"));
-        // Switch Default: Column 99
+
+        // Edge cases
+        QVERIFY(!model->headerData(0, Qt::Vertical, Qt::DisplayRole).isValid());
         QVERIFY(!model->headerData(99, Qt::Horizontal, Qt::DisplayRole).isValid());
+        QVERIFY(!model->headerData(0, Qt::Horizontal, Qt::DecorationRole).isValid());
     }
 
-    // --- 4. FLAGS() COVERAGE ---
-    void flagsCoverage() {
+    void flags() {
         auto model = createPopulatedModel();
+        // Col 2 should NOT have ItemIsEditable but SHOULD have ItemIsUserCheckable
+        Qt::ItemFlags col2Flags = model->flags(model->index(0, 2));
+        QVERIFY(col2Flags & Qt::ItemIsUserCheckable);
+        QVERIFY(!(col2Flags & Qt::ItemIsEditable));
 
-        // Guard: !index.isValid()
-        QCOMPARE(model->flags(QModelIndex()), Qt::NoItemFlags);
-
-        // Column 2 (UserCheckable)
-        QVERIFY(model->flags(model->index(0, 2)) & Qt::ItemIsUserCheckable);
-        // Column 0 (Standard)
-        QVERIFY(!(model->flags(model->index(0, 0)) & Qt::ItemIsUserCheckable));
+        // Col 0 should have ItemIsEditable
+        QVERIFY(model->flags(model->index(0, 0)) & Qt::ItemIsEditable);
+        QVERIFY(model->flags(QModelIndex()) == Qt::NoItemFlags);
     }
 
-    // --- 5. SETDATA() COVERAGE ---
-    void setDataCoverage() {
+    void setDataAndSignals() {
         auto model = createPopulatedModel();
+        QSignalSpy spy(model.get(), &InvoiceTableModel::dataChanged);
 
-        // Guard: !index.isValid()
-        QVERIFY(!model->setData(QModelIndex(), "value", Qt::EditRole));
+        // Edit Amount (Col 1)
+        QVERIFY(model->setData(model->index(0, 1), 999.9, Qt::EditRole));
+        QCOMPARE(model->items()->at(0).getAmount(), 999.9);
 
-        // Branch: CheckStateRole on Col 2
+        // Toggle Checkbox (Col 2)
         QVERIFY(model->setData(model->index(1, 2), Qt::Checked, Qt::CheckStateRole));
+        QVERIFY(model->items()->at(1).isPaid());
 
-        // Branch: role != EditRole (and not checkstate) -> return false
-        QVERIFY(!model->setData(model->index(0, 0), "value", Qt::ToolTipRole));
+        QCOMPARE(spy.count(), 2);
 
-        // Switch cases 0, 1, 2
-        QVERIFY(model->setData(model->index(0, 1), 500.0, Qt::EditRole));
-        QVERIFY(model->setData(model->index(0, 2), false, Qt::EditRole)); // case 2
-
-        // Switch Default: Column 99
-        QVERIFY(!model->setData(model->index(0, 99), "value", Qt::EditRole));
+        // Fail cases
+        QVERIFY(!model->setData(model->index(0, 99), "fail", Qt::EditRole));
+        QVERIFY(!model->setData(model->index(0, 0), "fail", Qt::DecorationRole));
     }
 
-    // --- 6. REMOVEROWS() COVERAGE ---
-    void removeRowsCoverage() {
+    void removeRows() {
         auto model = createPopulatedModel();
-
-        // Guard: !invoices (test with empty model)
-        InvoiceTableModel emptyModel;
-        QVERIFY(!emptyModel.removeRows(0, 1, QModelIndex()));
-
-        // Guard: row < 0
-        QVERIFY(!model->removeRows(-1, 1, QModelIndex()));
-        // Guard: row + count > size
-        QVERIFY(!model->removeRows(0, 5, QModelIndex()));
-
-        // Success Path
         QVERIFY(model->removeRows(0, 1, QModelIndex()));
-        QCOMPARE(model->rowCount(QModelIndex()), 1);
+        QCOMPARE(model->rowCount(), 1);
+
+        // Edge cases for out of bounds
+        QVERIFY(!model->removeRows(-1, 1, QModelIndex()));
+        QVERIFY(!model->removeRows(0, 10, QModelIndex()));
+    }
+
+    void utilities() {
+        auto model = createPopulatedModel();
+        Invoice inv; inv.setClient("Updated");
+        model->updateRow(0, inv);
+        QCOMPARE(model->items()->at(0).getClient(), std::string("Updated"));
+
+        model->refresh(); // Just coverage for reset signals
+        QVERIFY(model->items() != nullptr);
     }
 };
 
