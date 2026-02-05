@@ -1,17 +1,23 @@
-# 1. Paths
+# 1. Paths (Using absolute paths from CMake)
 $srcPath = "@CMAKE_CURRENT_SOURCE_DIR@\src".Replace("/", "\")
 $searchRoot = "@CMAKE_BINARY_DIR@".Replace("/", "\")
 $reportDir = Join-Path $searchRoot "CoverageReport"
 
-Write-Host "--- Debugging Coverage Runner ---" -ForegroundColor Yellow
+Write-Host "--- Coverage Runner Activated ---" -ForegroundColor Yellow
+Write-Host "Source: $srcPath" -ForegroundColor Gray
+Write-Host "Search: $searchRoot" -ForegroundColor Gray
 
 # 2. Cleanup (Crucial for fresh start)
 if (Test-Path $reportDir) { Remove-Item -Recurse -Force $reportDir }
 New-Item -ItemType Directory -Path $reportDir -Force | Out-Null
 
-# 3. Find Tests
-$testExes = Get-ChildItem -Path "$searchRoot" -Filter "*test*.exe" -Recurse | 
-            Where-Object { $_.FullName -notmatch "CMakeFiles" -and $_.FullName -notmatch "vcpkg" }
+# 3. Find Tests (Force filesystem scan)
+# Adding -Force ensures PowerShell looks into ignored/hidden folders
+$testExes = Get-ChildItem -Path "$searchRoot" -Filter "test*.exe" -Recurse -Force | 
+            Where-Object { 
+                $_.FullName -notmatch "CMakeFiles" -and 
+                $_.FullName -match "bin" 
+            }
 
 # 4. Run Coverage and capture errors
 foreach ($exe in $testExes) {

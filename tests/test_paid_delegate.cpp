@@ -76,9 +76,10 @@ private slots:
     void sizeHintCoverage() {
         PaidDelegate delegate;
         QStyleOptionViewItem option;
+        option.decorationSize = QSize(20, 20);
         QStandardItemModel model(1, 3);
-        QModelIndex index = model.index(0, 2);
-
+        QModelIndex index = model.index(0,2);
+        model.setData(index, "Test Data", Qt::DisplayRole);
         QSize size = delegate.sizeHint(option, index);
         QVERIFY(size.width() > 0);
     }

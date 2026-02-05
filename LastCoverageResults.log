@@ -1,0 +1,17 @@
+[2026-02-05 16:44:21] [info] Start Program:
+Path:".\\build\\x64-Debug\\bin\\test_paid_delegate.exe"
+Arguments:
+Working directory: not set.
+Modules: Selected: test_paid_delegate.exe Excluded: 
+Sources: Selected: C:\Users\jerem\source\repos\InvoiceApplication\src Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: html 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+[2026-02-05 16:44:21] [error] Error: Cannot find path: .\build\x64-Debug\bin\test_paid_delegate.exe

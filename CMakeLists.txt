@@ -38,6 +38,7 @@ add_library(invoice_tracker_core
     src/models/InvoiceTableModel.cpp
     src/models/ExpenseTableModel.cpp
     src/import/CsvImporter.cpp
+    src/import/ImportUtils.h
     src/import/JsonImporter.cpp
     src/export/CsvExporter.cpp
     src/export/JsonExporter.cpp
