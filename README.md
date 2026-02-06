@@ -1,7 +1,9 @@
 InvoiceApplication
-A C++/Qt application for managing invoices and expenses, featuring a comprehensive Qt Test suite and integrated code coverage reporting.
 
-Table of Contents
+A C++ / Qt desktop application for managing invoices and expenses, featuring a comprehensive Qt Test suite and integrated code coverage reporting using OpenCppCoverage.
+
+📚 Table of Contents
+
 Prerequisites
 
 Build Instructions
@@ -10,164 +12,119 @@ Run the Application
 
 Run Tests
 
-Code Coverage
+Generate Code Coverage
 
 Project Structure
 
-Prerequisites ✅
-Windows 10/11
+✅ Prerequisites
 
-Visual Studio 2022 (Desktop development with C++ & CMake support)
+Windows 10 / 11
 
-Qt 6.x (Ensure Qt6_DIR is in your environment variables)
+Visual Studio 2022
 
-OpenCppCoverage (Required for the RunCoverage target)
+Desktop development with C++
 
-Build Instructions 🏗️
-Using the Visual Studio Developer Command Prompt or PowerShell:
+CMake tools for Windows
 
-PowerShell
-# Configure CMake
-cmake -S . -B out/build/x64-Debug
+Qt 6.x
 
-# Build the project (Clean and Rebuild all targets)
-cmake --build out/build/x64-Debug --target clean
-cmake --build out/build/x64-Debug --config Debug
-Run the Application ▶️
+Ensure Qt6_DIR is set in your environment variables
+
+OpenCppCoverage
+
+Required for the RunCoverage utility target
+
+🏗️ Build Instructions
+Via Visual Studio
+
+Open Visual Studio 2022
+
+Click Folder View and select the root project directory
+
+This action automatically initiates CMake configuration and generation
+
+Once generation completes, open the Select Startup Item dropdown
+
+Select:
+
+invoice-tracker.exe (bin\invoice-tracker.exe)
+
+
+Click the green Run arrow or press F5
+
+This triggers a build (if required) and launches the application.
+
+▶️ Run the Application
+Via Visual Studio
+
+(If invoice-tracker.exe did not load automatically)
+
+Open Select Startup Item
+
+Choose invoice-tracker.exe (bin\invoice-tracker.exe)
+
+Press F5 or click Start
+
 Via Command Line
-From the project root, navigate to the binary directory:
-
-PowerShell
 cd .\out\build\x64-Debug\bin
 .\invoice-tracker.exe
-Via Visual Studio
-Open the CMake Targets View in the Solution Explorer.
 
-Locate the invoice-tracker executable.
-
-Right-click it and select Set As Startup Item.
-
-Press F5 or the Start button.
-
-Run Tests 🧪
-To run an individual test manually and view detailed output/logging:
-
-PowerShell
+🧪 Run Tests
+Run an Individual Test
 cd .\out\build\x64-Debug\bin
 .\test_apply_import.exe
+
 Run All Tests via CTest
-To run the full suite and see a summary of results:
 
-PowerShell
+Note: Run this command from the project root directory
+
 ctest --test-dir out/build/x64-Debug -C Debug --output-on-failure
-Generate Code Coverage 📊
-This project uses a custom Visual Studio task to automate the coverage lifecycle.
 
-In Visual Studio, locate the Startup Item dropdown.
+📊 Generate Code Coverage
 
-Select RunCoverage.
+This project includes a custom CMake utility target that automates test execution and coverage generation.
 
-Click the Start button.
+Steps (Visual Studio)
 
-This triggers the RunAllTests.ps1 script, which executes all test modules in the bin folder and generates a merged HTML report at: out/build/x64-Debug/CoverageReport/HtmlReport/index.html
+Click Build → Rebuild All
 
-Project Structure 🗂️
-Plaintext
+Click Switch between solutions and available views
+
+Select CMake Targets View
+
+Expand the invoice-tracker project
+
+Right-click RunCoverage
+
+Select Build RunCoverage
+
+What This Does
+
+Executes all unit test binaries
+
+Collects coverage data using OpenCppCoverage
+
+Merges results into a single HTML report
+
+📍 Coverage report location:
+
+out/build/x64-Debug/CoverageReport/HtmlReport/index.html
+
+
+This should automatically open in your browser
+
+You can also open the report manually by navigating to the path above or by executing the coverage script from the project root directory
+
+🗂️ Project Structure
 InvoiceApplication/
 ├── src/
-│   ├── data/           # Core Data Classes (Expense, Invoice)
-│   ├── dialogs/        # UI Dialogs (ExpenseDialog, InvoiceDialog)
-│   ├── models/         # Table Models (ExpenseTableModel, InvoiceTableModel)
-│   ├── import/         # Import logic (ImportUtils.h, CsvImporter)
+│   ├── data/           # Core data classes (Expense, Invoice)
+│   ├── dialogs/        # UI dialogs (ExpenseDialog, InvoiceDialog)
+│   ├── models/         # Qt table models
+│   ├── import/         # Import logic (ImportUtils, CsvImporter)
 │   ├── export/         # Export logic (ExportService, JsonExporter)
-│   └── ui/             # Views and Custom Delegates (PaidDelegate)
-├── tests/              # Qt Unit Tests (test_apply_import.cpp, etc.)
-├── out/                # Build output
-│   └── build/          # Compiled binaries and artifacts
-└── CMakeLists.txt      # Root configuration# InvoiceApplication
-
-A C++/Qt application for managing invoices and expenses, featuring a comprehensive Qt Test suite and integrated code coverage reporting.
-
-## Table of Contents
-* [Prerequisites](#prerequisites-)
-* [Build Instructions](#build-instructions-)
-* [Run the Application](#run-the-application-)
-* [Run Tests](#run-tests-)
-* [Code Coverage](#generate-code-coverage-)
-* [Project Structure](#project-structure-)
-
----
-
-## Prerequisites ✅
-
-Ensure you have the following installed:
-* **Windows 10/11**
-* **Visual Studio 2022** (Desktop development with C++ & CMake support)
-* **Qt 6.x** (Ensure `Qt6_DIR` is in your environment variables)
-* **OpenCppCoverage** (Required for the `RunCoverage` target)
-
----
-
-## Build Instructions 🏗️
-
-Using the Visual Studio Developer Command Prompt or PowerShell, run the following commands from the project root:
-
-```powershell
-# Configure CMake
-cmake -S . -B out/build/x64-Debug
-
-# Build the project (Clean and Rebuild all targets)
-cmake --build out/build/x64-Debug --target clean
-cmake --build out/build/x64-Debug --config Debug
-Run the Application ▶️
-Via Command Line
-From the project root, navigate to the binary directory:
-
-PowerShell
-cd .\out\build\x64-Debug\bin
-.\invoice-tracker.exe
-Via Visual Studio
-Open the CMake Targets View in the Solution Explorer.
-
-Locate the invoice-tracker executable.
-
-Right-click it and select Set As Startup Item.
-
-Press F5 or the Start button.
-
-Run Tests 🧪
-To run an individual test manually and view detailed output/logging:
-
-PowerShell
-cd .\out\build\x64-Debug\bin
-.\test_apply_import.exe
-Run All Tests via CTest
-To run the full suite and see a summary of results:
-
-PowerShell
-ctest --test-dir out/build/x64-Debug -C Debug --output-on-failure
-Generate Code Coverage 📊
-This project uses a custom Visual Studio task to automate the coverage lifecycle.
-
-In Visual Studio, locate the Startup Item dropdown (near the Start button).
-
-Select RunCoverage.
-
-Click the Start button.
-
-This triggers the RunAllTests.ps1 script, which executes all test modules in the bin folder and generates a merged HTML report at: out/build/x64-Debug/CoverageReport/HtmlReport/index.html
-
-Project Structure 🗂️
-Plaintext
-InvoiceApplication/
-├── src/
-│   ├── data/           # Core Data Classes (Expense.h, Invoice.h)
-│   ├── dialogs/        # UI Dialogs (ExpenseDialog, InvoiceDialog)
-│   ├── models/         # Table Models (ExpenseTableModel, InvoiceTableModel)
-│   ├── import/         # Import logic (ImportUtils.h, CsvImporter)
-│   ├── export/         # Export logic (ExportService, JsonExporter)
-│   └── ui/             # Views and Custom Delegates (PaidDelegate)
-├── tests/              # Qt Unit Tests (test_apply_import.cpp, etc.)
-├── out/                # Build output
-│   └── build/          # Compiled binaries and artifacts
-└── CMakeLists.txt      # Root configuration
+│   └── ui/             # Views and custom delegates (PaidDelegate)
+├── tests/              # Qt unit tests
+├── out/
+│   └── build/          # Build output and binaries
+└── CMakeLists.txt      # Root CMake configuration
