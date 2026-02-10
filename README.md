@@ -134,9 +134,8 @@ out\build\x64-Debug\CoverageReport\HtmlReport\index.html
 ```
 InvoiceApplication/
 ├── src/
-│   ├── data/           # Core data classes (Expense, Invoice)
 │   ├── dialogs/        # UI dialogs (ExpenseDialog, InvoiceDialog)
-│   ├── models/         # Qt table models
+│   ├── models/         # Core data classes (Expense, Invoice) and Qt table models
 │   ├── import/         # Import logic (ImportUtils, CsvImporter)
 │   ├── export/         # Export logic (ExportService, JsonExporter)
 │   └── ui/             # Views and custom delegates (PaidDelegate)
