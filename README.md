@@ -128,7 +128,63 @@ out\build\x64-Debug\CoverageReport\HtmlReport\index.html
 > **Note:** The report should automatically open in your browser. You can also view it manually by opening the file above or by running the coverage script from the project root directory.
 
 ---
+## 🏗️ Application Architecture
 
+The application follows a modular architecture built on the Qt Framework, separating user interface concerns from core business logic and data persistence.
+
+```mermaid
+flowchart TD
+    %% Nodes
+    User[User<br/>Desktop UI] 
+    UI[[Qt UI Layer]]
+    Logic{Core Application Logic}
+    Models[(Domain Models<br/>Invoice / Expense)]
+    Importers[Import Services<br/>CSV / JSON]
+    Exporters[Export Services<br/>CSV / JSON]
+    Storage[/Local Storage/]
+    Output[Exports & Reports]
+
+    %% Relationships
+    User --> UI
+    UI <--> Logic
+    Logic --> Models
+    Logic --> Importers
+    Logic --> Exporters
+    
+    Models <--> Storage
+    Importers --> Models
+    Exporters --> Output
+
+    %% Styling
+    style Logic fill:#f9f,stroke:#333,stroke-width:2px
+    style Models fill:#bbf,stroke:#333,stroke-width:2px
+    style UI fill:#dfd,stroke:#333,stroke-width:2px
+```
+## 🧩 Architectural Components
+
+### 🖥️ User Interaction
+* **Qt Framework:** Desktop UI built using **Qt Widgets** for high performance and a native look-and-feel.
+* **Intuitive Controls:** Custom table views, specialized dialogs, and real-time search filtering.
+* **Reactive Design:** Leverages Qt's **Signals & Slots** mechanism to ensure a responsive, non-blocking user experience.
+
+### ⚙️ Core Application Logic
+* **Model-View Architecture:** Custom implementations of `InvoiceTableModel` and `ExpenseTableModel` handle efficient data manipulation and display.
+* **Business Rules:** Centralized logic for profit calculations, tax handling, and automated "Paid" status tracking.
+* **Data Orchestration:** Managed workflows for sophisticated data operations, including merging or replacing datasets during import.
+
+### 💾 Data Persistence & Services
+* **File-Based Storage:** High-speed local storage utilizing structured files, removing the overhead of external database dependencies.
+* **Format Versatility:** Native support for **CSV** and **JSON** serialization and deserialization.
+* **Import Strategies:**
+    * **Merge Mode:** Seamlessly integrates new records into existing data.
+    * **Replace Mode:** Performs a clean overwrite of the current model.
+
+### 📊 Output & Quality Assurance
+* **Reporting:** Generates structured exports for external accounting, auditing, or data analysis.
+* **Unit Testing:** A robust suite of automated tests using **QtTest** ensures logic integrity.
+* **Code Coverage:** Integration with **OpenCppCoverage** produces detailed HTML reports to maintain high standards of code health.
+
+---
 ## Project Structure
 
 ```
