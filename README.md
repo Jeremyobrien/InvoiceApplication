@@ -18,8 +18,9 @@ A C++ / Qt desktop application for managing invoices and expenses, featuring a c
 - [Generate Code Coverage](#generate-code-coverage)
   - [Via Visual Studio](#via-visual-studio-2)
   - [Coverage Output](#coverage-output)
+- [Application Architecture](#application-architecture)
+- [Architectural Components](#architectural-components)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -128,7 +129,7 @@ out\build\x64-Debug\CoverageReport\HtmlReport\index.html
 > **Note:** The report should automatically open in your browser. You can also view it manually by opening the file above or by running the coverage script from the project root directory.
 
 ---
-## 🏗️ Application Architecture
+## Application Architecture
 
 The application follows a modular architecture built on the Qt Framework, separating user interface concerns from core business logic and data persistence.
 
@@ -160,19 +161,19 @@ flowchart TD
     style Models fill:#bbf,stroke:#333,stroke-width:2px
     style UI fill:#dfd,stroke:#333,stroke-width:2px
 ```
-## 🧩 Architectural Components
+## Architectural Components
 
-### 🖥️ User Interaction
+### User Interaction
 * **Qt Framework:** Desktop UI built using **Qt Widgets** for high performance and a native look-and-feel.
 * **Intuitive Controls:** Custom table views, specialized dialogs, and real-time search filtering.
 * **Reactive Design:** Leverages Qt's **Signals & Slots** mechanism to ensure a responsive, non-blocking user experience.
 
-### ⚙️ Core Application Logic
+### Core Application Logic
 * **Model-View Architecture:** Custom implementations of `InvoiceTableModel` and `ExpenseTableModel` handle efficient data manipulation and display.
 * **Business Rules:** Centralized logic for profit calculations, tax handling, and automated "Paid" status tracking.
 * **Data Orchestration:** Managed workflows for sophisticated data operations, including merging or replacing datasets during import.
 
-### 💾 Data Persistence & Services
+### Data Persistence & Services
 * **File-Based Storage:** High-speed local storage utilizing structured files, removing the overhead of external database dependencies.
 * **Format Versatility:** Native support for **CSV** and **JSON** serialization and deserialization.
 * **Import Strategies:**
